@@ -1,0 +1,100 @@
+ 
+ Corpo obrigratorio de todo site
+<!DOCTYPE html>
+<html lang="pt-br"> <-- idioma
+<head>
+    <script src="script.js" defer></script> --> Baixa o JS , mas só executa depois que o HTML estiver todo pronto
+<meta charset="UTF-8">  --> padrão de mercado para todos os idiomas.
+ <meta name="viewport" content="width=device-width, initial-scale=1.0"> --> mobile 
+    <title>Título da Aba</title> --> titulo do head 
+    <link rel="stylesheet" href="style.css"> --> link com o css
+    </head>
+<body>
+
+    <body>, usamos as tags semânticas (que têm significado):
+
+<header>: O topo do site (onde fica o logo e o menu).
+
+<nav>: Define que ali dentro estão os links de navegação.
+
+<main>: Onde fica o conteúdo principal (o "filé mignon" da página).
+
+<section>: Divide o conteúdo em blocos (Ex: seção de denúncias, seção de sobre).
+
+<article>: Um conteúdo que faz sentido sozinho (como um post de blog).
+
+<footer>: O rodapé (direitos autorais, contato).
+
+    <div>: uma divisão, meio que padrão do google é dividir o cabeçalho, o conteudo principal, o rodapé em seçõess, mas para uma
+        boa semantica evitar usar tudo div, e até mesmo fica melhor para lidar com o html bem dividido
+        >>>>  Onde a <div> É a escolha certa?
+A div deve ser usada quando o elemento não tem um significado especial e serve apenas para:
+
+Agrupamento para Layout: Quando você precisa juntar vários elementos para aplicar um display: flex ou grid.
+
+Estilização Pura: Quando você precisa de um container apenas para colocar uma borda, uma cor de fundo ou um espaçamento (margin/padding) que não se encaixa em nenhuma categoria semântica.
+
+Javascript: Quando você precisa de um "gancho" (ID ou Classe) para manipular uma área específica da tela via código.
+
+
+<h1> até <h6>: Títulos. O <h1> é o mais importante (só deve ter um por página).
+
+<p>: Parágrafo de texto comum.
+
+<a>: Link. O atributo href diz para onde o link leva.
+
+<img>: Imagem. O src é o caminho da foto e o alt é o texto para cegos (acessibilidade).
+
+<img src="pasta/foto-perfil.jpg" alt="Foto de perfil do jogador" width="200"> OBS, UMA TAG Q ABRE MAS N FECHA!
+
+//]
+IMAGEM+LINK
+<a href="https://steamcommunity.com/id/usuario">
+    <img src="avatar.jpg" alt="Perfil Steam">
+</a>
+
+<ul> e <li>: Listas (ótimo para menus ou lista de jogadores).
+
+<button>: Botão clicável 
+
+
+
+    >>>>>>  links no site <<<< ou mesmo mudar de paginas num "site com camadas"
+<a href="https://www.google.com" target="_blank">Visitar o Google</a>
+
+<a href="denuncias.html">Ir para Denúncias</a>
+
+<a href="x" id="btn-emergencia" class="botao-vermelho">SOCORRO</a>
+
+
+CLASSES E IDS, "OS GANCHOS"
+<button id="btn-denunciar" class="btn-padrao">Enviar</button>
+id="nome-unico": Use quando o elemento for único (ex: o botão de emergência). É como o CPF do elemento. No JS você usa #.
+
+class="estilo-repetido": Use quando vários elementos forem iguais (ex: vários cards de jogadores). É como o sobrenome de uma família. No JS você usa ..
+// 
+
+<head>
+    <script src="script.js" defer></script>
+</head>
+O que o defer faz? Ele diz: "Baixa o JS agora, mas só executa depois que o HTML estiver todo pronto".
+
+
+
+
+
+
+JS + HTML 
+CONEXÃO ENTRE OS DOIS:
+<script src="script.js"></script>
+    </body>
+</html>
+
+
+Mudar o link via JS: document.querySelector('a').href = "novo-link.com";
+
+Mudar a imagem via JS: document.querySelector('img').src = "outra-foto.png";
+
+<input type="text" id="campo-nome" placeholder="Nome do infrator">
+No JS, você não muda o href ou src, você pega o .value:
+document.querySelector('#campo-nome').value -> Isso pega o que o cara digitou.

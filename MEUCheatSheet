@@ -1,0 +1,68 @@
+
+html: 
+!tab > colocar em pt br, linkar o js(FIANL DO BODY) e o css(NO HEAD), titulo, ai manipular o header que é o cabeçalho,
+ os section que cada um é tipo uma seção de informação ou seja lá oq for dentro da main, até o footer que é o roda pé
+
+<link rel="stylesheet" href="style.css">. HEAD
+<script src="script.js"></script> FINAL DO BODY 
+
+
+img src="foto.jpg" alt="Descrição da foto" width="200"
+
+<a href=https://siteqlqr  target=blank class=texto ou btn target="_blank"   style=embedado ou criar no css 
+
+h1 ate o h6 titulos de texto, sendo do maior ao menor 
+
+
+
+
+css: *
+SEMPRE NO TOPO  {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; 
+    font-family: 'Inter', sans-serif; 
+}  
+
+
+CSS  PRINCIPAIS COMANDOS
+
+
+* UNIVERSAL
+.CLASSE
+#ID
+
+  display: flex;             Define como os itens se alinham (flexível)
+  margin: 10px;              Espaço fora da caixa
+  padding: 15px;             Espaço dentro da caixa
+  width: 100%;               Largura total
+  height: auto;              Altura automática
+  box-sizing: border-box;    Mantém o tamanho da caixa fixo mesmo com padding
+  border: 1px solid black;   Borda (espessura, estilo, cor)
+  border-radius: 8px;        Cantos arredondados
+
+  color: #333;               Cor da letra
+  font-family: Arial;        Tipo da letra
+  font-size: 16px;           Tamanho da letra
+  font-weight: bold;         Deixa em negrito
+  text-align: center;        Centraliza o texto
+  text-decoration: none;     Remove sublinhados
+  line-height: 1.5;          Espaço entre linhas
+
+  background-color: white;   Cor de fundo
+  background-image: url();   Imagem de fundo
+  opacity: 0.9;              Transparência
+
+  position: relative;        Posicionamento relativo à sua posição original
+  top: 0;                    Move para cima/baixo
+  z-index: 10;               Ordem de sobreposição (camadas)
+
+  cursor: pointer;           Mãozinha do mouse ao passar por cima
+  transition: 0.3s;          Tempo da animação de mudança
+  overflow: hidden;          Corta o que sobrar para fora da caixa
+
+  @media (max-width: 600px) { ... }    Aplica estilos apenas para telas menores (celular)
+@keyframes nome { ... }              Cria uma linha do tempo para animações (0% a 100%)
+@font-face { ... }                   Carrega uma fonte personalizada de um arquivo externo
+@import url();                       Importa outro arquivo CSS ou fontes do Google
+:root { ... }                        Cria variáveis globais (ex: cores que se repetem)

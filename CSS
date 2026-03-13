@@ -1,0 +1,174 @@
+o css é bom ser criado um arquivo separado para dar forma ao site, mas se pode usar uma tag tbm tipo style="background-color: x';
+
+https://devhints.io/css
+
+https://flexboxfroggy.com
+
+sempre no topo dos css
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif; <-- fonte do google//
+}
+
+Tudo no CSS é uma caixa !!
+
+Content: O texto ou imagem em si.
+
+Padding: Espaço dentro da caixa (entre o texto e a borda).
+
+Border: A linha que envolve a caixa.
+
+Margin: Espaço fora da caixa (distância para outros elementos).
+
+//
+
+h1 { }: Seleciona todas as tags H1.
+
+.btn-padrao { }: Seleciona todos os elementos com essa class.
+
+#btn-denunciar { }: Seleciona o elemento único com esse id.
+
+button:hover { }: Muda o estilo apenas quando o mouse passa por cima (efeito visual).
+
+
+
+Espaçamento e Tamanho (Onde a caixa fica)
+
+
+.exemplo {
+    width: 300px;         /* Largura da caixa */
+    height: 150px;        /* Altura da caixa */
+    padding: 20px;        /* Espaço INTERNO (entre o texto e a borda) */
+    margin: 10px;         /* Espaço EXTERNO (distância para outros elementos) */
+    box-sizing: border-box; /* DICA DE OURO: Garante que o padding não aumente o tamanho da caixa */
+}
+
+Cores e Fundo (A maquiagem)
+
+
+.exemplo {
+    background-color: #1b2838; /* Cor de fundo (estilo Steam) */
+    color: #ffffff;            /* Cor do texto */
+    opacity: 0.8;              /* Transparência (0 a 1) */
+    background-image: url('foto.jpg'); /* Coloca uma imagem de fundo */
+}
+
+ Texto (Tipografia)
+
+
+.exemplo {
+    font-size: 16px;      /* Tamanho da letra */
+    font-weight: bold;    /* Deixa em negrito */
+    text-align: center;   /* Alinha o texto no meio, esquerda ou direita */
+    text-decoration: none; /* Tira o sublinhado azul dos links (<a>) */
+    line-height: 1.5;     /* Espaçamento entre as linhas do texto */
+}
+
+ Bordas e Detalhes (O acabamento)
+
+
+.exemplo {
+    border: 2px solid red; /* Cria uma borda: espessura, estilo e cor */
+    border-radius: 8px;    /* Arredonda os cantos (essencial para botões e cards) */
+    box-shadow: 2px 2px 10px rgba(0,0,0,0.5); /* Sombra na caixa */
+}
+
+Posicionamento e Layout (A inteligência)
+
+
+.exemplo {
+    display: flex;         /* Transforma a caixa num container flexível (alinha os filhos) */
+    justify-content: space-between; /* Espalha os itens dentro da caixa */
+    align-items: center;   /* Centraliza os itens verticalmente */
+    
+    position: relative;    /* Permite mover a caixa sem quebrar o resto do site */
+    z-index: 10;           /* Define quem fica "por cima" de quem (tipo camadas no Photoshop) */
+}
+
+
+Estados de Interação (Pseudo-classes)
+Isso é o que faz o site parecer vivo quando o usuário mexe o mouse:
+
+
+.botao:hover {
+    background-color: blue; /* Muda a cor quando o mouse passa por cima */
+    cursor: pointer;        /* Muda a setinha do mouse para a "mãozinha" */
+}
+
+.input:focus {
+    border-color: yellow;  /* Muda a cor da borda quando o cara clica para digitar */
+}
+
+
+https://flexboxfroggy.com
+
+ O Container vs. Os Itens
+Para o Flexbox funcionar, você precisa de um Pai (container) e dos Filhos (itens).
+
+
+
+.pai-container {
+    display: flex; /* Ativa o modo mágico */
+}
+
+
+
+ As 4 propriedades que você vai usar sempre
+
+.pai-container {
+    display: flex;
+
+    /* 1. Direção: Os itens ficam em linha (row) ou coluna (column)? */
+    flex-direction: row; 
+
+    /* 2. Alinhamento Horizontal (Eixo Principal) */
+    justify-content: center; /* center, flex-start, flex-end, space-between */
+
+    /* 3. Alinhamento Vertical (Eixo Cruzado) */
+    align-items: center; /* center, flex-start, flex-end */
+
+    /* 4. Espaçamento entre os filhos (sem precisar de margin!) */
+    gap: 20px; 
+}
+
+
+ para Centralizar Tudo
+Sabe aquele sofrimento de centralizar um botão no meio da tela? Com Flexbox são só 3 linhas no Pai:
+
+
+
+.centralizar-tudo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Garante que o pai ocupe a altura da tela toda */
+}
+
+
+Propriedades para os Filhos (Itens)
+Às vezes você quer que um item específico se comporte diferente:
+
+
+
+.filho-especifico {
+    flex-grow: 1;    /* Faz o item crescer para ocupar o espaço vazio */
+    align-self: flex-end; /* Alinha SÓ ESTE item no final verticalmente */
+}
+
+
+
+
+
+
+    mobile estrategia 
+/* No PC: 3 colunas */
+.container { display: flex; flex-direction: row; }
+
+/* No Celular: vira 1 coluna só */
+@media (max-width: 600px) {
+    .container {
+        flex-direction: column;                           (LEMBRA DESSA MANIPULAÇÃO DO JOGUIN DO SAPO)
+    }
+}
