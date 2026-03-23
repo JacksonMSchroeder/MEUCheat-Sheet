@@ -150,11 +150,135 @@ console.log(MULTIPLICA(132, 213, 39)); */
 /* com o DOM depois uma chamadas para o server só vai mudar para onde eu tiver enviando, a log n */
 
 
-const kda = (kill, assist, death) => {
+
+/* const kda = (kill, assist, death) => {
 
     const totalkda = `kd: ${kill}/${death}/${assist}`; 
     const estapositivo = `Está positivo? ${kill - death}`; 
     const impacto = `impacto: ${kill + assist - death}`;
     return [totalkda, estapositivo, impacto];
 }
-console.log(kda(17, 21 , 9))
+console.log(kda(17, 21 , 9)) */
+
+/*
+🛠️ O Desafio: A Função validadorPlayer
+Crie uma função que receba dois parâmetros: kills e deaths.
+
+As Regras (Tratativas):
+
+Se as deaths forem 0: Retorne a mensagem: "Imortal! Dados perfeitos." (Pois não dá para dividir por zero na lógica de média).
+
+Se as kills forem maiores que 50: Retorne: "Suspeito de Cheat! VSF."
+
+Para todos os outros casos: Calcule o saldo (kills - deaths) e retorne o dado bruto com a frase: "Seu saldo é: [resultado]". */
+
+
+  /*  const validadorP1 = (kill , death) => { 
+
+    if(death === 0){  
+             return "Imortal! Dados perfeitos."
+    }
+    if(kill > 50){  return "Ta xitado até o talo"
+
+    }
+    else  { return `seu saldo é ${kill - death}`
+
+    }  
+} 
+
+
+
+console.log(validadorP1(13 , 22)) */
+
+
+//mostrando os 3 resultados simultaneo sem vericação (if/else) *diagnostico completo' 
+
+   /* const validadep1 = (kill, death) => {
+
+        const imortal = `Imortal: ${death === 0}`;
+        const cheat =  `Suspeito ${kill > 50}`
+        const saldo = `seu saldo é: ${kill - death}`
+        return [imortal , cheat , saldo]
+
+
+    }
+console.log(validadep1(40 , 38) )
+*/
+
+
+
+
+
+    ////
+/*
+while (true) {
+    let ENTIDADE = pegar_tipo_entidade();
+    
+    if (ENTIDADE != Entidades.Abobora && ENTIDADE != null) {  colher(); plantar(Entidades.Abobora);
+      
+      
+        if (num_itens(Itens.Fertilizante) > meta_fertilizante) {  usar_item(itens.Fertilizante);
+}
+    } 
+    else if (ENTIDADE == null) {   plantar(Entodades.Abobora);
+        
+        if (num_itens(Itens.Fertilizante) > meta_fertilizante) { usar_item(Itens.Fertilizante);
+        }
+    } 
+    else {
+        if (pegar_agua() < 0.2) {
+            usar_item(Itens.Agua);
+        }
+    }
+    
+    if (pode_colher()) {
+        break;
+    }
+} */
+
+
+    /* O Desafio: Sistema de Recompensa de Partida
+Crie uma função chamada calcularRecompensa que recebe o número de pontos de um jogador em uma partida.
+
+As Regras (Tratativas):
+
+Se os pontos forem menores que 0: Retorne "Erro: Pontos inválidos".
+
+Se os pontos forem de 0 a 10: Retorne "Recompensa: 100 moedas".
+
+Se os pontos forem de 11 a 50: Retorne "Recompensa: 500 moedas".
+
+Se os pontos forem maiores que 50: Retorne "Recompensa: 1000 moedas + Bônus de MVP". */
+
+const calcularRecompensa = (pontos) => { 
+
+if  /*  (pontos === 0){ return `erro, pontos inválidos`;  melhor forma para SUPLIR O REQUISITO! SE O PROGRAMA N LIDAR COM NUMERO NEGATIVO */
+
+    (pontos <= 0){ return `erro, pontos inválidos`; /* supri  o negativo e o 0 */
+
+   /* (pontos > -1 && pontos < 1){ return `erro, pontos inválidos`;  funciona */
+    /* (pontos === 0){ return `erro, pontos inválidos`; */ /* melhor forma para  */
+
+
+  /* ( pontos <= 0 && pontos <= -1 ){ return `erro, pontos inválidos`; 
+    /* Não dá, assim ele pega todos os numeros entre -1 e 0 mas se coloca -2 em diante da undefined    (CORREÇÃO !, como estava lidando com numero negativo << muda o sinal !!)    
+    vou deixar esse && complexo ai mas pode ser (pontos <= 0)
+    
+*/
+
+}
+if( pontos >= 1 && pontos <= 10) { return `recompensa 100 moedas `;
+
+}
+if(pontos >= 11 && pontos <= 50){  return `recompensa 500 moedas`;
+
+}
+if(pontos >= 50) { return `Recompensa 1000 moedas + mvp`;
+
+}
+
+}
+console.log(calcularRecompensa(-232))
+console.log(calcularRecompensa(4))
+console.log(calcularRecompensa(23))
+console.log(calcularRecompensa(67))

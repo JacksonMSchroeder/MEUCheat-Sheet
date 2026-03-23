@@ -66,3 +66,62 @@ CSS  PRINCIPAIS COMANDOS
 @font-face { ... }                   Carrega uma fonte personalizada de um arquivo externo
 @import url();                       Importa outro arquivo CSS ou fontes do Google
 :root { ... }                        Cria variáveis globais (ex: cores que se repetem)
+
+
+
+JS DOM 
+
+Categoria,Comando (A Chamada),O que faz (O Endereço)
+
+Debug,console.log( ),Envia para o Painel de Desenvolvedor (F12).
+
+DOM (Texto),.innerText =,Injeta apenas texto puro dentro de um contêiner.  contêiner = box no html   DOM = LINGUAGEM WEB 
+
+DOM (Estrutura),.innerHTML =,Injeta texto + tags HTML dentro de um contêiner.
+
+DOM (Estilo),.style.property =,Altera o CSS de um elemento específico.
+
+DOM (Entrada),.value =,Preenche o conteúdo de um campo de formulário/input.
+
+Navegador,alert( ),Dispara uma janela pop-up de sistema.
+
+Memória Local,localStorage.setItem( ),Salva o dado no navegador do usuário (permanente).
+
+API / Rede,fetch( ),Despacha o dado para um endereço externo (Backend).
+
+
+
+
+
+
+
+
+Nível,Destino (Onde mandar?),"Comando de ""Cuspir na tekla""",Uso Principal
+
+
+1. Teste Local,Console do Navegador/VS Code,console.log(suaVariavel);,Debug e ver se a conta está certa.
+
+2. Interface (DOM),Texto Simples no HTML,elemento.innerText = suaVariavel;,Mudar um texto sem estragar o HTML.
+
+3. Interface (DOM),HTML Dinâmico (Tags),elemento.innerHTML = suaVariavel;,"Criar negrito, cores ou cards."
+
+4. Interface (DOM),Caixas de Alerta,alert(suaVariavel);,"Avisos urgentes 
+
+5. Backend (Node),Resposta da API,res.send(suaVariavel);,Enviar o KDA do servidor para o seu site.
+
+6. Banco (Supabase),Gravar no Banco,insert({ coluna: suaVariavel });,Salvar o histórico de partidas para sempre.
+
+Território,Endereço Específico:
+
+Navegador (Memória),LocalStorage,"localStorage.setItem('kda', dado);",Salvar o nick do player mesmo se ele fechar a aba.
+
+Navegador (Visual),Input de Formulário,input.value = dado;,Preencher um campo de texto automaticamente.
+
+Navegador (URL),Query Params,window.location.search = dado;,Mandar o ID do player pela barra de endereço (ex: ?id=123).
+
+Navegador (Estilo),CSS Variáveis,"elemento.style.setProperty('--cor', dado);",Mudar a cor do card (ex: vermelho se o KDA for negativo).
+
+Rede (Comunicação),Fetch / API,body: JSON.stringify(dado),Despachar o dado do seu JS para o Backend.
+
+Servidor (Logs),Terminal Node.js,process.stdout.write(dado);,Ver o que está acontecendo dentro do servidor (Backend).
+Mobile (Alerta),Toast / SnackBar,showToast(dado);,Aquelas mensagenzinhas que sobem no rodapé do celular.
