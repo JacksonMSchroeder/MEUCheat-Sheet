@@ -25,7 +25,7 @@ API / Rede,fetch( ),Despacha o dado para um endereço externo (Backend).
 
 
 
-Nível,Destino (Onde mandar?),"Comando de ""Cuspir na tekla""",Uso Principal
+Nível,Destino (Onde mandar?),"Comando de ""Cuspir na tela""",Uso Principal
 
 
 1. Teste Local,Console do Navegador/VS Code,console.log(suaVariavel);,Debug e ver se a conta está certa.

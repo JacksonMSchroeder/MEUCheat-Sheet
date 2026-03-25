@@ -125,3 +125,34 @@ Rede (Comunicação),Fetch / API,body: JSON.stringify(dado),Despachar o dado do 
 
 Servidor (Logs),Terminal Node.js,process.stdout.write(dado);,Ver o que está acontecendo dentro do servidor (Backend).
 Mobile (Alerta),Toast / SnackBar,showToast(dado);,Aquelas mensagenzinhas que sobem no rodapé do celular.
+
+
+
+
+
+IMPAR 
+ % 2 === 1
+
+ 
+//
+
+
+PAR 
+
+% 2 === 0
+
+
+
+
+
+🧮 A Lógica da Tabuada no %
+Se o resto da divisão por $X$ é 0, significa que o número é um múltiplo de $X$.
+i % 2 === 0 ➔ Tabuada do 2 (2, 4, 6, 8, 10...) ➔ PARES
+i % 3 === 0 ➔ Tabuada do 3 (3, 6, 9, 12, 15...)
+i % 5 === 0 ➔ Tabuada do 5 (5, 10, 15, 20, 25...)
+i % 10 === 0 ➔ Tabuada do 10 (10, 20, 30, 40...)
+
+
+1. A Sintaxe do += 
+Sim, a sintaxe é sempre colada: variável += valor.
+Pense no += como um ímã: ele pega o que já tem na variável e "gruda" o novo valor nela.

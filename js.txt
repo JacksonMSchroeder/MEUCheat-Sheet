@@ -1,0 +1,133 @@
+const lerolero = (lero1 , lero2) => {
+      const queroumlero = lero1 - lero2
+    return queroumlero
+}
+console.log(lerolero(40, 20 ))
+
+
+const DadoMae = (parametro1 , parametro2) => {
+    const dado = parametro1 - /*operador*/ parametro2 
+
+    return dado /*retorno a mae*/
+}
+
+ 
+const lerolero = lero, se eu quiser mostra só o dado bruto só mando um console.log("aqui o dado"lerolero())
+
+
+DADOMAE (PARAMETROS) {  TRATATIVA > RETORNO <   } 
+
+
+
+//////////////
+
+// Compara valores
+==    // Igual a
+!=    // Diferente de
+>     // Maior que
+<     // Menor que
+>=    // Maior ou igual
+<=    // Menor ou igual
+
+&&    // E (As duas coisas tem que ser verdade)
+||    // OU (Pelo menos uma tem que ser verdade)
+!     // NÃO (Inverte: o que era true vira false)
+
+=     // Recebe valor
++=    // Soma e guarda (x = x + y)
+-=    // Subtrai e guarda
+++    // Soma 1 (Incremento)
+--    // Subtrai 1 (Decremento)
+
+
+
+
+
+1. OS INGREDIENTES (Variáveis e Dados)
+const: Para tudo que não muda (90% do seu código).
+
+let: Só se você precisar sobrescrever o valor (ex: um contador).
+
+Number(dado): Transforma o texto do input em número real.
+
+2. OS UTENSÍLIOS (Funções Arrow)
+A estrutura que você vai usar para criar suas ferramentas de cálculo:
+
+JavaScript
+const nomeDaFuncao = (param1, param2) => {
+    // 1. Processamento
+    const resultado = param1 + param2;
+    // 2. Entrega
+    return resultado;
+};
+3. O ESTOQUE (Arrays - Listas)
+Como você queria usar o [m1, m2]:
+
+Criar: const lista = [10, 20, 30];
+
+Acessar: lista[0] (é o 10), lista[1] (é o 20).
+
+Tamanho: lista.length (diz quantos itens tem).
+
+4. O MODO DE PREPARO (Estruturas de Controle)
+IF / ELSE (A Trilha)
+JavaScript
+if (valor > 10) {
+    // Faz isso
+} else {
+    // Faz aquilo
+}
+SWITCH (O Elevador)
+JavaScript
+switch (operacao) {
+    case '+': return a + b;
+    case '-': return a - b;
+    default: return "Erro";
+}
+WHILE / FOR (A Repetição)
+while: "Enquanto a condição for real, repita".
+
+JavaScript
+let contador = 0;
+while (contador < 5) {
+    console.log("Repetindo...");
+    contador++; // IMPORTANTE: Se não somar, trava o PC!
+}
+5. O GARÇOM (DOM - Interação com HTML)
+Como o JS "pega" e "entrega" as coisas na mesa (tela):
+
+Pegar o valor: const x = document.getElementById('meuInput').value;
+
+Mudar o texto: document.getElementById('titulo').innerText = "Novo Texto";
+
+Mudar a cor: document.getElementById('caixa').style.backgroundColor = "blue";
+
+Ouvir o clique: ```javascript
+const botao = document.getElementById('btn');
+botao.addEventListener('click', () => {
+console.log("Alguém clicou!");
+});
+
+
+### 6. O INSPETOR (Testes e Debug)
+* **`console.log(variavel)`**: Mostra o valor "escondido" no F12.
+* **`console.table(meuArray)`**: Mostra arrays de um jeito bonitão e organizado.
+* **`typeof variavel`**: Te diz se o dado é `string` (texto) ou `number`.
+
+
+
+---
+
+### 🧩 Como montar seu quebra-cabeça (O Passo a Passo):
+
+Sempre que travar, olhe para esse roteiro:
+
+1.  **ENTRADA:** Use `document.getElementById(...).value` para pegar os dados.
+2.  **CONVERSÃO:** Use `Number()` se for fazer conta matemática.
+3.  **LÓGICA:** Crie uma `const minhaFuncao = (dados) => { ... }` para processar.
+4.  **DECISÃO:** Use `if` ou `switch` se o código precisar escolher um caminho.
+5.  **SAÍDA:** Use `.innerText` para mostrar o resultado no HTML ou `console.log` para testar.
+
+**Dica para Joinville:** Quando estiver vendo o Guanabara, tente identificar qual dessas "peças" ele está usando em cada aula. Você vai ver que, no fundo, ele está sempre combinando esses 6 blocos de formas diferentes.
+
+**Quer que eu transforme esse Cheat Sheet em um arquivo .txt ou .md limpo para você salvar no seu PC?**

@@ -12,7 +12,7 @@ sempre no topo dos css
     font-family: 'Inter', sans-serif; <-- fonte do google//
 }
 
-Tudo no CSS é uma caixa !!
+Tudo no CSS é uma caixa !! ( att de conhecimento, backend tbm bixo kk)
 
 Content: O texto ou imagem em si.
 
