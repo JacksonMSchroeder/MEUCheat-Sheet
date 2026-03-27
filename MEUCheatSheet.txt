@@ -156,3 +156,40 @@ i % 10 === 0 ➔ Tabuada do 10 (10, 20, 30, 40...)
 1. A Sintaxe do += 
 Sim, a sintaxe é sempre colada: variável += valor.
 Pense no += como um ímã: ele pega o que já tem na variável e "gruda" o novo valor nela.
+
+/////////////
+
+
+ 1. .length (O Contador / O Mapa)
+O que ele faz: Ele olha para o Array e diz quantos itens tem lá dentro.
+
+Papel no código: Ele define o limite do seu for. Sem ele, o loop não sabe quando parar de correr e acaba batendo no muro (tentando ler o que não existe).
+
+Onde ele fica: Geralmente na condição do meio do for: i < lista.length.
+
+
+ 2. [i] (O Apontador / O Endereço)
+O que ele faz: Ele é a "mão" que entra na lista e pega o valor real daquela posição específica.
+
+Papel no código: Ele permite que você acesse a informação (o peso, o nome, a nota) para fazer o if.
+
+Onde ele fica: Sempre grudado na lista original: listaOriginal[i].
+
+
+
+ 3. .push() (O Guardião / A Gaveta)
+O que ele faz: Ele pega um valor e joga para dentro de uma nova lista, sempre colocando no final da fila.
+
+Papel no código: Ele serve para armazenar o resultado depois que você decidiu o que fazer com o dado (se ele é banido, se é pesado, etc.).
+
+Onde ele fica: Na lista de destino: listaDestino.push(valor)./
+
+
+///////////////
+
++=
+
+
+ Escrever somatotalleve += pesos[i] é exatamente a mesma coisa que escrever:
+
+somatotalleve = somatotalleve + pesos[i]

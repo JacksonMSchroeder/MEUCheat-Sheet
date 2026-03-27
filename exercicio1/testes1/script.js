@@ -530,6 +530,7 @@ No final (fora do loop), mostre no console:
 
 "Total de banidos: [quantidade]"  */
 
+/*
 const overwatch = () => {
 const denuncia = [10, 85, 30, 95, 50, 70, 20];
     
@@ -552,4 +553,206 @@ console.log(`lista de banidos ${banidos}`)
 console.log(`lista em obervação ${observacao.length}`)
 console.log(`lista de banidos ${banidos.length}`)
 }
-overwatch();
+overwatch(); */
+
+
+
+
+
+/* Exercício: O Conferente de Carga
+Você tem uma lista com o peso de várias caixas.
+
+Se a caixa pesa mais de 50kg, ela é considerada "Pesada" (vai para o fundo do container).
+
+Se a caixa pesa 50kg ou menos, ela é "Leve" (vai para o topo).
+
+Seu objetivo:
+
+Criar uma lista de pesos: const pesos = [12, 55, 8, 90, 45, 70];
+
+Criar duas "caixas" (arrays) vazias: caixasPesadas e caixasLeves.
+
+Usar o for com o .length para percorrer os pesos.
+
+Usar o if para testar se o peso é > 50.
+
+Usar o .push() para guardar o peso na lista certa.
+
+No final, dar um console.log mostrando quantos kg tem na lista de pesadas. */
+
+
+/*
+const pesocaixa = () => {
+const pesos = [12 , 55, 8, 90, 50 ,50, 50, 45, 70, 82, 12,11,32,80,];
+let caixaspesadas = [];
+let caixaLeves = [];
+let somatotalpesado = 0;
+let somtatotalleve = 0;
+
+
+for(let i = 0; i < pesos.length; i = i +1){
+if(pesos[i] > 50){ 
+    caixaspesadas.push(pesos[i]);
+    console.log(`Caixa Pesada ${pesos[i]}`)
+    somatotalpesado = somatotalpesado + pesos[i]; 
+  
+}
+
+
+if(pesos[i] <= 50) { 
+    caixaLeves.push(pesos[i]);      
+    console.log(`Caixa Leve ${pesos[i]}`)
+    somtatotalleve += pesos[i];
+
+}
+
+}
+
+if(somtatotalleve + somatotalpesado >= 1000){ 
+    console.log(`Ultrapassou limite de peso do Caminhão`)
+}
+
+else { 
+    console.log(`Não ultrapassou limite de peso do Caminhão`)
+}
+
+
+
+
+console.log(`É pesado ou leve? `)
+console.log(`Pesado  ${caixaspesadas.length}`)
+console.log(`Leve ${caixaLeves.length}`)
+
+console.log(`Os pesados tem ${somatotalpesado } kg `)
+console.log(`Os leves tem ${somtatotalleve } kg`)
+}
+pesocaixa();
+*/
+
+
+
+
+
+
+/* Vamos colocar esse seu processo mental de "Gaveta, Motor e Filtro" para trabalhar. Como você está na pegada de ADS e gosta de games e logística, montei um exercício que simula um sistema real.
+
+Imagine que você está desenvolvendo o backend para uma transportadora em Joinville. Você recebeu uma lista de pesos de cargas e precisa organizar o galpão.
+
+ O Desafio: Operador de Logística JS
+Você tem a seguinte array de pesos (em kg):
+const cargas = [120, 45, 200, 80, 30, 150, 40, 90];
+
+Sua missão é criar um script que:
+
+Percorra toda a array (linha por linha).
+
+Identifique quais cargas são "Leves" (abaixo de 100kg) e quais são "Pesadas" (100kg ou mais).
+
+Crie duas novas gavetas (arrays vazias) chamadas cargasLeves e cargasPesadas e jogue os valores nelas.
+
+Some o peso total de todas as cargas para saber o peso bruto do caminhão.
+
+Conte quantas cargas pesadas existem. */
+
+
+/*
+const tranportadora = () => {
+const carga = [120, 45, 200, 80, 30, 150, 40, 90];
+let cargasleves = [];
+let cargaspesadas = [];
+
+let somaleve = 0;
+ let somapesada= 0;
+let totalpesadas = 0;
+
+
+
+for(let i = 0; i < carga.length ; i++){
+
+    if(carga[i] >= 100){
+        cargaspesadas.push(carga[i]);
+        console.log(`cargas pesadas ${carga[i]}`)
+
+        somapesada = somapesada + carga[i];
+        totalpesadas = totalpesadas +1;
+    }
+
+    if(carga[i] < 100){
+        cargasleves.push(carga[i]);
+        console.log(`cargas leves ${carga[i]}`)
+        somaleve = somaleve + carga[i];
+
+    }
+      
+}
+
+
+console.log(`Soma das pesadas é ${somapesada}`)
+console.log(`Soma das leves é ${somaleve}`)
+console.log(`Soma total é ${somaleve + somapesada}`)
+console.log(`total de carga pesada é ${totalpesadas}`)
+}
+tranportadora(); */
+
+
+
+
+/*
+
+ Exercício: O Scanner de Integridade
+Imagine que você recebeu uma lista de scores de comportamento de jogadores. 
+Mas, como a internet oscila, alguns dados vieram corrompidos (NaN, Strings ou Números Negativos).
+
+Sua missão é criar um for que limpe essa lista e nos dê o relatório real.
+
+A Lista de Entrada:
+const scores = [85, "erro", 120, -10, NaN, 150, 40, "banido", 200];
+
+O que seu código deve fazer:
+
+Criar uma variável somaValida que começa em 0.
+
+Criar uma variável contagemErros que começa em 0.
+
+Usar um for para percorrer a lista scores.
+
+Dentro do for, use um if para checar se o dado é válido:
+
+Dica 1: Use typeof scores[i] === 'number' para garantir que é número.
+
+Dica 2: Use !isNaN(scores[i]) para garantir que não é um NaN.
+
+Dica 3: O número deve ser maior que 0 (não queremos scores negativos).
+
+Se o dado for válido: Some ele na somaValida.
+
+Se o dado for INVÁLIDO: Aumente 1 na contagemErros.
+*/
+
+const entrada = () => {
+const scores = [85, "erro", 120, -10, NaN, 150, 40, "banido", 200];
+let somaValida = 0;
+let contagemErros = 0;
+
+for(let i = 0; i < scores.length; i++){
+
+    if(typeof scores[i] === `number` && !isNaN(scores[i])){
+        /*  usa typeof para garantir o tipo.
+
+     usa !isNaN para garantir que o numero é real.( isNan = numero real, com o ! não é numero)
+
+     usa && para criar uma "porta lógica". */
+     
+
+
+    }
+   
+}
+console.log(typeof 2026); //teste typeof
+
+console.log(typeof "ADS Uniasselvi"); //teste
+
+console.log(typeof (5 > 2)); //teste
+
+}
+entrada();
