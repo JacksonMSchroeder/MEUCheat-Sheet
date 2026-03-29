@@ -729,30 +729,212 @@ Se o dado for válido: Some ele na somaValida.
 Se o dado for INVÁLIDO: Aumente 1 na contagemErros.
 */
 
-const entrada = () => {
-const scores = [85, "erro", 120, -10, NaN, 150, 40, "banido", 200];
-let somaValida = 0;
-let contagemErros = 0;
-
-for(let i = 0; i < scores.length; i++){
-
-    if(typeof scores[i] === `number` && !isNaN(scores[i])){
-        /*  usa typeof para garantir o tipo.
-
-     usa !isNaN para garantir que o numero é real.( isNan = numero real, com o ! não é numero)
-
-     usa && para criar uma "porta lógica". */
-     
+// const entrada = () => {
+// const scores = [85, "erro", 120, -10, NaN, 150, 40, "banido", 200];
+// let somaValida = 0;
+// let contagemErros = 0;
+// let validos = [];   
+// let invalidos = [];
+// //let somatotalvalidos = 0; sem necessidade ! soma valida já suple a soma total dos validos 
 
 
+// for(let i = 0; i < scores.length; i++){
+
+//     if(typeof scores[i] === `number` && !isNaN(scores[i]) && scores[i] > 0 ){
+//         somaValida = somaValida + scores[i]; /* para mostrar o valor do erro, ou seja o valor que não é valido, ou seja o valor que não é numero, ou seja o valor que é string ou numero negativo ou NaN */
+//         //console.log(`Score válido: ${scores[i]}`)
+//         validos.push(scores[i]);
+//         //somatotalvalidos = somatotalvalidos + scores[i];
+//         /*  usa typeof para garantir o tipo.
+
+//      usa !isNaN para garantir que o numero é real.( isNan = numero real, com o ! não é numero)
+
+//      usa && para criar uma "porta lógica". */
+
+
+//     }
+//     else { 
+//         contagemErros = contagemErros + 1;
+//         invalidos.push(scores[i]); /* para mostrar o valor do erro, ou seja o valor que não é valido, ou seja o valor que não é numero, ou seja o valor que é string ou numero negativo ou NaN */
+//         //console.log(`Score inválido: ${scores[i]}`)
+            
+//         //console.log(`Contagem de erros: ${contagemErros[i]}`)
+//     }
+    
+   
+   
+// }   
+// console.log(`soma valores total: ${somaValida}`)
+// console.log(`Valores válidos: ${validos}`)
+// console.log(`Valor do erro: ${invalidos}`)
+// console.log(`Contagem de erros: ${contagemErros}`)
+//  console.log(`Soma dos scores válidos: ${somaValida}`)
+
+// //console.log(typeof 2026); //teste typeof
+
+// //console.log(typeof "ADS Uniasselvi"); //teste
+
+// //console.log(typeof (5 > 2)); //teste
+
+// }
+// entrada();
+
+////
+
+/* 
+O Array de Entrada (A "Tabela" do Banco):
+
+JavaScript
+const arsenal = [
+    { id: 1, nome: "AK-47", estado: "novo", power: 90 },
+    { id: 2, nome: "M4A1", estado: "quebrado", power: 85 },
+    { id: 3, nome: "AWP", estado: "novo", power: 100 },
+    { id: 4, nome: "Glock", estado: "quebrado", power: 20 },
+    { id: 5, nome: "Desert Eagle", estado: "novo", power: 75 }
+];
+Sua Missão:
+Crie uma função chamada organizarArsenal que percorra esse array e faça o seguinte:
+
+Filtro de Estado: Crie dois novos arrays: prontasParaUso e manutencao.
+
+Lógica de Separação: * Se o estado for "novo", dê um .push() do nome da arma para o array prontasParaUso.
+
+Se o estado for "quebrado", dê um .push() do nome da arma para o array manutencao.
+
+Cálculo de Poder: Crie uma variável poderTotal que some o power de todas as armas do arsenal (independente do estado).
+
+Relatório Final (Saída): Fora do loop, dê um console.log mostrando:
+
+As armas prontas.
+
+As armas que precisam de conserto.
+
+O poder de fogo total do clan. */
+
+// const tabela = () => {
+//     const arsenal = [
+//     { id: 1, nome: "AK-47", estado: "novo", power: 90 },
+//     { id: 2, nome: "M4A1", estado: "quebrado", power: 85 },
+//     { id: 3, nome: "AWP", estado: "novo", power: 100 },
+//     { id: 4, nome: "Glock", estado: "quebrado", power: 20 },
+//     { id: 5, nome: "Desert Eagle", estado: "novo", power: 75 }
+// ];
+// let prontasParaUso = [];
+// let manutencao = [];
+// let poderTotal = 0;
+// let podeatual = 0;
+
+// for(let i = 0; i < arsenal.length; i++){
+
+    
+
+//     if(arsenal[i].estado === "novo"){
+//         //console.log(`Arma pronta para uso: ${arsenal[i].nome}`)
+//         prontasParaUso.push(arsenal[i].nome);
+//     }
+//     else { 
+//         //console.log(`Arma precisa de manutenção: ${arsenal[i].nome}`)
+//         manutencao.push(arsenal[i].nome);
+//     }
+
+// poderTotal =  poderTotal + arsenal[i].power;
+
+// poderatual = poderTotal - manutencao.length * arsenal[i].power; 
+
+// }
+// console.log(`Poder total acumulado: ${poderTotal}`);
+// console.log(`Armas prontas para uso: ${prontasParaUso}`);
+// console.log(`Armas que precisam de manutenção: ${manutencao}`)
+// console.log(`Poder atual do clan: ${poderatual}`)
+// }
+// tabela();
+
+
+/* Sua Missão:
+{ id: 1, usuario: "Jackson", valor: 100, tipo: "VIP" },
+        { id: 2, usuario: "Larissa", valor: 50, tipo: "comum" },
+        { id: 3, usuario: "Tainara", valor: 200, tipo: "VIP" },
+        { id: 4, usuario: "Budié", valor: 80, tipo: "comum" },
+        { id: 5, usuario: "Faith", valor: 150, tipo: "VIP" }
+
+Crie uma função chamada processarPagamentos que percorra o array compras e faça o seguinte:
+
+Filtro de Categoria: Crie dois novos arrays: clientesVIP e clientesComuns.
+
+Lógica de Desconto: * Se o tipo for "VIP", o cliente ganha 20% de desconto no valor da compra.
+
+Se o tipo for "comum", o cliente paga o valor cheio.
+
+Acumuladores:
+
+faturamentoTotal: Soma de todos os valores após os descontos aplicados.
+
+totalDescontos: Soma de quanto dinheiro o sistema "perdeu" dando descontos aos VIPs.
+
+Relatório Final: Exiba o faturamento real, o total de descontos e quem são os VIPs. */
+
+
+const processarpagamentos = () => {
+const compras = [ { id: 1, usuario: "Jackson", valor: 100, tipo: "VIP" },
+        { id: 2, usuario: "Larissa", valor: 50, tipo: "comum" },
+        { id: 3, usuario: "Tainara", valor: 200, tipo: "VIP" },
+        { id: 4, usuario: "Budié", valor: 80, tipo: "comum" },
+        { id: 5, usuario: "Faith", valor: 150, tipo: "VIP" }
+];
+   
+   
+
+let clientesVIP = [];
+let clientescomuns = [];
+let faturamento = 0;
+let totaldesconto = 0;
+
+
+for(let i = 0; i < compras.length; i++){
+
+     //const desconto = 0;
+
+    if(compras[i].valor >= 100 ){
+        clientesVIP.push(compras[i].usuario);
+        
+         compras[i].desconto  = compras[i].valor * 0.2 ;
+        totaldesconto = totaldesconto + compras[i].desconto;
+        faturamento = faturamento + compras[i].valor - compras[i].desconto;
+         console.log(`O desconto para ${compras[i].usuario} pagou ${compras[i].valor} e recebeu ${compras[i].desconto} de desconto`);
     }
+    else  {
+        clientescomuns.push(compras[i].usuario);    
+        faturamento = faturamento + compras[i].valor;
+        console.log(`O desconto para compra de ${compras[i].usuario} , nas compra de valor ${compras[i].valor} não foi possivel, só acima de 100! `);
+
+
+        
+    }
+ 
    
 }
-console.log(typeof 2026); //teste typeof
 
-console.log(typeof "ADS Uniasselvi"); //teste
 
-console.log(typeof (5 > 2)); //teste
+// for(let i = 0; i < compras.length; i++){
+//  if(compras[i].valor >= 100 ){
+//     console.log(`O desconto para ${compras[i].usuario} foi de ${compras[i].valor} para ${valorpago[i]}`);
+//  }
+// else {
+//     console.log(`O desconto para compra de ${compras[i].usuario} , nas compra de valor ${compras[i].valor} não foi possivel, só acima de 100! `);
+// }
 
+
+
+
+
+
+  console.log(`Clientes Vips são: ${clientesVIP}`);    
+ console.log(`O faturamento é  ${faturamento}`)
+ console.log(`o total de desconto é  ${totaldesconto}`)
+  //console.log(`O desconto para ${clientesVIP[i]} é ${descontos[i]}`);
 }
-entrada();
+
+processarpagamentos();  
+
+
+
