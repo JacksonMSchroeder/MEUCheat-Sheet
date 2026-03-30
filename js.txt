@@ -1,23 +1,5 @@
-const lerolero = (lero1 , lero2) => {
-      const queroumlero = lero1 - lero2
-    return queroumlero
-}
-console.log(lerolero(40, 20 ))
 
-
-const DadoMae = (parametro1 , parametro2) => {
-    const dado = parametro1 - /*operador*/ parametro2 
-
-    return dado /*retorno a mae*/
-}
-
- 
-const lerolero = lero, se eu quiser mostra só o dado bruto só mando um console.log("aqui o dado"lerolero())
-
-
-DADOMAE (PARAMETROS) {  TRATATIVA > RETORNO <   } 
-
-
+const DADOMAE = (PARAMETROS) => {  TRATATIVA RETORNO }   if(se) else(nao) while(loop(enquanto)) for(enquanto com inf definidas)
 
 //////////////
 
@@ -29,7 +11,7 @@ DADOMAE (PARAMETROS) {  TRATATIVA > RETORNO <   }
 >=    // Maior ou igual
 <=    // Menor ou igual
 
-&&    // E (As duas coisas tem que ser verdade)
+&&    // E (As duas coisas tem que ser verdade) 
 ||    // OU (Pelo menos uma tem que ser verdade)
 !     // NÃO (Inverte: o que era true vira false)
 
@@ -38,19 +20,88 @@ DADOMAE (PARAMETROS) {  TRATATIVA > RETORNO <   }
 -=    // Subtrai e guarda
 ++    // Soma 1 (Incremento)
 --    // Subtrai 1 (Decremento)
+isNaN() // não numero 
+
+////////////
+
+Fórmula: Math.min(Math.max(VALOR, MIN), MAX)
+valor = Math.min(Math.max(valor, 1), 100);
+
+variavel = Math.max(valor, 1); piso
+
+valor = Math.min(valor, 100); teto
+
+
+📥 1. Adicionar e Remover (Gerenciamento de Pilha)
+
+Perfeito para quando um novo jogador entra na lista de suspeitos ou uma carga é despachada.
+
+.push(item): Adiciona ao final da array. (O que você mais usou até agora).
+
+.pop(): Remove o último item.
+
+.unshift(item): Adiciona ao início.
+
+.shift(): Remove o primeiro item.
+
+🔍 2. Localização e Verificação (Busca)
+
+Ideal para saber se um Nick já está na sua lista de banidos.
+
+.indexOf(item): Retorna a posição (índice) do item. Se não achar, retorna -1.
+
+.includes(item): Retorna true ou false (Verdadeiro/Falso) se o item existe na lista.
+
+.length: Não é um método, mas uma propriedade que diz o tamanho total da array.
+
+🛠️ 3. Transformação e Filtro (O Nível "Pro")
+
+Isso aqui vai substituir os seus for gigantes no futuro. É o que chamamos de Métodos Funcionais.
+
+.forEach(): Executa uma função para cada item (como um for, mas mais limpo).
+
+.filter(): Cria uma nova array apenas com os itens que passaram no seu teste (ex: denuncias > 70).
+
+.map(): Transforma todos os itens da array (ex: pegar uma lista de preços e aplicar 10% de desconto em todos).
+
+.find(): Retorna o primeiro item que ele encontrar que bata com a sua busca.
+
+✂️ 4. Corte e Emenda (Manipulação)
+
+.slice(inicio, fim): Tira uma "fatia" da array sem estragar a original.
+
+.splice(posicao, quantosRemover): Remove ou substitui itens em qualquer lugar da array.
+
+.join(" "): Junta todos os itens da array em uma única String (frase), separando pelo que você colocar no parêntese.
 
 
 
 
 
-1. OS INGREDIENTES (Variáveis e Dados)
+
+
+
+
+////
+
+
+typeof	Investiga o tipo do dado.
+
+
+!isNaN(): É universal. Qualquer programador no mundo bate o olho e sabe: 
+"Ah, ele está garantindo que isso é um número válido". 
+
+
+///
+
+ OS INGREDIENTES (Variáveis e Dados)
 const: Para tudo que não muda (90% do seu código).
 
 let: Só se você precisar sobrescrever o valor (ex: um contador).
 
 Number(dado): Transforma o texto do input em número real.
 
-2. OS UTENSÍLIOS (Funções Arrow)
+ OS UTENSÍLIOS (Funções Arrow)
 A estrutura que você vai usar para criar suas ferramentas de cálculo:
 
 JavaScript
@@ -60,7 +111,7 @@ const nomeDaFuncao = (param1, param2) => {
     // 2. Entrega
     return resultado;
 };
-3. O ESTOQUE (Arrays - Listas)
+. O ESTOQUE (Arrays - Listas)
 Como você queria usar o [m1, m2]:
 
 Criar: const lista = [10, 20, 30];
@@ -93,7 +144,7 @@ while (contador < 5) {
     console.log("Repetindo...");
     contador++; // IMPORTANTE: Se não somar, trava o PC!
 }
-5. O GARÇOM (DOM - Interação com HTML)
+ O GARÇOM (DOM - Interação com HTML)
 Como o JS "pega" e "entrega" as coisas na mesa (tela):
 
 Pegar o valor: const x = document.getElementById('meuInput').value;
@@ -109,7 +160,7 @@ console.log("Alguém clicou!");
 });
 
 
-### 6. O INSPETOR (Testes e Debug)
+ O INSPETOR (Testes e Debug)
 * **`console.log(variavel)`**: Mostra o valor "escondido" no F12.
 * **`console.table(meuArray)`**: Mostra arrays de um jeito bonitão e organizado.
 * **`typeof variavel`**: Te diz se o dado é `string` (texto) ou `number`.

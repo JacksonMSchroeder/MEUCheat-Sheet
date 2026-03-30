@@ -874,67 +874,312 @@ totalDescontos: Soma de quanto dinheiro o sistema "perdeu" dando descontos aos V
 Relatório Final: Exiba o faturamento real, o total de descontos e quem são os VIPs. */
 
 
-const processarpagamentos = () => {
-const compras = [ { id: 1, usuario: "Jackson", valor: 100, tipo: "VIP" },
-        { id: 2, usuario: "Larissa", valor: 50, tipo: "comum" },
-        { id: 3, usuario: "Tainara", valor: 200, tipo: "VIP" },
-        { id: 4, usuario: "Budié", valor: 80, tipo: "comum" },
-        { id: 5, usuario: "Faith", valor: 150, tipo: "VIP" }
-];
+// const processarpagamentos = () => {
+// const compras = [ { id: 1, usuario: "Jackson", valor: 100, tipo: "VIP" },
+//         { id: 2, usuario: "Larissa", valor: 50, tipo: "comum" },
+//         { id: 3, usuario: "Tainara", valor: 200, tipo: "VIP" },
+//         { id: 4, usuario: "Budié", valor: 80, tipo: "comum" },
+//         { id: 5, usuario: "Faith", valor: 150, tipo: "VIP" }
+// ];
    
    
 
-let clientesVIP = [];
-let clientescomuns = [];
-let faturamento = 0;
-let totaldesconto = 0;
-
-
-for(let i = 0; i < compras.length; i++){
-
-     //const desconto = 0;
-
-    if(compras[i].valor >= 100 ){
-        clientesVIP.push(compras[i].usuario);
-        
-         compras[i].desconto  = compras[i].valor * 0.2 ;
-        totaldesconto = totaldesconto + compras[i].desconto;
-        faturamento = faturamento + compras[i].valor - compras[i].desconto;
-         console.log(`O desconto para ${compras[i].usuario} pagou ${compras[i].valor} e recebeu ${compras[i].desconto} de desconto`);
-    }
-    else  {
-        clientescomuns.push(compras[i].usuario);    
-        faturamento = faturamento + compras[i].valor;
-        console.log(`O desconto para compra de ${compras[i].usuario} , nas compra de valor ${compras[i].valor} não foi possivel, só acima de 100! `);
-
-
-        
-    }
- 
-   
-}
+// let clientesVIP = [];
+// let clientescomuns = [];
+// let faturamento = 0;
+// let totaldesconto = 0;
 
 
 // for(let i = 0; i < compras.length; i++){
-//  if(compras[i].valor >= 100 ){
-//     console.log(`O desconto para ${compras[i].usuario} foi de ${compras[i].valor} para ${valorpago[i]}`);
-//  }
-// else {
-//     console.log(`O desconto para compra de ${compras[i].usuario} , nas compra de valor ${compras[i].valor} não foi possivel, só acima de 100! `);
+
+//      //const desconto = 0;
+
+//     if(compras[i].valor >= 100 ){
+//         clientesVIP.push(compras[i].usuario);
+        
+//          compras[i].desconto  = compras[i].valor * 0.2 ;
+//         totaldesconto = totaldesconto + compras[i].desconto;
+//         faturamento = faturamento + compras[i].valor - compras[i].desconto;
+//          console.log(`O desconto para ${compras[i].usuario} pagou ${compras[i].valor} e recebeu ${compras[i].desconto} de desconto`);
+//     }
+//     else  {
+//         clientescomuns.push(compras[i].usuario);    
+//         faturamento = faturamento + compras[i].valor;
+//         console.log(`O desconto para compra de ${compras[i].usuario} , nas compra de valor ${compras[i].valor} não foi possivel, só acima de 100! `);
+
+
+        
+//     }
+ 
+   
 // }
 
 
+// // for(let i = 0; i < compras.length; i++){
+// //  if(compras[i].valor >= 100 ){
+// //     console.log(`O desconto para ${compras[i].usuario} foi de ${compras[i].valor} para ${valorpago[i]}`);
+// //  }
+// // else {
+// //     console.log(`O desconto para compra de ${compras[i].usuario} , nas compra de valor ${compras[i].valor} não foi possivel, só acima de 100! `);
+// // }
 
 
 
 
-  console.log(`Clientes Vips são: ${clientesVIP}`);    
- console.log(`O faturamento é  ${faturamento}`)
- console.log(`o total de desconto é  ${totaldesconto}`)
-  //console.log(`O desconto para ${clientesVIP[i]} é ${descontos[i]}`);
+
+
+//   console.log(`Clientes Vips são: ${clientesVIP}`);    
+//  console.log(`O faturamento é  ${faturamento}`)
+//  console.log(`o total de desconto é  ${totaldesconto}`)
+//   //console.log(`O desconto para ${clientesVIP[i]} é ${descontos[i]}`);
+// }
+
+// processarpagamentos();  
+
+
+/* Exercício 1: A Calculadora de Padaria
+Objetivo: Praticar a criação de variáveis e a concatenação (juntar texto com número).
+
+Crie uma variável chamada precoPao e atribua o valor 0.50.
+
+Crie uma variável chamada quantidade e atribua o valor 10.
+
+Crie uma variável chamada total que multiplique as duas anteriores.
+
+Mostre na tela a frase: "O valor total da compra é: " seguido do valor da variável total. */
+
+// const precopao = 0.50
+// const quantidade = 1301
+// const total = precopao * quantidade;  
+
+// console.log(`O o valor da compra é ${total}`)
+
+////////
+
+
+/* Exercício 2: O Registro do Atleta
+Objetivo: Praticar o uso de diferentes tipos de dados (Texto e Número).
+
+Crie uma variável nomeAtleta com o valor "Jackson".
+
+Crie uma variável kmPercorridos com o valor 5.5.
+
+Crie uma variável tempoMinutos com o valor 30.
+
+Mostre na tela uma frase única que diga: "O atleta [nome] correu 
+[km] km em [tempo] minutos." (Substitua os colchetes pelas suas variáveis). */
+
+// const nomeatleta = `jackson`;
+// const kmFeitos = 5.5;
+// const tempomin = 30.
+
+
+// console.log(`O atleta ${nomeatleta} correu ${kmFeitos} km em ${tempomin} minutos`);
+
+
+
+
+
+// Objetivo: Entender como o JavaScript mostra valores de "Verdadeiro ou Falso" (Porta Lógica).
+
+// Crie uma variável idadeUsuario e coloque a sua idade.
+
+// Crie uma variável chamada podeEntrar que receba o resultado da comparação: idadeUsuario >= 18.
+
+// Mostre no console o valor da variável podeEntrar.
+
+// Dica: O resultado na tela deve ser apenas true ou false.
+
+
+// const idadeuser = 12;
+// const podeentrar = idadeuser >= 18;
+
+// console.log(podeentrar);
+
+
+
+
+
+
+// Objetivo: Criar uma função simples que recebe um parâmetro e exibe uma mensagem.
+
+// Crie uma função chamada exibirBoasVindas.
+
+// Ela deve receber um parâmetro chamado nomeUsuario.
+
+// Dentro dela, use o console.log para mostrar: "Olá [nomeUsuario], bem-vindo ao servidor!".
+
+// Para testar: Chame a função passando o seu nome: exibirBoasVindas("Jackson");.
+
+
+// const exibirBoasVindas = (username) => {
+
+//     console.log(`Olá ${username}, bem-vindo ao servidor!`);
+// }
+// exibirBoasVindas("Jackson");
+
+
+// Objetivo: Praticar o uso do return (quando a função "devolve" um valor para ser usado depois).
+
+// Crie uma função chamada calcularXP.
+
+// Ela deve receber dois parâmetros: missoesConcluidas e dificuldade (um número).
+
+// A função deve retornar o valor de: missoesConcluidas * dificuldade * 100.
+
+// Para testar:
+
+// Crie uma variável fora da função chamada meuXP.
+
+// Atribua a ela o resultado da função: let meuXP = calcularXP(5, 2);.
+
+// Mostre no console: "Meu XP total é: [meuXP]".
+
+// const calcularXP = (missoesConcluidas, dificuldade)  => { //missoesConcluidas, dificuldade pode ser string, valor, true/false etc 
+   
+//     return  missoesConcluidas * dificuldade * 100;
+
+// };
+// let meuxp = calcularXP(5,2);
+// console.log(`meu xp = ${meuxp}`)
+
+
+
+
+
+
+// 3. Nível: Difícil (O Analista de Build)
+// Objetivo: Misturar função, lógica condicional (if/else) e retorno de strings.
+
+// Crie uma função chamada analisarStatus.
+
+// Ela recebe um parâmetro chamado pontosPoder.
+
+// Lógica:
+
+// Se pontosPoder for menor que 50, retorne a frase: "Build Fraca".
+
+// Se for entre 50 e 80, retorne: "Build Equilibrada".
+
+// Se for maior que 80, retorne: "Build OP (Overpowered)".
+
+// Para testar:
+
+// Dê um console.log(analisarStatus(90)); e veja se ele imprime a mensagem correta.
+
+// const analisarStatus = (pontosPoder) => {
+
+
+//     if(pontosPoder >= 50 && pontosPoder <= 80 ){
+//         return ("Build Equilibrada")
+//      }   
+//     if(pontosPoder > 80){
+//         return ("Build OP")
+//     }
+  
+//         return ("Fraquin")
+    
+// }
+// console.log(analisarStatus(40));
+
+
+
+
+// Crie uma função chamada podeSubirDeRank. Ela deve receber dois parâmetros: xpAtual e temPasseVip (que será um valor true ou false).
+
+// Lógica:
+
+// Se o xpAtual for maior ou igual a 1000 OU (||) o temPasseVip for verdadeiro (true):
+
+// Retorne: "Upgrade Liberado!"
+
+// Caso contrário:
+
+// Retorne: "XP Insuficiente."
+
+// const podeSubirDeRank = (xpAtual, temPasseVip ) => {
+
+//     if(xpAtual >= 100 ||temPasseVip === true ){
+//         return "Upgrade Liberado"
+// }
+//     return "xp insuficiente";
+
+// }
+// console.log(podeSubirDeRank(98, false));  
+// console.log(podeSubirDeRank(50, true));  
+
+
+
+
+
+// Objetivo: Criar uma função chamada calcularDano que decide se o
+//  personagem deu um acerto crítico, um dano normal ou se o inimigo bloqueou tudo.
+
+// Parâmetros da função:
+
+// valorAtaque (um número de 1 a 100).
+
+// defesaInimigo (um número de 1 a 100).
+
+// Regras da Lógica:
+
+// Bloqueio Total: Se o valorAtaque for menor ou igual à defesaInimigo, retorne a frase: 
+// "O inimigo bloqueou o golpe!".
+
+// Acerto Crítico: Se o valorAtaque for maior que 90 (independente da defesa, a menos que seja um bloqueio), retorne: 
+// "DANO CRÍTICO! Golpe fatal!".
+
+// Dano Normal: Se o ataque for maior que a defesa, mas não for crítico, retorne: 
+// "Dano causado: [valor do ataque]!" (aqui você deve usar template strings para mostrar o número). 
+
+const calcularDano = (valorAtaque, defesaInimigo ) => {
+    // let ataque =  valorAtaque >= 1 && valorAtaque <= 100;       
+    // let defesa =  defesaInimigo >= 1 && defesaInimigo <= 100; não precisava... logica falhou ao perceber q os 
+        //parametros do if else poderia atender ja ao requisito 1 a 100, n preciso declarar isso antes.. 
+
+        //const valorvalido = valorAtaque >= 1 && valorAtaque <= 100 && defesaInimigo >= 1 && defesaInimigo <= 100;
+            // <input type="number" id="ataque" min="1" max="100">
+            // para travar do usuario usar outro numero além do do estipulado.. 
+                     
+            //ou
+            // O valor nunca será menor que 1 nem maior que 100, 
+    // o JS "força" ele a entrar no limite.
+    //valorAtaque = Math.min(Math.max(valorAtaque, 1), 100);
+    //defesaInimigo = Math.min(Math.max(defesaInimigo, 1), 100);
+
+    //valorAtaque = Math.min(  Math.max(valorAtaque, 1)  ,  100  );
+                    //↑         └──────────┬──────────┘      ↑
+                //Reduz p/ 100       Calcula o Piso        Teto
+
+
+
+    if(valorAtaque < 1 || valorAtaque > 100 || defesaInimigo < 1 || defesaInimigo > 100 ) {
+      return `Error um ataque ou defesa não pode ultrapssar 100 pontos ou ser negativo`
+      //manter a logica do sistema que recebe passivamente os dados, mas esta na linha 1140 
+        //para fazer o jeito que trava a condição sem precisar colocar condições if/else 
+    }
+
+    if(defesaInimigo >= valorAtaque) {
+        return `"O inimigo bloqueou o golpe!"`
+    }
+    if(valorAtaque > 90 && valorAtaque <= 100 ) {
+        return `DANO CRÍTICO! Golpe fatal!`
+    }   
+    if(valorAtaque > defesaInimigo){
+        return `Dano causado: ${valorAtaque}!`
+    }
+     
+        return;
+         
 }
+         
+     
 
-processarpagamentos();  
+    
 
 
-
+calcularDano();
+console.log(calcularDano(95, 50)); // Deve retornar: "DANO CRÍTICO! Golpe fatal!"
+console.log(calcularDano(30, 80)); // Deve retornar: "O inimigo bloqueou o golpe!"
+console.log(calcularDano(70, 40)); // Deve retornar: "Dano causado: 70!"
+console.log(calcularDano(40, 101)); // error
