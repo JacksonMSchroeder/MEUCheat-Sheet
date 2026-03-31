@@ -95,6 +95,16 @@ console.log(cor);
 
 */
 
+// let num1 = 13;
+// let num2 = 234;
+
+// const soma = num1 + num2;
+// const diminuir = num1 - num2;
+// const multiplicar = num1 * num2;
+// const dividir = num1 / num2; 
+
+// console.log(dividir);
+
 
 
 /*
@@ -1132,54 +1142,154 @@ Mostre na tela uma frase única que diga: "O atleta [nome] correu
 // Dano Normal: Se o ataque for maior que a defesa, mas não for crítico, retorne: 
 // "Dano causado: [valor do ataque]!" (aqui você deve usar template strings para mostrar o número). 
 
-const calcularDano = (valorAtaque, defesaInimigo ) => {
-    // let ataque =  valorAtaque >= 1 && valorAtaque <= 100;       
-    // let defesa =  defesaInimigo >= 1 && defesaInimigo <= 100; não precisava... logica falhou ao perceber q os 
-        //parametros do if else poderia atender ja ao requisito 1 a 100, n preciso declarar isso antes.. 
+// const calcularDano = (valorAtaque, defesaInimigo ) => {
+//     // let ataque =  valorAtaque >= 1 && valorAtaque <= 100;       
+//     // let defesa =  defesaInimigo >= 1 && defesaInimigo <= 100; não precisava... logica falhou ao perceber q os 
+//         //parametros do if else poderia atender ja ao requisito 1 a 100, n preciso declarar isso antes.. 
 
-        //const valorvalido = valorAtaque >= 1 && valorAtaque <= 100 && defesaInimigo >= 1 && defesaInimigo <= 100;
-            // <input type="number" id="ataque" min="1" max="100">
-            // para travar do usuario usar outro numero além do do estipulado.. 
-                     
-            //ou
-            // O valor nunca será menor que 1 nem maior que 100, 
-    // o JS "força" ele a entrar no limite.
-    //valorAtaque = Math.min(Math.max(valorAtaque, 1), 100);
-    //defesaInimigo = Math.min(Math.max(defesaInimigo, 1), 100);
+//         //const valorvalido = valorAtaque >= 1 && valorAtaque <= 100 && defesaInimigo >= 1 && defesaInimigo <= 100;
+//             // <input type="number" id="ataque" min="1" max="100">
+//             // para travar do usuario usar outro numero além do do estipulado.. 
 
-    //valorAtaque = Math.min(  Math.max(valorAtaque, 1)  ,  100  );
-                    //↑         └──────────┬──────────┘      ↑
-                //Reduz p/ 100       Calcula o Piso        Teto
+//                                 // ||     
+            
+//             // O valor nunca será menor que 1 nem maior que 100, 
+//     // o JS "força" ele a entrar no limite.
+//     //valorAtaque = Math.min(Math.max(valorAtaque, 1), 100);
+//     //defesaInimigo = Math.min(Math.max(defesaInimigo, 1), 100);
+
+//     //valorAtaque = Math.min(  Math.max(valorAtaque, 1)  ,  100  );
+//                     //↑         └──────────┬──────────┘      ↑
+//                 //Reduz p/ 100       Calcula o Piso        Teto
 
 
 
-    if(valorAtaque < 1 || valorAtaque > 100 || defesaInimigo < 1 || defesaInimigo > 100 ) {
-      return `Error um ataque ou defesa não pode ultrapssar 100 pontos ou ser negativo`
-      //manter a logica do sistema que recebe passivamente os dados, mas esta na linha 1140 
-        //para fazer o jeito que trava a condição sem precisar colocar condições if/else 
-    }
+//     if(valorAtaque < 1 || valorAtaque > 100 || defesaInimigo < 1 || defesaInimigo > 100 ) {
+//       return `Error um ataque ou defesa não pode ultrapssar 100 pontos ou ser negativo`
+//       //manter a logica do sistema que recebe passivamente os dados, mas esta na linha 1140 
+//         //para fazer o jeito que trava a condição sem precisar colocar condições if/else 
+//     }
 
-    if(defesaInimigo >= valorAtaque) {
-        return `"O inimigo bloqueou o golpe!"`
-    }
-    if(valorAtaque > 90 && valorAtaque <= 100 ) {
-        return `DANO CRÍTICO! Golpe fatal!`
-    }   
-    if(valorAtaque > defesaInimigo){
-        return `Dano causado: ${valorAtaque}!`
-    }
+//     if(defesaInimigo >= valorAtaque) { // VALORES IGUAIS SÓ COM O > TAVA DANDO UNDEFIENED, ATENÇÃO COM A LOGICA
+//         return `"O inimigo bloqueou o golpe!"`
+//     }
+//     if(valorAtaque > 90 && valorAtaque <= 100 ) {
+//         return `DANO CRÍTICO! Golpe fatal!`
+//     }   
+//     if(valorAtaque > defesaInimigo){
+//         return `Dano causado: ${valorAtaque}!`
+//     }
      
-        return;
+//         return;
          
-}
+// }
          
      
 
     
 
 
-calcularDano();
-console.log(calcularDano(95, 50)); // Deve retornar: "DANO CRÍTICO! Golpe fatal!"
-console.log(calcularDano(30, 80)); // Deve retornar: "O inimigo bloqueou o golpe!"
-console.log(calcularDano(70, 40)); // Deve retornar: "Dano causado: 70!"
-console.log(calcularDano(40, 101)); // error
+// calcularDano();
+// console.log(calcularDano(95, 50)); // Deve retornar: "DANO CRÍTICO! Golpe fatal!"
+// console.log(calcularDano(30, 80)); // Deve retornar: "O inimigo bloqueou o golpe!"
+// console.log(calcularDano(70, 40)); // Deve retornar: "Dano causado: 70!"
+// console.log(calcularDano(40, 101)); // error
+
+
+///
+
+
+// Exercício: O Coletor de XP (Experiência)
+// Cenário: Seu herói começa uma jornada. Ele tem uma quantidade inicial de XP e, 
+// conforme derrota monstros, ele ganha mais pontos. Se ele atingir um certo limite, ele sobe de nível.
+
+// Objetivo:
+
+// Crie uma variável chamada xpAtual começando em 0.
+
+// Crie uma função chamada ganharExp que recebe um parâmetro pontos.
+
+// Dentro da função:
+
+// Some os pontos ao xpAtual (use a estrutura variavel = variavel + x).
+
+// Se o xpAtual passar de 100, exiba: "LEVEL UP!" e resete o xpAtual para 0.
+
+// Senão, exiba apenas: "XP atual: [valor]".
+
+
+
+// const ganharExp = (pontos) => { //criar pontos que pode ser o numero, ou seja, ele vai sempre receber oq eu quiser
+// let xpAtual = 0;
+// xpAtual +=  pontos;
+// xpAtual = Math.min(Math.max(xpAtual, 1), 100);
+
+//     return `Xp atual: ${xpAtual}`
+// }
+// ganharExp();
+// console.log(ganharExp(102)); // XP vira 10
+// console.log(ganharExp(25)); // XP vira 35 (10 + 25)
+// console.log(ganharExp(5));  // XP vira 40 (35 + 5)) 
+
+
+/////////
+
+
+// 1. Nível: Tranquilo (Manipulando a Mochila)
+// Objetivo: Criar, adicionar e acessar posições específicas.
+
+// Crie um array chamado inventario com: "Espada", "Escudo", "Poção".
+
+// Adicione o item "Adaga" ao final da lista usando o .push().
+
+// Mude o primeiro item (índice 0) de "Espada" para "Espada de Ferro".
+
+// Dê um console.log no terceiro item da lista.
+
+
+// const inventario = ["Espada", "Escudo", "Poção" ];
+
+// inventario.push(`Adaga`);
+//  inventario[0] = `Espada de Ferro`;
+//     console.log(inventario[3]);
+
+
+////////////
+
+// 2. Nível: Médio (Varrendo a Lista)
+// Objetivo: Usar o loop for para ler a lista inteira automaticamente.
+
+// Crie um array chamado precos com os valores: 10.50, 20.00, 5.00, 15.00.
+
+// Crie um for que comece no 0 e vá até o final da lista (precos.length).
+
+// Dentro do for, mostre no console: "O item custa: R$ [valor]".
+
+const precos = () => {
+    const valores = [10.50, 20.00, 5.00, 15.00];
+
+    const terceirovalor = valores [2];    //se eu sei que os valores e eu quero pegar especificamente algo dentro da lista 
+    console.log(`o terceiro valor é ${terceirovalor}`);
+
+    for(let i = 0; i < valores.length; i++){   //percorrer a lista
+
+        console.log(`O itens custam respectivamente : ${valores[i]}`);
+    
+    }
+
+
+}
+precos();
+
+// const compras = [ 
+//     { id: 1, usuario: "Jackson", valor: 100, tipo: "VIP" },
+//     { id: 2, usuario: "Larissa", valor: 50, tipo: "comum" },  
+//     { id: 3, usuario: "Tainara", valor: 200, tipo: "VIP" },
+//     { id: 4, usuario: "Budié", valor: 80, tipo: "comum" }, // <-- Esse é o índice 3
+//     { id: 5, usuario: "Faith", valor: 150, tipo: "VIP" }
+// ];
+
+
+// const cliente4tipo = compras[3].tipo;    PARA buscar um item especifico numa lista com objetos aRRAYname[i].caractristica 
+
+// console.log(cliente4tipo); // Saída: "comum"

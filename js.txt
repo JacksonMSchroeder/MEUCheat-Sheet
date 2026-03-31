@@ -3,36 +3,71 @@ const DADOMAE = (PARAMETROS) => {  TRATATIVA RETORNO }   if(se) else(nao) while(
 
 //////////////
 
-// Compara valores
-==    // Igual a
-!=    // Diferente de
->     // Maior que
-<     // Menor que
->=    // Maior ou igual
-<=    // Menor ou igual
+// Compara valores                                              IMPORTANTE !!!IMPORTANTE !!! 
+==     Igual a
+!=     Diferente de
+>      Maior que
+<     Menor que
+>=     Maior ou igual
+<=     Menor ou igual
 
-&&    // E (As duas coisas tem que ser verdade) 
-||    // OU (Pelo menos uma tem que ser verdade)
-!     // NÃO (Inverte: o que era true vira false)
+&&     E (As duas coisas tem que ser verdade) 
+||     OU (Pelo menos uma tem que ser verdade)
+!      NÃO (Inverte: o que era true vira false)
 
-=     // Recebe valor
-+=    // Soma e guarda (x = x + y)
--=    // Subtrai e guarda
-++    // Soma 1 (Incremento)
---    // Subtrai 1 (Decremento)
-isNaN() // não numero 
+=      Recebe valor
++=     Soma e guarda (x = x + y)
+-=     Subtrai e guarda
+++     Soma 1 (Incremento)
+--     Subtrai 1 (Decremento)
+isNaN()   não numero 
 
 ////////////
 
+Principais Operadores Aritméticos:                                              IMPORTANTE!!!
+
+Adição (+): Soma dois valores. Também usado para concatenar strings.
+
+Subtração (-): Subtrai o segundo operando do primeiro.
+
+Multiplicação (*): Multiplica dois valores.
+
+Divisão (/): Divide o primeiro operando pelo segundo.
+
+Módulo (%): Retorna o resto da divisão inteira entre dois números.
+
+Exponenciação (**): Eleva o primeiro operando à potência do segundo (ES6).
+
+Incremento (++): Aumenta o valor da variável em 1.
+
+Decremento (--): Diminui o valor da variável em 1. 
+
+////
+
 Fórmula: Math.min(Math.max(VALOR, MIN), MAX)
+
 valor = Math.min(Math.max(valor, 1), 100);
+
+mathmax sempre vai ser o piso, o começom o mathmix sempre o teto o ultimo   IMPORTANTE !!!IMPORTANTE !!!
 
 variavel = Math.max(valor, 1); piso
 
-valor = Math.min(valor, 100); teto
+variavel = Math.min(valor, 100); teto
+
+/////////
+
+MANIPULAR LISTAS                            !!IMPORTANTE, FUI TENTAR ARRAYS MAIS COMPLEXAS E TRAVEI POR N ENTENDER ISSO BEM
+const VARIAVEL = ["Espada", "Escudo", "Poção" ];
+
+VARIAVEL.push(`Adaga`);
+ VARIAVEL[0] = `Espada de Ferro`;
+    console.log(VARIAVEL[3]);
 
 
-📥 1. Adicionar e Remover (Gerenciamento de Pilha)
+////////
+
+
+📥 1. Adicionar e Remover (Gerenciamento de Pilha)              !!IMPORTANTE para dar os comandos.. 
 
 Perfeito para quando um novo jogador entra na lista de suspeitos ou uma carga é despachada.
 
@@ -75,20 +110,14 @@ Isso aqui vai substituir os seus for gigantes no futuro. É o que chamamos de M�
 .join(" "): Junta todos os itens da array em uma única String (frase), separando pelo que você colocar no parêntese.
 
 
-
-
-
-
-
-
-
 ////
 
 
-typeof	Investiga o tipo do dado.
+typeof	Investiga o tipo do dado.                                                       IMPORTANTE !!!
 
 
-!isNaN(): É universal. Qualquer programador no mundo bate o olho e sabe: 
+!isNaN():                                                                               IMPORTANTE !!!
+ É universal. Qualquer programador no mundo bate o olho e sabe:                    
 "Ah, ele está garantindo que isso é um número válido". 
 
 
