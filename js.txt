@@ -59,12 +59,26 @@ variavel = Math.min(valor, 100); teto
 MANIPULAR LISTAS                            !!IMPORTANTE, FUI TENTAR ARRAYS MAIS COMPLEXAS E TRAVEI POR N ENTENDER ISSO BEM
 const VARIAVEL = ["Espada", "Escudo", "Poção" ];
 
-VARIAVEL.push(`Adaga`);
+VARIAVEL.push(`Adaga`); < ADD ITEM NA LISTA
  VARIAVEL[0] = `Espada de Ferro`;
     console.log(VARIAVEL[3]);
 
 
 ////////
+
+// const hoje = new Date();
+// if (hoje.getDay() === 3) {                      //lidando com dias para semana               !!IMPORTANTE dias 
+//     console.log("Desconto de terça");
+// } else {
+//     console.log("Hoje não tem desconto");
+// }
+ 
+
+// const hoje = new Date();                                                                                 //horario !IMPORTANTE
+// console.log(hoje.getHours(), hoje.getMinutes(), hoje.getSeconds(), hoje.getMilliseconds());  //para lidar com horarios 
+
+
+/////////////
 
 
 📥 1. Adicionar e Remover (Gerenciamento de Pilha)              !!IMPORTANTE para dar os comandos.. 

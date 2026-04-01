@@ -1250,8 +1250,8 @@ Mostre na tela uma frase única que diga: "O atleta [nome] correu
 // const inventario = ["Espada", "Escudo", "Poção" ];
 
 // inventario.push(`Adaga`);
-//  inventario[0] = `Espada de Ferro`;
-//     console.log(inventario[3]);
+// inventario[0] = `Espada de Ferro`;
+// console.log(inventario[3]);
 
 
 ////////////
@@ -1265,21 +1265,21 @@ Mostre na tela uma frase única que diga: "O atleta [nome] correu
 
 // Dentro do for, mostre no console: "O item custa: R$ [valor]".
 
-const precos = () => {
-    const valores = [10.50, 20.00, 5.00, 15.00];
+// const precos = () => {
+//     const valores = [10.50, 20.00, 5.00, 15.00];
 
-    const terceirovalor = valores [2];    //se eu sei que os valores e eu quero pegar especificamente algo dentro da lista 
-    console.log(`o terceiro valor é ${terceirovalor}`);
+//     const terceirovalor = valores [2];    //se eu sei que os valores e eu quero pegar especificamente algo dentro da lista 
+//     console.log(`o terceiro valor é ${terceirovalor}`);
 
-    for(let i = 0; i < valores.length; i++){   //percorrer a lista
+//     for(let i = 0; i < valores.length; i++){   //percorrer a lista
 
-        console.log(`O itens custam respectivamente : ${valores[i]}`);
+//         console.log(`O itens custam respectivamente : ${valores[i]}`);
     
-    }
+//     }
 
 
-}
-precos();
+// }
+// precos();
 
 // const compras = [ 
 //     { id: 1, usuario: "Jackson", valor: 100, tipo: "VIP" },
@@ -1293,3 +1293,195 @@ precos();
 // const cliente4tipo = compras[3].tipo;    PARA buscar um item especifico numa lista com objetos aRRAYname[i].caractristica 
 
 // console.log(cliente4tipo); // Saída: "comum"
+
+///////
+
+// 3. Nível: Responsa (O Localizador)
+// Objetivo: Usar lógica dentro do array para encontrar um valor específico.
+
+// Crie um array chamado jogadores com: "Jackson", "Marcos", "Larissa", "Budié".
+
+// Crie um for para percorrer a lista.
+
+// Lógica: Se o nome do jogador for igual a "Budié", mostre: "Parceiro encontrado!".
+
+// Se não for, mostre: "Procurando...".
+
+// const Localizador = () => {
+//     const jogadores = ["Jackson", "Marcos", "Larissa", "Budié"];
+
+//     for(let i = 0; i < jogadores.length; i++){
+
+//         if(jogadores[i] === "Budié"){ 
+            
+//             //console.log(`Parceiro encontrado! ${i}`);
+//             return `Parceiro Budié encontrado!  `
+//         }
+       
+//             console.log( `Procurando... ${jogadores[i]} não é sua busca`); console.log //da eco no terminal se usado no loop, vai aparecer para 
+//                                         //   tudo por causa do [i]
+
+//              //return "Procurando..." 
+
+//             // return "Procurando..." usar assim ele vai parar o loop na primeira volta "Jackson"
+        
+           
+            
+//     }
+//       return "Procurando..." 
+// }
+// Localizador();
+// console.log(Localizador());
+
+//////////
+
+// Crie const notas = [10, 20, 30];.
+
+// Crie let total = 0; antes do loop.
+
+// No for, faça: total = total + notas[i];.
+
+// Dê o return total; fora das chaves do for.
+
+
+
+// const note = () => {
+// const notas = [10, 20, 30];
+// let total = 0;
+
+// for(let i = 0; i < notas.length; i++){
+
+//     total = total + notas[i];                           //ACUMULADOR !! variavel += array[i]
+
+
+// }
+// return total;
+// }
+// note();
+// console.log(note());
+
+//////
+
+// Crie um array const vendas = [50, 150, 200, 30];.
+
+// Crie uma variável let totalVendasGrandes = 0;.
+
+// No for, use um if para verificar: Se a venda atual (vendas[i]) for maior que 100:
+
+// Acumule no total usando o +=.
+
+// Fora do loop, dê o return no total.     //primeiro desafio 
+
+
+
+// ++ há um imposto de 10% no valortotal //pensando em algo que dificulte
+
+// const vendas = () => {
+//     const vendas = [50, 150, 200, 30];
+//     //let totalVendasGrandes = 0;
+//     let totalvendas = 0;
+//     let imposto = 0;
+
+//     for(let i = 0; i < vendas.length; i++){
+
+       
+    
+//         if(vendas[i] >= 0 && vendas[i] > vendas.length){ 
+//         //totalVendasGrandes += vendas[i]; //primeiro desafio
+//                         //+= acumulador 
+//         totalvendas += vendas[i];
+         
+
+//         }
+        
+        
+//         imposto = totalvendas  * 0.1;
+
+    
+        
+//     }
+//     //return `Suas vendas deram: ${totalvendas}, isso gerou um imposto de(10%): ${imposto} Seu faturamento foi: ${totalvendas - imposto}`;
+//     //return totalvendas - imposto; //retornar com imposto 
+//     //return totalvendas * 0.1; // retornar com imposto, sabendo a porcentagem do desconto n precisa colocar ele no cod
+
+    
+      
+    
+
+     
+
+// }
+// console.log(vendas());
+
+
+
+
+// Aqui, o desafio é lidar com Objetos dentro da lista e usar um Filtro (o if) para somar apenas o que interessa.
+
+// 🛡️ Desafio: O Relatório de Serviços
+// Cenário: Você recebeu uma lista de movimentações do dia. Algumas são vendas de produtos
+//  (pomada, shampoo) e outras são serviços (corte, barba). O dono quer saber o faturamento bruto apenas dos serviços, 
+// para calcular a comissão dos barbeiros.
+
+// Sua Missão:
+// Crie a lista de objetos:
+
+// JavaScript
+// const movimentacoes = [
+//     { tipo: "serviço", valor: 50 },  // Corte
+//     { tipo: "produto", valor: 30 },  // Pomada
+//     { tipo: "serviço", valor: 70 },  // Barba
+//     { tipo: "produto", valor: 100 }  // Kit Presente
+// ];
+// Crie uma variável let totalServicos = 0;.
+
+// Use o for para percorrer a lista.
+
+// Dentro do loop, use um if para verificar:
+
+// SE o tipo daquela linha for igual a "serviço".
+
+// ENTÃO acumule o valor no totalServicos.
+
+// Fora do loop, calcule um imposto de 10% sobre esse total de serviços.
+
+// Retorne um Objeto contendo: { bruto, imposto, liquido }.
+
+
+// se tiver só 1 serviço, e o valor for exatamente 50, de 5% de desconto
+
+const desconto = 0.05
+const movement = () => {
+    const movimentacoes = [
+        { tipo: "serviço", valor: 50 },  // Corte
+        { tipo: "produto", valor: 30 },  // Pomada
+        //{ tipo: "serviço", valor: 70 },  // Barba
+        { tipo: "produto", valor: 100 }  // Kit Presente
+    ];
+
+    let quantidadeservico = 0;
+    let servico = 0;
+    let imposto = 0;
+
+
+    for(let i = 0; i < movimentacoes.length; i++ ){
+        if(movimentacoes[i].tipo === "serviço"){
+            servico += movimentacoes[i].valor;
+            quantidadeservico += 1;
+        } 
+        
+        //imposto = servico * 0.1; // precisa estar fora do loop se não ele roda junto ai vai somando conforme as vzs q roda o loop
+        //return `seu total de ganho com os serviços foi de ${servico} e o imposto foi ${imposto} e o liquido foi ${servico - imposto}`  
+    }
+    console.log("antes desconto", servico);
+    if (quantidadeservico === 1 && servico === 50) {
+        servico = servico * (1 - desconto);
+    }
+    console.log("depois desconto", servico);
+    imposto = servico * 0.1;
+   
+    //return `seu total de ganho com os serviços foi de ${servico} e o imposto foi ${imposto} e o liquido foi ${servico - imposto}`
+    return servico - quantidadeservico;
+}   
+console.log(movement()); 
+
