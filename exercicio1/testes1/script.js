@@ -1448,40 +1448,339 @@ Mostre na tela uma frase única que diga: "O atleta [nome] correu
 // Retorne um Objeto contendo: { bruto, imposto, liquido }.
 
 
-// se tiver só 1 serviço, e o valor for exatamente 50, de 5% de desconto
+// se tiver só 1 serviço, e o valor for exatamente 50, de 5% de desconto / primeira compra = disconto
 
-const desconto = 0.05
-const movement = () => {
-    const movimentacoes = [
-        { tipo: "serviço", valor: 50 },  // Corte
-        { tipo: "produto", valor: 30 },  // Pomada
-        //{ tipo: "serviço", valor: 70 },  // Barba
-        { tipo: "produto", valor: 100 }  // Kit Presente
-    ];
+// const desconto = 0.05
+// const movement = () => {
+//     const movimentacoes = [
+//         { tipo: "serviço", valor: 50 },  // Corte
+//         { tipo: "produto", valor: 30 },  // Pomada
+//         //{ tipo: "serviço", valor: 70 },  // Barba
+//         { tipo: "produto", valor: 100 }  // Kit Presente
+//     ];
 
-    let quantidadeservico = 0;
-    let servico = 0;
-    let imposto = 0;
+//     let quantidadeservico = 0;
+//     let servico = 0;
+//     let imposto = 0;
 
 
-    for(let i = 0; i < movimentacoes.length; i++ ){
-        if(movimentacoes[i].tipo === "serviço"){
-            servico += movimentacoes[i].valor;
-            quantidadeservico += 1;
-        } 
+//     for(let i = 0; i < movimentacoes.length; i++ ){
+//         if(movimentacoes[i].tipo === "serviço"){
+//             servico += movimentacoes[i].valor;
+//             quantidadeservico += 1;
+//         } 
         
-        //imposto = servico * 0.1; // precisa estar fora do loop se não ele roda junto ai vai somando conforme as vzs q roda o loop
-        //return `seu total de ganho com os serviços foi de ${servico} e o imposto foi ${imposto} e o liquido foi ${servico - imposto}`  
-    }
-    console.log("antes desconto", servico);
-    if (quantidadeservico === 1 && servico === 50) {
-        servico = servico * (1 - desconto);
-    }
-    console.log("depois desconto", servico);
-    imposto = servico * 0.1;
+//         //imposto = servico * 0.1; // precisa estar fora do loop se não ele roda junto ai vai somando conforme as vzs q roda o loop
+//         //return `seu total de ganho com os serviços foi de ${servico} e o imposto foi ${imposto} e o liquido foi ${servico - imposto}`  
+//     }
+//     console.log("antes desconto", servico);
+//     if (quantidadeservico === 1 && servico === 50) {
+//         servico = servico * (1 - desconto);
+//     }
+//     console.log("depois desconto", servico);
+//     imposto = servico * 0.1;
    
-    //return `seu total de ganho com os serviços foi de ${servico} e o imposto foi ${imposto} e o liquido foi ${servico - imposto}`
-    return servico - quantidadeservico;
-}   
-console.log(movement()); 
+//     //return `seu total de ganho com os serviços foi de ${servico} e o imposto foi ${imposto} e o liquido foi ${servico - imposto}`
+//     return servico - quantidadeservico;
+// }   
+// console.log(movement()); 
 
+
+
+
+
+// O Desafio: Sistema de Checkout "Fidelidade 10"
+// Imagine que você está desenvolvendo o sistema para uma barbearia ou uma cafeteria. As regras de negócio são:
+
+// Primeira Compra: Sempre tem 15% de desconto (Boas-vindas).
+
+// Compras Comuns: Valor integral.
+
+// Décima Compra: O cliente atinge o marco de 10 serviços e ganha 30% de desconto naquela compra específica.
+
+
+// const cafeteria = () => {
+//     const compra = [{ "compra": 1, "original": 50, "final": 42.5, "tipo": "Boas-vindas" },
+//   { "compra": 2, "original": 50, "final": 50, "tipo": "Normal" },
+//   { "compra": 3, "original": 50, "final": 50, "tipo": "Normal" },
+//   { "compra": 4, "original": 50, "final": 50, "tipo": "Normal" },
+//   { "compra": 5, "original": 50, "final": 50, "tipo": "Normal" },
+//   { "compra": 6, "original": 50, "final": 50, "tipo": "Normal" },
+//   { "compra": 7, "original": 50, "final": 50, "tipo": "Normal" },
+//   { "compra": 8, "original": 50, "final": 50, "tipo": "Normal" },
+//   { "compra": 9, "original": 50, "final": 50, "tipo": "Normal" },
+//   { "compra": 10, "original": 50, "final": 35, "tipo": "Fidelidade 10" }, // 30% OFF
+//   { "compra": 11, "original": 50, "final": 50, "tipo": "Normal" },
+//   { "compra": 12, "original": 50, "final": 50, "tipo": "Normal" },
+//   { "compra": 13, "original": 50, "final": 50, "tipo": "Normal" },
+//   { "compra": 14, "original": 50, "final": 50, "tipo": "Normal" },
+//   { "compra": 15, "original": 50, "final": 50, "tipo": "Normal" },
+//   { "compra": 16, "original": 50, "final": 50, "tipo": "Normal" },
+//   { "compra": 17, "original": 50, "final": 50, "tipo": "Normal" },
+//   { "compra": 18, "original": 50, "final": 50, "tipo": "Normal" },
+//   { "compra": 19, "original": 50, "final": 50, "tipo": "Normal" },
+//   { "compra": 20, "original": 50, "final": 35, "tipo": "Fidelidade 20" }, // 30% OFF
+//   { "compra": 21, "original": 50, "final": 50, "tipo": "Normal" },
+//   { "compra": 22, "original": 50, "final": 50, "tipo": "Normal" },
+//   { "compra": 23, "original": 50, "final": 50, "tipo": "Normal" },
+//   { "compra": 24, "original": 50, "final": 50, "tipo": "Normal" },
+//   { "compra": 25, "original": 50, "final": 50, "tipo": "Normal" },
+//   { "compra": 26, "original": 50, "final": 50, "tipo": "Normal" },
+//   { "compra": 27, "original": 50, "final": 50, "tipo": "Normal" },
+//   { "compra": 28, "original": 50, "final": 50, "tipo": "Normal" },
+//   { "compra": 29, "original": 50, "final": 50, "tipo": "Normal" },
+//   { "compra": 30, "original": 50, "final": 35, "tipo": "Fidelidade 30" }  // 30% OFF
+// ];
+
+// let numerodecompra = 0;
+// let valornormal = 0;
+// let primeiracompra = 0;
+// //let desconto10 = 0;
+// let desconto10 = []; // para n somar no loop cada desconto acumulativo, declara array, .push
+
+// for(let i = 0; i < compra.length; i++){  
+
+//     numerodecompra =  compra[i].compra;
+//     valornormal = compra[i].original;
+    
+
+//     if(numerodecompra === 1){
+//         primeiracompra = compra[0].original * 0.85  
+//     }
+//     if(numerodecompra % 10 === 0 ){
+//         //desconto10 = compra[i].original * 0.70
+//         desconto10.push(compra[i].original * 0.70);
+        
+
+//     }
+
+// }
+
+
+// return `Primeira compra ${primeiracompra} /  se for a décima compra ${desconto10} / se for sem promo ${valornormal}` 
+
+// }   
+// console.log(cafeteria());   
+
+
+
+
+
+
+// Alerta de Estoque Baixo: Se a quantidade for menor que 5, adicione uma propriedade status: "REABASTECER".
+
+// Desconto de Lote (Atacado): Se o cliente comprar mais de 10 unidades de uma vez, o precoUnitario recebe 20% de desconto.
+
+// Valor de Patrimônio: Crie uma propriedade totalEmEstoque que é precoUnitario * quantidade.
+
+// Tente completar esse código:
+// JavaScript
+// const oficina = () => {
+//     const estoque = [
+//         { nome: "Furadeira Makita", precoUnitario: 500, quantidade: 3 },
+//         { nome: "Jogo de Brocas Vonder", precoUnitario: 80, quantidade: 15 },
+//         { nome: "Disco de Corte", precoUnitario: 25, quantidade: 60 },
+//         { nome: "Esmerilhadeira", precoUnitario: 350, quantidade: 4 },
+//         { nome: "Parafusadeira", precoUnitario: 420, quantidade: 12 }
+//     ];
+    
+// Diferentes Tipos de Dados: Você está lidando com strings, números inteiros e decimais.
+
+// Múltiplas Condições: O sistema precisa checar se falta produto E se o preço muda pelo volume.
+
+// Transformação de Objeto: Você está pegando um objeto simples e gerando um "Resumo" mais complexo.
+
+
+
+// const oficina = () => {
+//     const estoque = [
+//         { nome: "Furadeira Makita", precoUnitario: 500, quantidade: 3 },
+//         { nome: "Jogo de Brocas Vonder", precoUnitario: 80, quantidade: 15 },
+//         { nome: "Disco de Corte", precoUnitario: 25, quantidade: 60 },
+//         { nome: "Esmerilhadeira", precoUnitario: 350, quantidade: 4 },
+//         { nome: "Parafusadeira", precoUnitario: 420, quantidade: 12 }
+//     ]; 
+
+//     let quantidade = 0;
+//     let precoUnitario = 0;
+//     let totalEmEstoque = 0;
+//     //let nomeproduto = String; assim ela vira um string construtura, para dar variavel de testo basta ""
+//     let nomeproduto = "";
+
+//     for(let i = 0; i < estoque.length; i++){
+
+//         //eu coloco acumuladores depois do for para n comprometer o loop, mas n tem problemas eu usar atribuição antes
+
+//         nomeproduto = estoque[i].nome;
+//         quantidade = estoque[i].quantidade;
+//         precoUnitario = estoque[i].precoUnitario;
+
+//         if(estoque[i].quantidade <= 5){
+//             estoque[i].status = "Reabastecer" //.status = nova "gaveta" para o array
+//              console.log(`o item ${nomeproduto} precisa ser reabastecido` );
+//         }
+//          //totalEmEstoque += precoUnitario * quantidade; para calcular sem os descontos, antes das regras do desconto
+//         if(estoque[i].quantidade >= 10){
+//             precoUnitario = estoque[i].precoUnitario * 0.8; //no geral para dar desconto eu sempre uso o valor que falta do 100%, se quer 60% de desconto eu coloco * 0.4
+            
+//             console.log(`Promoção ativa, comprou mais de 10 produtos.` );
+//         }
+
+//          totalEmEstoque += precoUnitario * quantidade; // para calcular com os descontos, depois da regra 
+//         //eu coloco acumuladores depois do for para n comprometer o loop, mas n tem problemas eu usar atribuição antes
+
+           
+//         //totalEmEstoque += estoque[i].precoUnitario * estoque[i].quantidade; n precisa dos [i] pq eu declarei lá em cima do que se trata 
+//         // tinha esqueci de fazer ele acumulador ja quer era uma logica de somar todas as quantidades +=
+        
+//             console.log(estoque[i].quantidade ,  "o tipo quantidade", typeof quantidade);
+//             console.log(estoque[i].precoUnitario ,  "o tipo precoUnitario", typeof precoUnitario);
+//             console.log(estoque[i].nome , "o tipo nomeproduto", typeof nomeproduto);
+//     }
+
+
+//         console.log(`Patrimônio de R$ ${totalEmEstoque}`)
+//         console.log(`==============//===============`)
+//         console.log(totalEmEstoque , "o tipo totalEmEstoque", typeof totalEmEstoque);
+//         console.log(`==============//===============`)
+//     return `produto ${nomeproduto , typeof nomeproduto} quantidade de preço do estoque ${totalEmEstoque, typeof totalEmEstoque}
+//      a quantidade comprada${quantidade }`
+    
+// }  
+// oficina(); 
+
+
+
+    // console.log(`Produto Atual: ${nomeproduto[i]}`);
+    // console.log(`Valor calculado nesta volta: R$ ${totalEmEstoque}`);
+    // console.log(`-----------------------------`);
+
+
+
+
+
+
+    //desafio pessoal, criar um sistema que digito um numero de 1 a 26 e ele retorna a quantidade de letras correspondente do alfabeto
+
+   // plus, só retornar 1 a que foi digitada 
+
+    // const contagemalfabeto = (numerodigitado) => { //preciso estudar quando coloco no parametro ou declaro depois... 
+    //     const alfabeto = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"];
+    //      let listaalfabeto = [];
+    //     //let numerodigitado = 0; aq ou no parametro? entender as diferenças !!!!!!!!!!!!!IMPORTANTE
+
+    //     //Para um sistema de input (onde o usuário escolhe), use sempre o Parâmetro. usar let numerodigitado = 0; é usar valor fixo num harcoding
+    //     //imaginar o hardcoding nesse sentido como um numeru estacionario no cod, n faz sentido pq preciso do input para devolver algo ! 
+    //     // ou seja, um valor estacionario(let numerodigitado = 0;) ele n vai ditar o retorno do input, o input n vai manipular ele dentro do cod assim !! 
+
+    //      if(numerodigitado < 1 || numerodigitado > 26){
+    //         //regra para delimitar as "regras do jogo", por isso vou usar o numerodigitado no let do for...
+    //             return "Ops, só pode digitar numeros entre 1 a 26!"
+    //         }
+    //         //listaalfabeto += alfabeto; viajei, vou conconcatenar o texto fazendo isso, vai um loop de a, ab, abc, abcd, ou seja, não!!
+    //       for(let i = 0; i < numerodigitado; i++){ //no começo usei .length, isso só vale quando quero puxar toda a lista da array !!!!! 
+    //        //tbm usei o alfabeto invez do numerodigitado no let =, isso foi ruim uma vez q vou manipular o numero entre 1 a 26 digito.. 
+
+    //         //i < alfabeto.length: O loop percorreria as 26 letras sempre, ignorando o que o usuário pediu.
+    //         //i < numerodigitado: O loop para exatamente onde o usuário mandou. Se ele digitou 3, o i vai ser 0, 1, 2 e para.
+
+
+    //         listaalfabeto.push(alfabeto[i]); //retorna a lista de todas as letras correspondentes ao numero 
+    //         //listaalfabeto = alfabeto[i]; // para retornar só 1 valor !!!! 
+           
+
+    //          //const listaalfabeto = alfabeto [numerodigitado - 1]; //para fazer sem o for direto
+    //          //return listaalfabeto ; 
+    //     }
+    //      return listaalfabeto ;
+    // }
+        
+        
+    
+    // contagemalfabeto();
+    // console.log(contagemalfabeto(21));
+    
+
+    //FAZER A LOGICA DO ALFABETO MAS INVERSO, DOS NUMEROS PUXAR A LETRA
+
+//     const alfabetoinverso = (letradigitada) => {
+//         const numeros = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26];
+//         let letraencontrada = "";
+
+//             for(let i = 0; i < numeros.length; i++){
+
+//                 if(numeros[i] === letradigitada){
+
+//         switch (numeros[i]) {
+//                 case 1: letraencontrada = "A"; break;  
+//                 case 2: letraencontrada = "B"; break;
+//                 case 3: letraencontrada = "C"; break;
+//                 case 4: letraencontrada = "D"; break;
+//                 case 5: letraencontrada = "E"; break;
+//                 case 6: letraencontrada = "F"; break;
+//                 case 7: letraencontrada = "G"; break;
+//                 case 8: letraencontrada = "H"; break;
+//                 case 9: letraencontrada = "I"; break;
+//                 case 10: letraencontrada = "J"; break;
+//                 case 11: letraencontrada = "K"; break;
+//                 case 12: letraencontrada = "L"; break;
+//                 case 13: letraencontrada = "M"; break;
+//                 case 14: letraencontrada = "N"; break;
+//                 case 15: letraencontrada = "O"; break;
+//                 case 16: letraencontrada = "P"; break;
+//                 case 17: letraencontrada = "Q"; break;
+//                 case 18: letraencontrada = "R"; break;
+//                 case 19: letraencontrada = "S"; break;
+//                 case 20: letraencontrada = "T"; break;
+//                 case 21: letraencontrada = "U"; break;
+//                 case 22: letraencontrada = "V"; break;
+//                 case 23: letraencontrada = "W"; break;
+//                 case 24: letraencontrada = "X"; break;
+//                 case 25: letraencontrada = "Y"; break;
+//                 case 26: letraencontrada = "Z"; break;
+//                 default: letraencontrada = "Inexistente"; break;
+//         }
+//         return letraencontrada;
+        
+//         }
+
+                    
+//                 }
+//                  return "not found";
+       
+//             }
+//             console.log((alfabetoinverso(C)));
+// alfabetoinverso();
+
+//vi um exemplo com switch e decidi usar para ver, mas é pessimo, foge muito do KISS, tive dificuldade tbm, escreve tudo na mão para descobrir q coloquei "" onde n devia e tive q reescrever
+//era para ser um estudo de usar o switch, mas na real q foi uma pessima solução para um problema mais simples.... vou refazer a logica, e depois estudar sobre onde e como usar o switch de forma correta....
+
+    
+//O switch é usado quando você tem uma única variável que pode assumir vários valores constantes diferentes e você quer executar um bloco de código específico para cada um deles.
+//Em ADS, a gente diz que o switch é uma alternativa mais limpa e organizada ao "ninho" de if...else if...else quando a comparação é sempre de igualdade.
+// ou seja para um cod que por exeplo vai fazer promoções diferentes nos produtos acaba se usando o switch para o cod ficar sem mt if, mas tem q ser usado em casos especificos.. 
+
+
+
+
+
+
+
+
+
+//O método indexOf() no JavaScript retorna o primeiro índice (posição) em que um elemento/string é encontrado, ou -1 se não existir.
+//  Funciona tanto para strings quanto para arrays,
+//  comparando valores com igualdade estrita (===) e diferencia maiúsculas de minúsculas.
+
+const alfabetoinverso = (letra) => {
+    const alfabeto = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"];
+    const indice = alfabeto.indexOf(letra.toUpperCase()); //.toUpperCase para n fazer diferença se é maiuscula ou minuscula 
+
+        if(indice === -1){ //primeiro checa se o usuario digita qlqr coisa além de letra
+            return "Não é letra"  //usar o -1 é padrão universal, pq é numero impossivel dentro de arrays q começam do 0
+        }
+
+        return indice + 1  // retorna o indice +1 pq array começa do 0 então vai ficar sempre 1 atrás se eu n colocar..
+    
+}
+console.log(alfabetoinverso("a"));

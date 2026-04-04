@@ -80,6 +80,8 @@ VARIAVEL.push(`Adaga`); < ADD ITEM NA LISTA
 
 /////////////
 
+indexOf() = detetive de array, ele devolve o que tem dentro do array, lembrando que array começa do 0, geralmente é +1 q se coloca
+
 
 📥 1. Adicionar e Remover (Gerenciamento de Pilha)              !!IMPORTANTE para dar os comandos.. 
 
