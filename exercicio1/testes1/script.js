@@ -1689,7 +1689,7 @@ Mostre na tela uma frase única que diga: "O atleta [nome] correu
     //         //listaalfabeto = alfabeto[i]; // para retornar só 1 valor !!!! 
            
 
-    //          //const listaalfabeto = alfabeto [numerodigitado - 1]; //para fazer sem o for direto
+    //          //const listaalfabeto = alfabeto [numerodigitado - 1]; //para fazer sem o for direto, mas sem lista tbm
     //          //return listaalfabeto ; 
     //     }
     //      return listaalfabeto ;
@@ -1772,15 +1772,356 @@ Mostre na tela uma frase única que diga: "O atleta [nome] correu
 //  Funciona tanto para strings quanto para arrays,
 //  comparando valores com igualdade estrita (===) e diferencia maiúsculas de minúsculas.
 
-const alfabetoinverso = (letra) => {
-    const alfabeto = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"];
-    const indice = alfabeto.indexOf(letra.toUpperCase()); //.toUpperCase para n fazer diferença se é maiuscula ou minuscula 
+// const alfabetoinverso = (letra) => {
+//     const alfabeto = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"];
+//     const indice = alfabeto.indexOf(letra.toUpperCase()); //.toUpperCase para n fazer diferença se é maiuscula ou minuscula 
 
-        if(indice === -1){ //primeiro checa se o usuario digita qlqr coisa além de letra
-            return "Não é letra"  //usar o -1 é padrão universal, pq é numero impossivel dentro de arrays q começam do 0
-        }
+//         if(indice === -1){ //primeiro checa se o usuario digita qlqr coisa além de letra
+//             return "Não é letra"  //usar o -1 é padrão universal, pq é numero impossivel dentro de arrays q começam do 0
+//         }
 
-        return indice + 1  // retorna o indice +1 pq array começa do 0 então vai ficar sempre 1 atrás se eu n colocar..
+//         return indice + 1  // retorna o indice +1 pq array começa do 0 então vai ficar sempre 1 atrás se eu n colocar..
     
+// }
+// console.log(alfabetoinverso("a"));
+
+// O veredito para  estudo:
+// No dia a dia de um desenvolvedor moderno:
+
+// Para saber se existe: usa-se .includes().
+
+// Para achar o valor de um objeto: usa-se .find().
+
+// Para achar a posição de um objeto: usa-se .findIndex().
+
+// Para achar a posição de algo simples (tipo o seu alfabeto): usa-se o indexOf.
+
+
+
+////////////////
+
+// // Exercício Médio: O Localizador de Itens (Logística)
+// // Imagine que você está trabalhando no armazém e tem uma lista de produtos em uma prateleira específica.
+
+// // A Lista: const produtos = ["Monitor", "Teclado", "Mouse", "Headset", "Cadeira"];
+
+// // O Objetivo: Crie uma função que receba o nome do produto.
+
+// // Se o produto estiver na lista, retorne: "Produto encontrado na posição X" (lembrando que para o humano o Monitor é 1).
+
+// // Se não estiver, retorne: "Produto inexistente".
+
+// // Desafio: Tente fazer uma versão usando for e outra usando indexOf.
+
+
+// // const contadorprodutos = (produto) => {
+// //     const produtos = ["Monitor", "Teclado", "Mouse", "Headset", "Cadeira"];
+
+// //      // const indice = nomedaarray.indexOf(nomedoparametro);
+
+// //     const padraodigitar = produtos.map(produtos => produtos.toUpperCase()); //para fazer aceitar todas as letras
+// //     const busca = produto.toUpperCase();
+
+// //     const indice =  padraodigitar.indexOf(busca);
+
+// //     if(indice === -1){ //descarta a falsa
+// //         return "Produto não existe"        
+// //     }
+// //         return indice;
+// // }
+// // console.log(contadorprodutos("tecLado"));
+
+
+// ///
+
+// // const contadorprodutos = (produto) => {
+// //     const produtos = ["Monitor", "Teclado", "Mouse", "Headset", "Cadeira"];
+
+
+// //     const padraodigitar = produtos.map(produtos => produtos.toUpperCase()); //se transfomra na lista
+// //     const busca = produto.trim().toUpperCase(); // se transforma no parametro
+// //                     //trim() para limpar espaços !!
+
+// //     for(let i = 0; i < padraodigitar.length; i++){
+
+// //         if(busca === padraodigitar[i]){
+// //             return busca
+
+// //         }
+        
+        
+
+// // }
+// //     return "Produto não encontrado"
+// // }
+// // console.log(contadorprodutos("mouse                   "));
+
+// // O Ritual da Comparação de Strings
+// // Para o seu if (parametro === array[i]) ser infalível, você geralmente faz isso:
+
+// // 1. A "Limpeza" (Normalização)
+// // Antes do if, você garante que os dois lados falem a mesma língua.
+
+// // Case: toUpperCase() ou toLowerCase().
+
+// // Espaços: .trim() (remove espaços invisíveis no início ou fim).
+
+// // 2. O "Duelo" (A Comparação)
+// // Aqui é onde o seu if entra em ação dentro do for.
+
+// // Dica: O === (estritamente igual) é o seu melhor amigo. Ele garante que "Mouse" seja "Mouse" e não o número 0, por exemplo.
+
+// // 3. O "Plano B" (O Retorno Negativo)
+// // Como você fez no seu código, o return "Não encontrado" fica fora do loop. É o aviso de que o "duelo" aconteceu com todo mundo da lista e ninguém venceu.
+
+
+// // A Lista: const banidos = ["steam_123", "steam_456", "steam_789"];
+
+// // O Objetivo: Crie uma função chamada verificarJogador que receba um ID.
+
+// // Se o ID estiver na lista de banidos, retorne true.
+
+// // Se não estiver, retorne false.
+
+// // Dica de ADS: Pense em como o -1 do indexOf pode te ajudar a retornar esse true ou false de um jeito bem curto.
+
+// // const verificarJogador = (ban) => {
+// //     const banidos = ["steam_123", "steam_456", "steam_789"];
+   
+// //     const banidosinput = banidos.map(b => b.toUpperCase());
+// //     const baninput = ban.trim().toUpperCase();
+
+
+// //     return  banidosinput.indexOf(baninput) !== -1;
+   
+// // // -1 é sempre para indexof
+
+// // // === -1 é pq ta fora da array
+
+// // // !== -1 está dentro da array
+
+    
+// // }
+// // console.log(verificarJogador("   sTeaM_123 "));
+// // console.log(verificarJogador("steam_832"));
+
+
+
+
+
+
+// //só para fazer ignorando a logica do true e false para treino 
+// // const verificarJogador = (ban) => {
+// //     const banidos = ["steam_123", "steam_456", "steam_789"];
+
+// //     const banidosinput = banidos.map(ban => ban.toUpperCase());
+// //     const userbusca = ban.trim().toUpperCase();
+
+// //     for(let i = 0; i < banidosinput.length; i++){
+
+// //         if(userbusca === banidosinput[i]){
+// //             return `${userbusca} é banido`
+// //         }
+
+// //     }
+// //     return "user limpo"
+
+    
+
+
+// // }
+// // console.log(verificarJogador("steam_123"));
+
+
+
+// // 3. Exercício DIFÍCIL: O Contador de Ocorrências
+// // Este aqui vai exigir que você use o for de um jeito mais avançado, porque o indexOf sozinho não resolve.
+
+// // A Lista: const historicoGols = ["Vasco", "Flamengo", "Vasco", "Vasco", "Palmeiras", "Fluminense"];
+
+// // O Objetivo: Crie uma função que receba o nome de um time e conte quantas vezes esse time aparece na lista.
+
+// // Exemplo: Se eu digitar "Vasco", a função deve retornar 3. Se digitar "Grêmio", retorna 0.
+
+// // Por que é difícil? Porque você vai precisar de uma variável "contadora" (ex: let total = 0;) dentro da função que aumenta cada vez que o for encontrar o nome do time.
+
+// const contarTimes = (times) => {
+//     const equipes = ["Vasco", "Flamengo", "Vasco", "Vasco", "Palmeiras", "Fluminense"];
+//     let total = 0;
+//     let encontrados = [];
+//     //let lista = []; depois tentar com for para mostra eles ne pratica 
+
+//     const inputequipes = equipes.map(e => e.toUpperCase());
+//     const timesinput = times.trim().toUpperCase();
+
+//    for(let i = 0; i < inputequipes.length; i++){
+
+//     if(timesinput === inputequipes[i]){
+//        console.log(times); 
+//         total ++ //soma quando encontra o time
+//         encontrados.push(inputequipes[i]);
+//     }
+//     //total++ === total = total + 1
+//     // poderia ser em outros casos total +=, ai seria total = total +
+      
+
+
+//    }
+//    return `Os time foi encontrado ${total}`
+
+// }
+// console.log(contarTimes("Vasco"));
+// console.log(contarTimes("Flamengo"));
+// console.log(contarTimes("Gremio"));
+
+
+
+// //acumulador
+// // const carrinho = [
+// //     { produto: "Mouse", preco: 50 },
+// //     { produto: "Teclado", preco: 150 },
+// //     { produto: "Monitor", preco: 800 }
+// // ];
+
+// // let totalConta = 0;
+
+// // for (let i = 0; i < carrinho.length; i++) {
+// //     totalConta += carrinho[i].preco; // Pega o 0 e soma 50, depois + 150, depois + 800
+// // }
+// // // Resultado: 1000
+
+
+// Contexto:
+// Você está desenvolvendo o módulo de fechamento de caixa de um sistema de vendas. O sistema recebe um Array de Objetos contendo os dados dos clientes e uma String com o nome do cliente que está no balcão agora.
+
+// Sua Missão (Os Requisitos):
+
+// A Busca Infalível (Busca Linear):
+
+// Crie uma função que percorra o array clientes.
+
+// A busca deve ser insensível a maiúsculas/minúsculas e ignorar espaços extras (use .trim() e .toUpperCase()).
+
+// Se o cliente não existir na lista, a função deve retornar: "Erro: Cliente não localizado no banco de dados."
+
+// O Motor de Descontos (Regras de Negócio):
+
+// Regra A (Boas-Vindas): Se for a primeira compra do cliente (primeiraCompra: true), ele ganha 15% de desconto sobre o valor da última compra.
+
+// Regra B (Fidelidade): Se o cliente tiver 10 ou mais compras no histórico (historicoCompras >= 10), ele ganha 10% de desconto fixo.
+
+// Importante: Os descontos são cumulativos. Se ele for novo E tiver histórico (o que é raro, mas o sistema deve prever), aplique um e depois o outro.
+
+// O Relatório de Saída (Saída de Dados):
+
+// A função deve retornar uma String formatada (usando Template Strings `) contendo:
+
+// O nome do cliente encontrado.
+
+// O valor bruto (sem desconto).
+
+// O valor total de descontos aplicados (em Reais).
+
+// O valor final líquido a pagar.
+
+// Extra (O Analista):
+
+// Use .toFixed(2) para que os valores de dinheiro fiquem sempre com duas casas decimais (ex: R$ 150.00).
+
+
+
+
+    let totalCaixaBruto = 0;        //fora da função para o valor não morrer depois da primeira execução, para ter uma logica acumulativa
+    let totalCaixaComDesconto = 0;  // preciso estudar quando é necessario colocar dentro ou fora isso bugou o cod legal no começo 
+
+const processarPagamento = (nomeDoCliente) => {
+        const clientes = [
+    { nome: "Jackson", tipo: "Premium", historicoCompras: 10, valorUltimaCompra: 250.00, primeiraCompra: false },
+    { nome: "Larissa", tipo: "Standard", historicoCompras: 2, valorUltimaCompra: 150.00, primeiraCompra: true },        //lista
+    { nome: "Budié", tipo: "Standard", historicoCompras: 0, valorUltimaCompra: 100.00, primeiraCompra: true },
+    { nome: "Tainara", tipo: "Premium", historicoCompras: 20, valorUltimaCompra: 300.00, primeiraCompra: false },
+    { nome: "Faith", tipo: "Standard", historicoCompras: 5, valorUltimaCompra: 80.00, primeiraCompra: false },
+    { nome: "Cláudio", tipo: "Premium", historicoCompras: 30, valorUltimaCompra: 450.00, primeiraCompra: false },
+    { nome: "Marcos", tipo: "Standard", historicoCompras: 1, valorUltimaCompra: 200.00, primeiraCompra: true },
+    { nome: "Jéssica", tipo: "Premium", historicoCompras: 9, valorUltimaCompra: 120.00, primeiraCompra: false },
+    { nome: "Enzo", tipo: "Standard", historicoCompras: 0, valorUltimaCompra: 90.00, primeiraCompra: true },
+    { nome: "Valentina", tipo: "Premium", historicoCompras: 40, valorUltimaCompra: 500.00, primeiraCompra: false },
+    { nome: "Rodrigo", tipo: "Standard", historicoCompras: 15, valorUltimaCompra: 180.00, primeiraCompra: false },
+    { nome: "Aline", tipo: "Premium", historicoCompras: 10, valorUltimaCompra: 210.00, primeiraCompra: false },
+    { nome: "Fabio", tipo: "Standard", historicoCompras: 3, valorUltimaCompra: 130.00, primeiraCompra: false },
+    { nome: "Gisele", tipo: "Premium", historicoCompras: 0, valorUltimaCompra: 350.00, primeiraCompra: true },
+    { nome: "Bruno", tipo: "Standard", historicoCompras: 50, valorUltimaCompra: 400.00, primeiraCompra: false },
+    { nome: "Carla", tipo: "Premium", historicoCompras: 7, valorUltimaCompra: 160.00, primeiraCompra: false },
+    { nome: "Douglas", tipo: "Standard", historicoCompras: 10, valorUltimaCompra: 110.00, primeiraCompra: false },
+    { nome: "Elena", tipo: "Premium", historicoCompras: 2, valorUltimaCompra: 280.00, primeiraCompra: true },
+    { nome: "Felipe", tipo: "Standard", historicoCompras: 100, valorUltimaCompra: 600.00, primeiraCompra: false },
+    { nome: "Glória", tipo: "Premium", historicoCompras: 0, valorUltimaCompra: 150.00, primeiraCompra: true }
+];
+
+    
+    
+    let valorbruto = 0;
+    let valordesconto = 0;
+    let primeira = 0;
+    let desconto10 = 0;
+    //let valorPagoAgora = 0;
+    
+    
+    const inputnomeDoCliente = nomeDoCliente.trim().toUpperCase();
+
+    for(let i = 0; i < clientes.length; i++){
+
+    if(clientes[i].nome.toUpperCase() === inputnomeDoCliente) {
+
+        valorbruto = clientes[i].valorUltimaCompra;
+        clientestatus = clientes[i].tipo;
+        primeiraCompra = clientes[i].primeiraCompra;
+        valorpago = valorbruto; // para caso o cliente faça compra de 10 itens na primeira, q dai o valor bruto vai se transformando considerando os if..
+
+        if(clientes[i].primeiraCompra === true){
+            primeira = valorbruto * 0.85
+            valorpago = primeira;
+        }
+        if(clientes[i].historicoCompras % 10 === 0 && clientes[i].historicoCompras !== 0){ //!==0 para o cliente novo n começar acumulando desconto de dezena
+            desconto10 = valorbruto * 0.90
+            valorpago = desconto10;
+
+        }
+        //valorPagoAgora = valorbruto - (desconto10 || primeira);
+        valordesconto = valorbruto - valorpago;
+        totalCaixaBruto += valorbruto;
+        totalCaixaComDesconto +=  valorpago; 
+        
+    }
+   
 }
-console.log(alfabetoinverso("a"));
+    return `Cliente ${inputnomeDoCliente} gastou ${valorbruto} , O desconto: ${primeira || desconto10} é cliente vip? ${clientestatus} é a priemira? ${primeiraCompra}`
+}
+console.log(processarPagamento("JAcksOn"));
+console.log("--- TESTANDO CLIENTES COM 10 OU MAIS COMPRAS (DESCONTO 10%) ---");
+console.log(processarPagamento("Jackson"));   // 10 compras
+console.log(processarPagamento("Tainara"));   // 20 compras
+console.log(processarPagamento("Douglas"));   // 10 compras
+console.log(processarPagamento("Felipe"));    // 100 compras (Múltiplo de 10)
+
+console.log("\n--- TESTANDO PRIMEIRA COMPRA (DESCONTO 15%) ---");
+console.log(processarPagamento("Larissa"));   // Primeira: true
+console.log(processarPagamento("Budié"));     // Primeira: true
+console.log(processarPagamento("Enzo"));      // Primeira: true
+console.log(processarPagamento("GlóRia"));    // Primeira: true
+
+console.log("\n--- TESTANDO QUEM NÃO TEM DESCONTO ---");
+console.log(processarPagamento("Faith"));     // 5 compras, Primeira: false
+console.log(processarPagamento("Fabio"));     // 3 compras, Primeira: false
+console.log(processarPagamento("Carla"));     // 7 compras, Primeira: false
+
+console.log("\n--- TESTANDO CASO ESPECIAL (SÓ NOVO, SEM 10 COMPRAS) ---");
+console.log(processarPagamento("Gisele"));    // Primeira: true, mas 0 compras (Não deve ganhar o de 10)
+
+console.log("\n--- TESTANDO ERRO DE BUSCA ---");
+console.log(processarPagamento("Neymar"));    // Não está na lista
+
+console.log("\n--- ============///======== ---");
+
+console.log(totalCaixaBruto);
+console.log(totalCaixaComDesconto.toFixed(2));

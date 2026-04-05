@@ -82,6 +82,17 @@ VARIAVEL.push(`Adaga`); < ADD ITEM NA LISTA
 
 indexOf() = detetive de array, ele devolve o que tem dentro do array, lembrando que array começa do 0, geralmente é +1 q se coloca
 
+O veredito para o seu estudo:
+No dia a dia de um desenvolvedor moderno:
+
+Para saber se existe: usa-se .includes().
+
+Para achar o valor de um objeto: usa-se .find().
+
+Para achar a posição de um objeto: usa-se .findIndex().
+
+Para achar a posição de algo simples (tipo o seu alfabeto): usa-se o indexOf.
+
 
 📥 1. Adicionar e Remover (Gerenciamento de Pilha)              !!IMPORTANTE para dar os comandos.. 
 
