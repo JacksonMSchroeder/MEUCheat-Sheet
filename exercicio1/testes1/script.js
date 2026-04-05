@@ -2031,97 +2031,126 @@ Mostre na tela uma frase única que diga: "O atleta [nome] correu
 
 
 
-    let totalCaixaBruto = 0;        //fora da função para o valor não morrer depois da primeira execução, para ter uma logica acumulativa
-    let totalCaixaComDesconto = 0;  // preciso estudar quando é necessario colocar dentro ou fora isso bugou o cod legal no começo 
+    
 
 const processarPagamento = (nomeDoCliente) => {
         const clientes = [
     { nome: "Jackson", tipo: "Premium", historicoCompras: 10, valorUltimaCompra: 250.00, primeiraCompra: false },
-    { nome: "Larissa", tipo: "Standard", historicoCompras: 2, valorUltimaCompra: 150.00, primeiraCompra: true },        //lista
-    { nome: "Budié", tipo: "Standard", historicoCompras: 0, valorUltimaCompra: 100.00, primeiraCompra: true },
+    { nome: "Larissa", tipo: "Standard", historicoCompras: 1, valorUltimaCompra: 150.00, primeiraCompra: true },        //lista
+    { nome: "Budié", tipo: "Standard", historicoCompras: 1, valorUltimaCompra: 100.00, primeiraCompra: true },
     { nome: "Tainara", tipo: "Premium", historicoCompras: 20, valorUltimaCompra: 300.00, primeiraCompra: false },
     { nome: "Faith", tipo: "Standard", historicoCompras: 5, valorUltimaCompra: 80.00, primeiraCompra: false },
     { nome: "Cláudio", tipo: "Premium", historicoCompras: 30, valorUltimaCompra: 450.00, primeiraCompra: false },
     { nome: "Marcos", tipo: "Standard", historicoCompras: 1, valorUltimaCompra: 200.00, primeiraCompra: true },
     { nome: "Jéssica", tipo: "Premium", historicoCompras: 9, valorUltimaCompra: 120.00, primeiraCompra: false },
-    { nome: "Enzo", tipo: "Standard", historicoCompras: 0, valorUltimaCompra: 90.00, primeiraCompra: true },
+    { nome: "Enzo", tipo: "Standard", historicoCompras: 1, valorUltimaCompra: 90.00, primeiraCompra: true },
     { nome: "Valentina", tipo: "Premium", historicoCompras: 40, valorUltimaCompra: 500.00, primeiraCompra: false },
     { nome: "Rodrigo", tipo: "Standard", historicoCompras: 15, valorUltimaCompra: 180.00, primeiraCompra: false },
     { nome: "Aline", tipo: "Premium", historicoCompras: 10, valorUltimaCompra: 210.00, primeiraCompra: false },
     { nome: "Fabio", tipo: "Standard", historicoCompras: 3, valorUltimaCompra: 130.00, primeiraCompra: false },
-    { nome: "Gisele", tipo: "Premium", historicoCompras: 0, valorUltimaCompra: 350.00, primeiraCompra: true },
+    { nome: "Gisele", tipo: "Premium", historicoCompras: 1, valorUltimaCompra: 350.00, primeiraCompra: true },
     { nome: "Bruno", tipo: "Standard", historicoCompras: 50, valorUltimaCompra: 400.00, primeiraCompra: false },
     { nome: "Carla", tipo: "Premium", historicoCompras: 7, valorUltimaCompra: 160.00, primeiraCompra: false },
     { nome: "Douglas", tipo: "Standard", historicoCompras: 10, valorUltimaCompra: 110.00, primeiraCompra: false },
-    { nome: "Elena", tipo: "Premium", historicoCompras: 2, valorUltimaCompra: 280.00, primeiraCompra: true },
+    { nome: "Elena", tipo: "Premium", historicoCompras: 1, valorUltimaCompra: 280.00, primeiraCompra: true },
     { nome: "Felipe", tipo: "Standard", historicoCompras: 100, valorUltimaCompra: 600.00, primeiraCompra: false },
-    { nome: "Glória", tipo: "Premium", historicoCompras: 0, valorUltimaCompra: 150.00, primeiraCompra: true }
+    { nome: "Glória", tipo: "Premium", historicoCompras: 1, valorUltimaCompra: 150.00, primeiraCompra: true }
 ];
-
-    
-    
-    let valorbruto = 0;
-    let valordesconto = 0;
-    let primeira = 0;
-    let desconto10 = 0;
-    //let valorPagoAgora = 0;
-    
-    
     const inputnomeDoCliente = nomeDoCliente.trim().toUpperCase();
+
+    for (let i = 0; i < clientes.length; i++) {
+        if (clientes[i].nome.toUpperCase() === inputnomeDoCliente) {
+            let valor = clientes[i].valorUltimaCompra;
+            let clientestatus = clientes[i].tipo;
+            let primeiraCompra = clientes[i].primeiraCompra;
+            
+            if(clientes[i].primeiraCompra === true){
+                valor = valor * 0.85;
+            }
+            if(clientes[i].historicoCompras >= 10){ //!==0 para o cliente novo n começar acumulando desconto de dezena
+                valor = valor * 0.9;
+            }
+            let desconto = clientes[i].valorUltimaCompra - valor;
+            return `Cliente ${inputnomeDoCliente} / gastou ${valor} / O desconto: ${desconto} / é cliente vip? ${clientestatus} / é a priemira? ${primeiraCompra}`       
+        }
+    }
+}
+
+// console.log(processarPagamento("JAcksOn"));
+// console.log("--- TESTANDO CLIENTES COM 10 OU MAIS COMPRAS (DESCONTO 10%) ---");
+// console.log(processarPagamento("Jackson"));   // 10 compras
+// console.log(processarPagamento("Tainara"));   // 20 compras
+// console.log(processarPagamento("Douglas"));   // 10 compras
+// console.log(processarPagamento("Felipe"));    // 100 compras (Múltiplo de 10)
+
+// console.log("\n--- TESTANDO PRIMEIRA COMPRA (DESCONTO 15%) ---");
+// console.log(processarPagamento("Larissa"));   // Primeira: true
+// console.log(processarPagamento("Budié"));     // Primeira: true
+// console.log(processarPagamento("Enzo"));      // Primeira: true
+// console.log(processarPagamento("GlóRia"));    // Primeira: true
+
+// console.log("\n--- TESTANDO QUEM NÃO TEM DESCONTO ---");
+// console.log(processarPagamento("Faith"));     // 5 compras, Primeira: false
+// console.log(processarPagamento("Fabio"));     // 3 compras, Primeira: false
+// console.log(processarPagamento("Carla"));     // 7 compras, Primeira: false
+
+// console.log("\n--- TESTANDO CASO ESPECIAL (SÓ NOVO, SEM 10 COMPRAS) ---");
+// console.log(processarPagamento("Gisele"));    // Primeira: true, mas 0 compras (Não deve ganhar o de 10)
+
+// console.log("\n--- TESTANDO ERRO DE BUSCA ---");
+// console.log(processarPagamento("Neymar"));    // Não está na lista
+
+// console.log("\n--- ============///======== ---");
+
+// console.log(totalCaixaBruto);
+// console.log(totalCaixaComDesconto.toFixed(2));
+
+
+    let totalCaixaBruto = 0;       
+    let totalCaixaComDesconto = 0; 
+   
+
+const acumuladorpagode = () => {
+    const clientes = [
+    { nome: "Jackson", tipo: "Premium", historicoCompras: 10, valorUltimaCompra: 250.00, primeiraCompra: false },
+    { nome: "Larissa", tipo: "Standard", historicoCompras: 1, valorUltimaCompra: 150.00, primeiraCompra: true },        //lista
+    { nome: "Budié", tipo: "Standard", historicoCompras: 1, valorUltimaCompra: 100.00, primeiraCompra: true },
+    { nome: "Tainara", tipo: "Premium", historicoCompras: 20, valorUltimaCompra: 300.00, primeiraCompra: false },
+    { nome: "Faith", tipo: "Standard", historicoCompras: 5, valorUltimaCompra: 80.00, primeiraCompra: false },
+    { nome: "Cláudio", tipo: "Premium", historicoCompras: 30, valorUltimaCompra: 450.00, primeiraCompra: false },
+    { nome: "Marcos", tipo: "Standard", historicoCompras: 1, valorUltimaCompra: 200.00, primeiraCompra: true },
+    { nome: "Jéssica", tipo: "Premium", historicoCompras: 9, valorUltimaCompra: 120.00, primeiraCompra: false },
+    { nome: "Enzo", tipo: "Standard", historicoCompras: 1, valorUltimaCompra: 90.00, primeiraCompra: true },
+    { nome: "Valentina", tipo: "Premium", historicoCompras: 40, valorUltimaCompra: 500.00, primeiraCompra: false },
+    { nome: "Rodrigo", tipo: "Standard", historicoCompras: 15, valorUltimaCompra: 180.00, primeiraCompra: false },
+    { nome: "Aline", tipo: "Premium", historicoCompras: 10, valorUltimaCompra: 210.00, primeiraCompra: false },
+    { nome: "Fabio", tipo: "Standard", historicoCompras: 3, valorUltimaCompra: 130.00, primeiraCompra: false },
+    { nome: "Gisele", tipo: "Premium", historicoCompras: 1, valorUltimaCompra: 350.00, primeiraCompra: true },
+    { nome: "Bruno", tipo: "Standard", historicoCompras: 50, valorUltimaCompra: 400.00, primeiraCompra: false },
+    { nome: "Carla", tipo: "Premium", historicoCompras: 7, valorUltimaCompra: 160.00, primeiraCompra: false },
+    { nome: "Douglas", tipo: "Standard", historicoCompras: 10, valorUltimaCompra: 110.00, primeiraCompra: false },
+    { nome: "Elena", tipo: "Premium", historicoCompras: 1, valorUltimaCompra: 280.00, primeiraCompra: true },
+    { nome: "Felipe", tipo: "Standard", historicoCompras: 100, valorUltimaCompra: 600.00, primeiraCompra: false },
+    { nome: "Glória", tipo: "Premium", historicoCompras: 1, valorUltimaCompra: 150.00, primeiraCompra: true }
+];
+      
 
     for(let i = 0; i < clientes.length; i++){
 
-    if(clientes[i].nome.toUpperCase() === inputnomeDoCliente) {
-
-        valorbruto = clientes[i].valorUltimaCompra;
-        clientestatus = clientes[i].tipo;
-        primeiraCompra = clientes[i].primeiraCompra;
-        valorpago = valorbruto; // para caso o cliente faça compra de 10 itens na primeira, q dai o valor bruto vai se transformando considerando os if..
-
+        let valor = clientes[i].valorUltimaCompra;
+        totalCaixaBruto += valor; //aq para caixa sem desconto
         if(clientes[i].primeiraCompra === true){
-            primeira = valorbruto * 0.85
-            valorpago = primeira;
-        }
-        if(clientes[i].historicoCompras % 10 === 0 && clientes[i].historicoCompras !== 0){ //!==0 para o cliente novo n começar acumulando desconto de dezena
-            desconto10 = valorbruto * 0.90
-            valorpago = desconto10;
+                valor = valor * 0.85;
+            }
+            if(clientes[i].historicoCompras >= 10){ //!==0 para o cliente novo n começar acumulando desconto de dezena
+                valor = valor * 0.9;
+            }
 
-        }
-        //valorPagoAgora = valorbruto - (desconto10 || primeira);
-        valordesconto = valorbruto - valorpago;
-        totalCaixaBruto += valorbruto;
-        totalCaixaComDesconto +=  valorpago; 
-        
+        totalCaixaComDesconto += valor; // depois das condições de desconto fazer o += valor com os descontos do if 
+
+          //return `cxbruto ${totalCaixaBruto} CXcomDesconto ${totalCaixaComDesconto}` tem q ser fora do loop !
     }
-   
-}
-    return `Cliente ${inputnomeDoCliente} gastou ${valorbruto} , O desconto: ${primeira || desconto10} é cliente vip? ${clientestatus} é a priemira? ${primeiraCompra}`
-}
-console.log(processarPagamento("JAcksOn"));
-console.log("--- TESTANDO CLIENTES COM 10 OU MAIS COMPRAS (DESCONTO 10%) ---");
-console.log(processarPagamento("Jackson"));   // 10 compras
-console.log(processarPagamento("Tainara"));   // 20 compras
-console.log(processarPagamento("Douglas"));   // 10 compras
-console.log(processarPagamento("Felipe"));    // 100 compras (Múltiplo de 10)
+    return `cxbruto ${totalCaixaBruto} CXcomDesconto ${totalCaixaComDesconto}`
 
-console.log("\n--- TESTANDO PRIMEIRA COMPRA (DESCONTO 15%) ---");
-console.log(processarPagamento("Larissa"));   // Primeira: true
-console.log(processarPagamento("Budié"));     // Primeira: true
-console.log(processarPagamento("Enzo"));      // Primeira: true
-console.log(processarPagamento("GlóRia"));    // Primeira: true
-
-console.log("\n--- TESTANDO QUEM NÃO TEM DESCONTO ---");
-console.log(processarPagamento("Faith"));     // 5 compras, Primeira: false
-console.log(processarPagamento("Fabio"));     // 3 compras, Primeira: false
-console.log(processarPagamento("Carla"));     // 7 compras, Primeira: false
-
-console.log("\n--- TESTANDO CASO ESPECIAL (SÓ NOVO, SEM 10 COMPRAS) ---");
-console.log(processarPagamento("Gisele"));    // Primeira: true, mas 0 compras (Não deve ganhar o de 10)
-
-console.log("\n--- TESTANDO ERRO DE BUSCA ---");
-console.log(processarPagamento("Neymar"));    // Não está na lista
-
-console.log("\n--- ============///======== ---");
-
-console.log(totalCaixaBruto);
-console.log(totalCaixaComDesconto.toFixed(2));
+}   
+console.log(acumuladorpagode());
