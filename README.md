@@ -16,6 +16,23 @@ Ou seja: estou estudando só para ganhar dinheiro e ter carreira, ou porque eu r
 Olha, só quero ser um cara que entende muito bem de códigos e, a longo prazo, ter muitos projetos, entender partes físicas e afins. Porque achei algo que vai muito além de ser apenas a minha profissão...
 
 
+
+
+ARRAY É SEMPRE MAP(), FILTER() E REDUCE() !!
+
+Entram 10 itens -> Saem 10 itens (mexidos): Use .map().
+
+Entram 10 itens -> Saem 5 itens (iguais): Use .filter().
+
+Entram 10 itens -> Sai 1 valor (total): Use .reduce().
+
+
+
+
+
+
+
+
 SRP NA PRATICA    !!!!!IMPORTANTE
 
 ![Busca Linear](assets/cod1.jpeg)

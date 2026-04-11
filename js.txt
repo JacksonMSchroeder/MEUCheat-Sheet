@@ -66,6 +66,15 @@ VARIAVEL.push(`Adaga`); < ADD ITEM NA LISTA
 
 ////////
 
+
+
+
+
+
+
+
+
+
 // const hoje = new Date();
 // if (hoje.getDay() === 3) {                      //lidando com dias para semana               !!IMPORTANTE dias 
 //     console.log("Desconto de terça");
@@ -235,6 +244,54 @@ Sempre que travar, olhe para esse roteiro:
 4.  **DECISÃO:** Use `if` ou `switch` se o código precisar escolher um caminho.
 5.  **SAÍDA:** Use `.innerText` para mostrar o resultado no HTML ou `console.log` para testar.
 
-**Dica para Joinville:** Quando estiver vendo o Guanabara, tente identificar qual dessas "peças" ele está usando em cada aula. Você vai ver que, no fundo, ele está sempre combinando esses 6 blocos de formas diferentes.
 
-**Quer que eu transforme esse Cheat Sheet em um arquivo .txt ou .md limpo para você salvar no seu PC?**
+
+1. .map()
+O que faz: Cria um novo array do mesmo tamanho, transformando cada item.
+Quando usar: Quando você quer alterar os valores (ex: dobrar números, extrair nomes de objetos).
+
+
+// Estrutura
+const novoArray = array.map((item, index) => {
+    return item * 2; // O que retornar aqui vira o novo item
+});
+
+2. .filter()
+O que faz: Cria um novo array apenas com os itens que passarem no teste (True).
+Quando usar: Quando você quer remover itens de uma lista (ex: pegar só números pares, ou só produtos caros).
+
+
+
+// Estrutura
+const arrayFiltrado = array.filter((item, index) => {
+    return item > 10; // Se retornar TRUE, o item fica. Se FALSE, tchau.
+});
+
+
+
+3. .reduce()
+O que faz: Transforma o array inteiro em um único valor (número, string, objeto ou outro array).
+Quando usar: Quando você precisa de um resultado acumulado (ex: soma total, média, maior valor).
+
+
+
+// Estrutura
+const resultadoFinal = array.reduce((acumulador, atual, index) => {
+    return acumulador + atual; // O que retornar vira o acumulador da próxima volta
+}, 0); // <--- VALOR INICIAL (Muito importante!)
+
+
+https://www.youtube.com/watch?v=Ar2cMgpjkLM
+
+map → Transformar: Você tem 10 itens e termina com 10 itens, só que modificados.
+
+filter → Filtrar: Você entra com 10 itens e termina com menos (ou nenhum), apenas os que passaram no seu teste.
+
+reduce → Acumular/Condensar: Você pega a lista toda e "derrete" ela até virar uma coisa só (um total, um objeto único, uma frase).
+
+
+
+ const formatador = new Intl.NumberFormat('pt-BR', { //tranformar em BRL                     IMPORTANTE!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+    style: 'currency',
+    currency: 'BRL'
+});

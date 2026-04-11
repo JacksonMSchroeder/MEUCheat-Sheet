@@ -2033,50 +2033,50 @@ Mostre na tela uma frase única que diga: "O atleta [nome] correu
 
     
 
-const processarPagamento = (nomeDoCliente) => {
-        const clientes = [
-    { nome: "Jackson", tipo: "Premium", historicoCompras: 10, valorUltimaCompra: 250.00, primeiraCompra: false },
-    { nome: "Larissa", tipo: "Standard", historicoCompras: 1, valorUltimaCompra: 150.00, primeiraCompra: true },        //lista
-    { nome: "Budié", tipo: "Standard", historicoCompras: 1, valorUltimaCompra: 100.00, primeiraCompra: true },
-    { nome: "Tainara", tipo: "Premium", historicoCompras: 20, valorUltimaCompra: 300.00, primeiraCompra: false },
-    { nome: "Faith", tipo: "Standard", historicoCompras: 5, valorUltimaCompra: 80.00, primeiraCompra: false },
-    { nome: "Cláudio", tipo: "Premium", historicoCompras: 30, valorUltimaCompra: 450.00, primeiraCompra: false },
-    { nome: "Marcos", tipo: "Standard", historicoCompras: 1, valorUltimaCompra: 200.00, primeiraCompra: true },
-    { nome: "Jéssica", tipo: "Premium", historicoCompras: 9, valorUltimaCompra: 120.00, primeiraCompra: false },
-    { nome: "Enzo", tipo: "Standard", historicoCompras: 1, valorUltimaCompra: 90.00, primeiraCompra: true },
-    { nome: "Valentina", tipo: "Premium", historicoCompras: 40, valorUltimaCompra: 500.00, primeiraCompra: false },
-    { nome: "Rodrigo", tipo: "Standard", historicoCompras: 15, valorUltimaCompra: 180.00, primeiraCompra: false },
-    { nome: "Aline", tipo: "Premium", historicoCompras: 10, valorUltimaCompra: 210.00, primeiraCompra: false },
-    { nome: "Fabio", tipo: "Standard", historicoCompras: 3, valorUltimaCompra: 130.00, primeiraCompra: false },
-    { nome: "Gisele", tipo: "Premium", historicoCompras: 1, valorUltimaCompra: 350.00, primeiraCompra: true },
-    { nome: "Bruno", tipo: "Standard", historicoCompras: 50, valorUltimaCompra: 400.00, primeiraCompra: false },
-    { nome: "Carla", tipo: "Premium", historicoCompras: 7, valorUltimaCompra: 160.00, primeiraCompra: false },
-    { nome: "Douglas", tipo: "Standard", historicoCompras: 10, valorUltimaCompra: 110.00, primeiraCompra: false },
-    { nome: "Elena", tipo: "Premium", historicoCompras: 1, valorUltimaCompra: 280.00, primeiraCompra: true },
-    { nome: "Felipe", tipo: "Standard", historicoCompras: 100, valorUltimaCompra: 600.00, primeiraCompra: false },
-    { nome: "Glória", tipo: "Premium", historicoCompras: 1, valorUltimaCompra: 150.00, primeiraCompra: true }
-];
-    const inputnomeDoCliente = nomeDoCliente.trim().toUpperCase();
+// const buscarcliente = (nomeDoCliente) => {
+//         const clientes = [
+//     { nome: "Jackson", tipo: "Premium", historicoCompras: 10, valorUltimaCompra: 250.00, primeiraCompra: false },
+//     { nome: "Larissa", tipo: "Standard", historicoCompras: 1, valorUltimaCompra: 150.00, primeiraCompra: true },        //lista
+//     { nome: "Budié", tipo: "Standard", historicoCompras: 1, valorUltimaCompra: 100.00, primeiraCompra: true },
+//     { nome: "Tainara", tipo: "Premium", historicoCompras: 20, valorUltimaCompra: 300.00, primeiraCompra: false },
+//     { nome: "Faith", tipo: "Standard", historicoCompras: 5, valorUltimaCompra: 80.00, primeiraCompra: false },
+//     { nome: "Cláudio", tipo: "Premium", historicoCompras: 30, valorUltimaCompra: 450.00, primeiraCompra: false },
+//     { nome: "Marcos", tipo: "Standard", historicoCompras: 1, valorUltimaCompra: 200.00, primeiraCompra: true },
+//     { nome: "Jéssica", tipo: "Premium", historicoCompras: 9, valorUltimaCompra: 120.00, primeiraCompra: false },
+//     { nome: "Enzo", tipo: "Standard", historicoCompras: 1, valorUltimaCompra: 90.00, primeiraCompra: true },
+//     { nome: "Valentina", tipo: "Premium", historicoCompras: 40, valorUltimaCompra: 500.00, primeiraCompra: false },
+//     { nome: "Rodrigo", tipo: "Standard", historicoCompras: 15, valorUltimaCompra: 180.00, primeiraCompra: false },
+//     { nome: "Aline", tipo: "Premium", historicoCompras: 10, valorUltimaCompra: 210.00, primeiraCompra: false },
+//     { nome: "Fabio", tipo: "Standard", historicoCompras: 3, valorUltimaCompra: 130.00, primeiraCompra: false },
+//     { nome: "Gisele", tipo: "Premium", historicoCompras: 1, valorUltimaCompra: 350.00, primeiraCompra: true },
+//     { nome: "Bruno", tipo: "Standard", historicoCompras: 50, valorUltimaCompra: 400.00, primeiraCompra: false },
+//     { nome: "Carla", tipo: "Premium", historicoCompras: 7, valorUltimaCompra: 160.00, primeiraCompra: false },
+//     { nome: "Douglas", tipo: "Standard", historicoCompras: 10, valorUltimaCompra: 110.00, primeiraCompra: false },
+//     { nome: "Elena", tipo: "Premium", historicoCompras: 1, valorUltimaCompra: 280.00, primeiraCompra: true },
+//     { nome: "Felipe", tipo: "Standard", historicoCompras: 100, valorUltimaCompra: 600.00, primeiraCompra: false },
+//     { nome: "Glória", tipo: "Premium", historicoCompras: 1, valorUltimaCompra: 150.00, primeiraCompra: true }
+// ];
+//     const inputnomeDoCliente = nomeDoCliente.trim().toUpperCase();
 
-    for (let i = 0; i < clientes.length; i++) {
-        if (clientes[i].nome.toUpperCase() === inputnomeDoCliente) {
-            let valor = clientes[i].valorUltimaCompra;
-            let clientestatus = clientes[i].tipo;
-            let primeiraCompra = clientes[i].primeiraCompra;
+//     for (let i = 0; i < clientes.length; i++) {
+//         if (clientes[i].nome.toUpperCase() === inputnomeDoCliente) {
+//             let valor = clientes[i].valorUltimaCompra;
+//             let clientestatus = clientes[i].tipo;
+//             let primeiraCompra = clientes[i].primeiraCompra;
             
-            if(clientes[i].primeiraCompra === true){
-                valor = valor * 0.85;
-            }
-            if(clientes[i].historicoCompras >= 10){ //!==0 para o cliente novo n começar acumulando desconto de dezena
-                valor = valor * 0.9;
-            }
-            let desconto = clientes[i].valorUltimaCompra - valor;
-            return `Cliente ${inputnomeDoCliente} / gastou ${valor} / O desconto: ${desconto} / é cliente vip? ${clientestatus} / é a priemira? ${primeiraCompra}`       
-        }
-    }
-}
+//             if(clientes[i].primeiraCompra === true){
+//                 valor = valor * 0.85;
+//             }
+//             if(clientes[i].historicoCompras >= 10){ //!==0 para o cliente novo n começar acumulando desconto de dezena
+//                 valor = valor * 0.9;
+//             }
+//             let desconto = clientes[i].valorUltimaCompra - valor;
+//             return `Cliente ${inputnomeDoCliente} / gastou ${valor} / O desconto: ${desconto} / é cliente vip? ${clientestatus} / é a priemira compra? ${primeiraCompra}`       
+//         }
+//     }
+// }
 
-// console.log(processarPagamento("JAcksOn"));
+// console.log(buscarcliente("JAcksOn"));
 // console.log("--- TESTANDO CLIENTES COM 10 OU MAIS COMPRAS (DESCONTO 10%) ---");
 // console.log(processarPagamento("Jackson"));   // 10 compras
 // console.log(processarPagamento("Tainara"));   // 20 compras
@@ -2106,51 +2106,435 @@ const processarPagamento = (nomeDoCliente) => {
 // console.log(totalCaixaComDesconto.toFixed(2));
 
 
-    let totalCaixaBruto = 0;       
-    let totalCaixaComDesconto = 0; 
+//     let totalCaixaBruto = 0;       
+//     let totalCaixaComDesconto = 0; 
    
 
-const acumuladorpagode = () => {
-    const clientes = [
-    { nome: "Jackson", tipo: "Premium", historicoCompras: 10, valorUltimaCompra: 250.00, primeiraCompra: false },
-    { nome: "Larissa", tipo: "Standard", historicoCompras: 1, valorUltimaCompra: 150.00, primeiraCompra: true },        //lista
-    { nome: "Budié", tipo: "Standard", historicoCompras: 1, valorUltimaCompra: 100.00, primeiraCompra: true },
-    { nome: "Tainara", tipo: "Premium", historicoCompras: 20, valorUltimaCompra: 300.00, primeiraCompra: false },
-    { nome: "Faith", tipo: "Standard", historicoCompras: 5, valorUltimaCompra: 80.00, primeiraCompra: false },
-    { nome: "Cláudio", tipo: "Premium", historicoCompras: 30, valorUltimaCompra: 450.00, primeiraCompra: false },
-    { nome: "Marcos", tipo: "Standard", historicoCompras: 1, valorUltimaCompra: 200.00, primeiraCompra: true },
-    { nome: "Jéssica", tipo: "Premium", historicoCompras: 9, valorUltimaCompra: 120.00, primeiraCompra: false },
-    { nome: "Enzo", tipo: "Standard", historicoCompras: 1, valorUltimaCompra: 90.00, primeiraCompra: true },
-    { nome: "Valentina", tipo: "Premium", historicoCompras: 40, valorUltimaCompra: 500.00, primeiraCompra: false },
-    { nome: "Rodrigo", tipo: "Standard", historicoCompras: 15, valorUltimaCompra: 180.00, primeiraCompra: false },
-    { nome: "Aline", tipo: "Premium", historicoCompras: 10, valorUltimaCompra: 210.00, primeiraCompra: false },
-    { nome: "Fabio", tipo: "Standard", historicoCompras: 3, valorUltimaCompra: 130.00, primeiraCompra: false },
-    { nome: "Gisele", tipo: "Premium", historicoCompras: 1, valorUltimaCompra: 350.00, primeiraCompra: true },
-    { nome: "Bruno", tipo: "Standard", historicoCompras: 50, valorUltimaCompra: 400.00, primeiraCompra: false },
-    { nome: "Carla", tipo: "Premium", historicoCompras: 7, valorUltimaCompra: 160.00, primeiraCompra: false },
-    { nome: "Douglas", tipo: "Standard", historicoCompras: 10, valorUltimaCompra: 110.00, primeiraCompra: false },
-    { nome: "Elena", tipo: "Premium", historicoCompras: 1, valorUltimaCompra: 280.00, primeiraCompra: true },
-    { nome: "Felipe", tipo: "Standard", historicoCompras: 100, valorUltimaCompra: 600.00, primeiraCompra: false },
-    { nome: "Glória", tipo: "Premium", historicoCompras: 1, valorUltimaCompra: 150.00, primeiraCompra: true }
-];
+// const valorestotais = () => {
+//     const clientes = [
+//     { nome: "Jackson", tipo: "Premium", historicoCompras: 10, valorUltimaCompra: 250.00, primeiraCompra: false },
+//     { nome: "Larissa", tipo: "Standard", historicoCompras: 1, valorUltimaCompra: 150.00, primeiraCompra: true },        //lista
+//     { nome: "Budié", tipo: "Standard", historicoCompras: 1, valorUltimaCompra: 100.00, primeiraCompra: true },
+//     { nome: "Tainara", tipo: "Premium", historicoCompras: 20, valorUltimaCompra: 300.00, primeiraCompra: false },
+//     { nome: "Faith", tipo: "Standard", historicoCompras: 5, valorUltimaCompra: 80.00, primeiraCompra: false },
+//     { nome: "Cláudio", tipo: "Premium", historicoCompras: 30, valorUltimaCompra: 450.00, primeiraCompra: false },
+//     { nome: "Marcos", tipo: "Standard", historicoCompras: 1, valorUltimaCompra: 200.00, primeiraCompra: true },
+//     { nome: "Jéssica", tipo: "Premium", historicoCompras: 9, valorUltimaCompra: 120.00, primeiraCompra: false },
+//     { nome: "Enzo", tipo: "Standard", historicoCompras: 1, valorUltimaCompra: 90.00, primeiraCompra: true },
+//     { nome: "Valentina", tipo: "Premium", historicoCompras: 40, valorUltimaCompra: 500.00, primeiraCompra: false },
+//     { nome: "Rodrigo", tipo: "Standard", historicoCompras: 15, valorUltimaCompra: 180.00, primeiraCompra: false },
+//     { nome: "Aline", tipo: "Premium", historicoCompras: 10, valorUltimaCompra: 210.00, primeiraCompra: false },
+//     { nome: "Fabio", tipo: "Standard", historicoCompras: 3, valorUltimaCompra: 130.00, primeiraCompra: false },
+//     { nome: "Gisele", tipo: "Premium", historicoCompras: 1, valorUltimaCompra: 350.00, primeiraCompra: true },
+//     { nome: "Bruno", tipo: "Standard", historicoCompras: 50, valorUltimaCompra: 400.00, primeiraCompra: false },
+//     { nome: "Carla", tipo: "Premium", historicoCompras: 7, valorUltimaCompra: 160.00, primeiraCompra: false },
+//     { nome: "Douglas", tipo: "Standard", historicoCompras: 10, valorUltimaCompra: 110.00, primeiraCompra: false },
+//     { nome: "Elena", tipo: "Premium", historicoCompras: 1, valorUltimaCompra: 280.00, primeiraCompra: true },
+//     { nome: "Felipe", tipo: "Standard", historicoCompras: 100, valorUltimaCompra: 600.00, primeiraCompra: false },
+//     { nome: "Glória", tipo: "Premium", historicoCompras: 1, valorUltimaCompra: 150.00, primeiraCompra: true }
+// ];
       
 
-    for(let i = 0; i < clientes.length; i++){
+//     for(let i = 0; i < clientes.length; i++){
 
-        let valor = clientes[i].valorUltimaCompra;
-        totalCaixaBruto += valor; //aq para caixa sem desconto
-        if(clientes[i].primeiraCompra === true){
-                valor = valor * 0.85;
-            }
-            if(clientes[i].historicoCompras >= 10){ //!==0 para o cliente novo n começar acumulando desconto de dezena
-                valor = valor * 0.9;
-            }
+//         let valor = clientes[i].valorUltimaCompra;
+//         totalCaixaBruto += valor; //aq para caixa sem desconto
+//         if(clientes[i].primeiraCompra === true){
+//                 valor = valor * 0.85;
+//             }
+//             if(clientes[i].historicoCompras >= 10){ //!==0 para o cliente novo n começar acumulando desconto de dezena
+//                 valor = valor * 0.9;
+//             }
 
-        totalCaixaComDesconto += valor; // depois das condições de desconto fazer o += valor com os descontos do if 
+//         totalCaixaComDesconto += valor; // depois das condições de desconto fazer o += valor com os descontos do if 
 
-          //return `cxbruto ${totalCaixaBruto} CXcomDesconto ${totalCaixaComDesconto}` tem q ser fora do loop !
-    }
-    return `cxbruto ${totalCaixaBruto} CXcomDesconto ${totalCaixaComDesconto}`
+//           //return `cxbruto ${totalCaixaBruto} CXcomDesconto ${totalCaixaComDesconto}` tem q ser fora do loop !
+//     }
+//     return `cxbruto ${totalCaixaBruto} CXcomDesconto ${totalCaixaComDesconto}`
 
-}   
-console.log(acumuladorpagode());
+// }   
+// console.log(valorestotais());
+
+
+//lembrar sempre de separar as funcionalidade, não colocar função de busca e acumuladora junto !! ou duas função q faz coisas difentes
+// não ficar fazendo gambiarra para blocar duas funcionalidades em um só cod, um só loop, se atentar bastante para separar bem o cod!!
+//TIPOS de funcionalidades que vi para ter um norte para conseguir as separar: 
+//Entidades: Definem apenas a estrutura e o formato dos dados (os moldes do seu sistema).
+// Serviços: Onde fica a lógica e as regras de negócio (o "cérebro" que decide o que pode ou não acontecer).
+// Repositórios: Responsáveis pela comunicação externa, como salvar no Supabase ou buscar na API da Steam.
+// Controladores: Funcionam como a porta de entrada, recebendo pedidos do usuário e apenas repassando para quem sabe resolver.
+
+
+
+
+// A Entidade (O Molde):
+
+// Um objeto Aluno com: nome, plano (Mensal/Anual), mensalidade, treinosNoMes e statusPagamento (boolean).
+
+// O Repositório (A Busca):
+
+// Crie uma função que busque o aluno pelo nome no array (use .trim() e .toUpperCase()).
+
+// O Serviço (A Lógica de Negócio):
+
+// Regra de Acesso: Se statusPagamento for false, retorna: "Acesso Negado: Mensalidade Pendente".
+
+// Regra de Bônus: Se o aluno treinou mais de 20 vezes no mês, ele ganha 5% de desconto na mensalidade do mês que vem.
+
+// Regra de Plano: Se o plano for "Anual", ele já tem um desconto fixo de 10% sobre o valor base.
+
+// O Acumulador (O Sistema):
+
+// Crie uma variável global ou externa para acumular o Total de Mensalidades a Receber de todos os alunos da academia (já aplicando os descontos de quem tem direito).
+
+// 🛠️ Sua Estrutura de Arquivos (Como você deve organizar):
+// Para não virar espaguete, tente separar assim:
+
+// funcaoCalculo.js (Serviço): Uma função que recebe apenas os dados técnicos (plano, mensalidade, treinos) e retorna o valor final com desconto. 
+// Ela não sabe nada de arrays ou nomes.
+
+// funcaoBusca.js (Repositório/Controlador): Uma função que recebe o nome, percorre o array, chama a função de cálculo e retorna a string formatada de sucesso ou erro.
+
+// funcaoRelatorio.js (Acumuladora): Uma função que percorre a lista inteira e diz: "O faturamento bruto da academia é X, e com os descontos aplicados será Y".
+
+
+///////////////==////////////////
+
+
+
+// 🛒 O Desafio: Carrinho de Compras Tech
+// Você tem um array de produtos. Cada produto tem: nome, categoria, preco e qtd.
+
+// As Regras de Negócio:
+
+// Imposto (Obrigatório): Todo produto tem 10% de imposto sobre o preço base.
+
+// Desconto Cupom: Se a categoria for "Hardware", o cliente ganha 15% de desconto no valor do produto (antes do imposto).
+
+// Frete Grátis: Se o valor total do item (preço * qtd) passar de R$ 500, o frete é 0. Se não, o frete custa R$ 20 por item.
+
+// O que o seu Acumulador deve entregar no final:
+
+// Total Bruto: (Soma de preco * qtd de tudo).
+
+// Total de Impostos: (Quanto o governo levou no total).
+
+// Total de Descontos: (Quanto o cliente economizou no total).
+
+// Valor Final: (O que o cliente realmente vai pagar no cartão).
+
+// const checkout = () => {
+//     const produtos = [
+//         { nome: "Teclado Mecânico", categoria: "Periférico", preco: 200, qtd: 2 },
+//         { nome: "Placa de Vídeo", categoria: "Hardware", preco: 1500, qtd: 1 },
+//         { nome: "Mousepad", categoria: "Periférico", preco: 50, qtd: 1 },
+//         { nome: "Memória RAM", categoria: "Hardware", preco: 300, qtd: 2 }
+//     ];
+
+//     let totalBruto = 0;
+//     let imposto = 0;
+//     let totalDescontos = 0;
+//     let valorFinal = 0;
+//     let frete = 0;
+//     //let frete  =  20;
+
+//     for (let i = 0; i < produtos.length; i++) {
+//         let valorcliente = produtos[i].preco
+//         totalBruto += produtos[i].preco * produtos[i].qtd;
+//         imposto += (produtos[i].preco * produtos[i].qtd) * 0.10
+
+//         let descontocliente = 0;
+//         if(produtos[i].categoria === "Hardware" ){
+//             descontocliente = valorcliente * 0.15
+
+//         }
+//         if((produtos[i].preco * produtos[i].qtd) < 500){ 
+//          frete += 20 * produtos[i].qtd;
+        
+//         }
+        
+//         //totalImpostos += imposto;
+//         totalDescontos += descontocliente;
+        
+//     }
+
+//     valorFinal = (totalBruto + imposto + frete)  - totalDescontos;
+
+
+//     return `Bruto: ${totalBruto} | Impostos: ${imposto} | Descontos: ${totalDescontos} | TOTAL: ${valorFinal}`;
+// }
+// console.log(checkout());
+
+
+// Exercício 1: O Contador de Pontos (Soma Simples)
+// Imagine que você tem um array com as pontuações de várias partidas. Você precisa calcular o total de pontos.
+
+// O Array:
+// const pontuacoes = [10, 15, 8, 20, 30];
+
+// Com for: Crie uma variável let total = 0 e use um loop para somar cada item.
+
+// Com reduce: Use o método para chegar ao mesmo resultado em uma única linha.
+
+//        let total = 0;
+// const contador = () => {
+//     const numeros = [10, 15, 8, 20, 30];
+
+     
+//     for(let i = 0; i < numeros.length; i++){
+//         total += numeros[i];
+//         //somatotal += total;
+
+//     }                            
+//     return ` o total é ${total}`;
+// }
+// console.log(contador(total));
+
+ 
+// //
+ 
+
+// const numeros = [10, 15, 8, 20, 30];
+
+// const total = numeros.reduce((acumulador, atual) => {
+//     0
+//     return acumulador + atual;
+// }, 0);
+
+// console.log(total);
+
+
+// const numeros = [10, 15, 8, 20, 30];
+
+// const lerolero = numeros.map(numero => numero * 10 );
+
+// console.log(lerolero);
+
+
+// const numeros = [10, 15, 8, 20, 30];
+
+// const lerolero = numeros.map((numero , index, arraycompleto ) => {
+// //console.log(numero); 
+// //console.log(index); 
+// //console.log(arraycompleto);
+// return numero * 10;
+// }
+//   );
+// console.log(lerolero);
+
+
+
+//reduce
+// const numeros = [10, 15, 8, 20, 30];
+
+// const soma = numeros.reduce((acumulador, valoratual) => {
+
+//     const total = acumulador + valoratual ;
+
+//     return total;
+// }, 0) ; //, 20 ) // com virgula e o numero eu posso manipular o numero que começar o array, boa pratica sempre deixar 0 ou qlqr nº
+// console.log(soma);
+
+//filter 
+
+// const numeros = [10, 15, 8, 20, 30, 31 ,23, 11];
+
+// const returnopar = numeros.filter( num => {
+//     return num % 2 === 0;
+
+// })
+//  console.log(returnopar);
+
+// 🛒 O Desafio: Carrinho de Compras Tech
+// Você tem um array de produtos. Cada produto tem: nome, categoria, preco e qtd.
+
+// As Regras de Negócio:
+
+// Imposto (Obrigatório): Todo produto tem 10% de imposto sobre o preço base.
+
+// Desconto Cupom: Se a categoria for "Hardware", o cliente ganha 15% de desconto no valor do produto (antes do imposto).
+
+// Frete Grátis: Se o valor total do item (preço * qtd) passar de R$ 500, o frete é 0. Se não, o frete custa R$ 20 por item.
+
+// O que o seu Acumulador deve entregar no final:
+
+// Total Bruto: (Soma de preco * qtd de tudo).
+
+// Total de Impostos: (Quanto o governo levou no total).
+
+// Total de Descontos: (Quanto o cliente economizou no total).
+
+// Valor Final: (O que o cliente realmente vai pagar no cartão).
+
+
+//     const produtos = [
+//         { nome: "Teclado Mecânico", categoria: "Periférico", preco: 200, qtd: 2 },
+//         { nome: "Placa de Vídeo", categoria: "Hardware", preco: 1500, qtd: 1 },
+//         { nome: "Mousepad", categoria: "Periférico", preco: 50, qtd: 1 },
+//         { nome: "Memória RAM", categoria: "Hardware", preco: 300, qtd: 2 }
+//     ];
+
+//      const formatador = new Intl.NumberFormat('pt-BR', { //tranformar em BRL
+//     style: 'currency',
+//     currency: 'BRL'
+// });
+
+
+
+// //map
+// const checkout = produtos.map( produtos => {
+
+//     const total = produtos.preco * produtos.qtd;
+//     const promohardware = produtos.categoria === "Hardware" ? total * 0.15 : 0   //pensar em fluxo, primeiro vou ter o valor total e ir aplicando as regras de negocio !!
+//     const preco = total - promohardware;                        // toto >> descontos(if) >> imposto em cima do valor >> "frete" ou preço final
+//     const imposto = preco * 1.10
+//     const frete = total > 500 ? imposto : imposto + 20
+
+
+
+
+
+
+// // return {
+// //     nome: produtos.nome,
+// //     valorOriginal: total.toFixed(2),            // O bruto (preco * qtd)
+// //     descontoAplicado: promohardware.toFixed(2), // O quanto ele economizou por ser Hardware        //to fixed n chama o formatador em brl, só pula casa 
+// //     valorTaxado: preco.toFixed(2),              // O valor base que o governo olhou
+// //     impostoTotal: imposto.toFixed(2),           // O preço já com os 10%
+// //     fretePago: total > 500 ? "De graça" : 20 , // Se teve que pagar frete ou não
+// //     valorFinal: frete.toFixed(2),     // O "boleto" final  
+// // };
+// return {
+//     nome: produtos.nome,
+//     valorOriginal: formatador.format(total), 
+//     descontoAplicado: formatador.format(promohardware),
+//     valorTaxado: formatador.format(preco),
+//     impostoTotal: formatador.format(imposto),
+//     fretePago: total > 500 ? "De graça" : formatador.format(20), 
+//     valorFinal: formatador.format(frete) 
+// };
+
+
+// // eu poderia colocar um const imposto = 1.10 ai usar imposto em todo o cod
+
+// // const totalbrutoperiferico = filtroperiferico.reduce((acumulador, produtos)=>  {  //reduce
+// //        return acumulador + (produtos.preco * produtos.qtd * imposto);
+
+// // ai se o imposto mudar basta eu mudar um numero dai, fica mais limpo o profissional 
+
+
+// //reduce
+// });
+// const filtrofretegratis = produtos.filter( produtos => produtos.preco * produtos.qtd * 1.10 > 500 ); //não precisa que no map ja resolvi com a logica
+// //porem faz sentido para chamar ele para um filtro de site por exemplo.. ai jogar ele no fronte ja tenho a variavel certa para isso 
+
+// const filtroperiferico = produtos.filter( produtos => produtos.categoria !== "Hardware" );  //filtro
+// const filtrohardware = produtos.filter( produtos => produtos.categoria === "Hardware" ); // colocar o ! seria o inverso, ai procuraria tudo q n é hardware
+
+// const totalbrutoperiferico = filtroperiferico.reduce((acumulador, produtos)=>  {  //reduce
+//        return acumulador + (produtos.preco * produtos.qtd * 1.10);
+
+     
+// }, 0);
+
+// const totalbrutohardware = filtrohardware.reduce((acumulador, produtos)=>  {  //reduce
+//        return acumulador + (produtos.preco * produtos.qtd * 1.10);
+
+     
+// }, 0);
+
+// const totalgeral = produtos.reduce((acumulador, produtos) => {          //reduce
+//         return acumulador + (produtos.preco * produtos.qtd * 1.10);
+// }, 0 );
+
+// const totalgeralsemimposto = produtos.reduce((acumulador, produtos) => {          //reduce
+//         return acumulador + produtos.preco * produtos.qtd ;
+// }, 0 );
+
+
+// const totalExibicaoper = formatador.format(totalbrutoperiferico);
+// const totalExibicaoHard = formatador.format(totalbrutohardware);
+// const totalgeralexibicao = formatador.format(totalgeral);
+// const totalsemimpostoexib = formatador.format(totalgeralsemimposto);
+
+
+
+// // const projecaovendas = produtos.map( produtos => {
+// //     return {...produtos, quantidade: produtos.qtd + 10}
+// // }).reduce((acumulador, produtos) => {
+// //     return  acumulador + produtos.preco * produtos.quantidade ;   //overcoding com o map ali!!
+
+// // }, 0)
+
+
+// //refatorando.. nota importante, como vou lidar com "sites vivos" em geral eu não vou ter q me preocupar em adicionar quantidades num map
+// //as quantidades de produtos e preços vão ser dinamicos 
+// //"o codigo não deve tentar curar uma doença que esta nos dados".
+// const projecaovendas = produtos.reduce ((acumulador, produtos)=> {
+//     const novaquantidade = produtos.qtd + 10;
+//     return acumulador + produtos.preco * novaquantidade;
+
+
+// }, 0)
+
+// const projecaovendascomimposto = produtos.reduce ((acumulador, produtos)=> {
+//     const novaquantidade = produtos.qtd + 10;
+//     return acumulador + (produtos.preco * novaquantidade * 1.10);
+
+
+// }, 0)
+
+
+
+
+// const exibirprojecao = formatador.format(projecaovendas);
+// const exibirprojecaocomimposto = formatador.format(projecaovendascomimposto);
+
+// //total
+// // const totalbruto = produtos.reduce((acumulador, produtos)=>  {
+// //        return acumulador + total;
+// // }, 0);
+
+
+// //filter antes do total bruto, antes do reduce para considerar ela na conta final, mas pode ser antes do map para eu definir no que quero trabalhar especificamente !!!
+
+
+// //ai o fluxo q fiz e posso ter na cabeça , primeiro o array ou a chamada para o acesso dos dados, ai a manipulção, se for dinheiro ja lança um formatador 
+// //de dinheiro embaixo do array, tipo transformar tudo em brl, ai tu vai lançando os formato em cada "return" NomeVariavelFormatadora.format() durante  cod
+// // ai tu lança o map, e vai colocando as regras do negocio, ai vem os impostos, os descontos e tudo mais 
+// //ai depois lança o filtro, ai se consegue adequar o passa ou não por ele, por caracteristicas, ou preço, só manipular
+// //ai depois o reduce, que vai somar tudo considerando as regras ou não do filtro, ai vc vai fazer ele como acumulador.. 
+
+//             // o filtro pode vir antes ou depois do map, depende do objetivo, se for muito grande o site, ou se quero manipular só uma parte dos dados..
+
+// console.log(checkout);
+// console.log(`total periferico:  ${totalExibicaoper}`);
+// console.log(`total hardware:  ${totalExibicaoHard}`);
+// console.log(`total geral:  ${totalgeralexibicao}`);
+// console.log(`Receita Bruta de venda sem imposto ${totalsemimpostoexib}`)
+// //console.log(filtrofretegratis);
+// console.log(`A venda de 10 quantidade de todos os produtos : ${exibirprojecao}`);
+// console.log(` venda de 10 quantidade de todos os produtos considerando o imposto : ${exibirprojecaocomimposto}`);
+
+const alfabeto = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"];
+
+
+const retornoalfabeto = 33 ; //aq a qauntidade do input
+
+const estadentro = retornoalfabeto < 1 || retornoalfabeto > 26 ? "numero invalido, só entre 1 e 26" : alfabeto[retornoalfabeto - 1];;
+
+ const contaralfabeto = alfabeto.filter( (letra, index) => { //aq defino o filtro
+
+    return letra < retornoalfabeto; // aq é para retornar tudo menor que o index(posição da array)
+
+});
+
+console.log(estadentro);
+
+// const qualletra = alfabeto[retornoalfabeto];
+// const letra = qualletra + (retornoalfabeto + 1 );
+
+// console.log(qualletra);
+//});
+
+
