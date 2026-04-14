@@ -24,6 +24,19 @@ isNaN()   não numero
 
 ////////////
 
+const novoArray = arrayOriginal.map((item, index) => {                          MAP                             IMPORTANTE !!!IMPORTANTE !!! 
+  return item * 2; // O que você retornar aqui será o novo valor na lista                       
+});
+
+const novoArray = arrayOriginal.filter((item, index) => {
+  return item > 10; // Se retornar TRUE, o item fica. Se retornar FALSE, o item sai.    FILTER
+});
+
+const resultadoUnico = arrayOriginal.reduce((acumulador, item) => {                 REDUCE
+  return acumulador + item; 
+}, 0); // <-- Esse '0' é onde a conta começa!
+
+
 Principais Operadores Aritméticos:                                              IMPORTANTE!!!
 
 Adição (+): Soma dois valores. Também usado para concatenar strings.
@@ -295,3 +308,38 @@ reduce → Acumular/Condensar: Você pega a lista toda e "derrete" ela até vira
     style: 'currency',
     currency: 'BRL'
 });
+
+
+Sempre que o código dentro deles for de apenas uma linha, você pode remover o return e as chaves {} para o código ficar bem "síntese", assim:
+
+const dobro = nums.map(n => n * 2);
+
+const maiores = nums.filter(n => n > 10);
+
+
+
+
+
+
+O if / else (O Arquiteto)
+Você usa quando a decisão gera uma ação ou bloqueio.
+
+Ação: Salvar no banco de dados, enviar um e-mail, parar a execução.
+
+Clareza: Se você tem 3 ou mais caminhos, o if/else if/else é obrigatório para o código não virar uma "sopa de letras".
+
+Dica de Ouro: Use o if para as "Cláusulas de Guarda" (os erros que matam o código no começo).
+
+2. O Ternário (O Estilista)
+Você usa quando a decisão gera um valor.
+
+Atribuição: Dar nome a uma variável, definir uma cor de um botão, mudar um texto.
+
+Curto: Se a pergunta e as duas respostas cabem em uma linha, o ternário é o rei.
+
+
+
+// Filter + Map: Você joga gente fora e transforma o que sobrou. (O array diminui).
+
+// Map com Ternário: Você mantém todo mundo, mas "etiqueta" ou transforma de forma condicional. (O array mantém o tamanho).     !!!IMPORTANTE logica para usar o map 
+                                                                                                                         //      concatenado com o filter ou nao

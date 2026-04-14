@@ -2462,7 +2462,7 @@ Mostre na tela uma frase única que diga: "O atleta [nome] correu
 // // const projecaovendas = produtos.map( produtos => {
 // //     return {...produtos, quantidade: produtos.qtd + 10}
 // // }).reduce((acumulador, produtos) => {
-// //     return  acumulador + produtos.preco * produtos.quantidade ;   //overcoding com o map ali!!
+// //     return  acumulador + produtos.preco * produtos.quantidade ;   //overcoding com o map ali, ja tenho o dado só chamar!!
 
 // // }, 0)
 
@@ -2490,22 +2490,22 @@ Mostre na tela uma frase única que diga: "O atleta [nome] correu
 // const exibirprojecao = formatador.format(projecaovendas);
 // const exibirprojecaocomimposto = formatador.format(projecaovendascomimposto);
 
-// //total
-// // const totalbruto = produtos.reduce((acumulador, produtos)=>  {
-// //        return acumulador + total;
-// // }, 0);
+//total
+// const totalbruto = produtos.reduce((acumulador, produtos)=>  {
+//        return acumulador + total;
+// }, 0);
 
 
-// //filter antes do total bruto, antes do reduce para considerar ela na conta final, mas pode ser antes do map para eu definir no que quero trabalhar especificamente !!!
+//filter antes do total bruto, antes do reduce para considerar ela na conta final, mas pode ser antes do map para eu definir no que quero trabalhar especificamente !!!
 
 
-// //ai o fluxo q fiz e posso ter na cabeça , primeiro o array ou a chamada para o acesso dos dados, ai a manipulção, se for dinheiro ja lança um formatador 
-// //de dinheiro embaixo do array, tipo transformar tudo em brl, ai tu vai lançando os formato em cada "return" NomeVariavelFormatadora.format() durante  cod
-// // ai tu lança o map, e vai colocando as regras do negocio, ai vem os impostos, os descontos e tudo mais 
-// //ai depois lança o filtro, ai se consegue adequar o passa ou não por ele, por caracteristicas, ou preço, só manipular
-// //ai depois o reduce, que vai somar tudo considerando as regras ou não do filtro, ai vc vai fazer ele como acumulador.. 
+//ai o fluxo q fiz e posso ter na cabeça , primeiro o array ou a chamada para o acesso dos dados, ai a manipulção, se for dinheiro ja lança um formatador 
+//de dinheiro embaixo do array, tipo transformar tudo em brl, ai tu vai lançando os formato em cada "return" NomeVariavelFormatadora.format() durante  cod
+// ai tu lança o map, e vai colocando as regras do negocio, ai vem os impostos, os descontos e tudo mais 
+//ai depois lança o filtro, ai se consegue adequar o passa ou não por ele, por caracteristicas, ou preço, só manipular
+//ai depois o reduce, que vai somar tudo considerando as regras ou não do filtro, ai vc vai fazer ele como acumulador.. 
 
-//             // o filtro pode vir antes ou depois do map, depende do objetivo, se for muito grande o site, ou se quero manipular só uma parte dos dados..
+            // o filtro pode vir antes ou depois do map, depende do objetivo, se for muito grande o site, ou se quero manipular só uma parte dos dados..
 
 // console.log(checkout);
 // console.log(`total periferico:  ${totalExibicaoper}`);
@@ -2516,20 +2516,35 @@ Mostre na tela uma frase única que diga: "O atleta [nome] correu
 // console.log(`A venda de 10 quantidade de todos os produtos : ${exibirprojecao}`);
 // console.log(` venda de 10 quantidade de todos os produtos considerando o imposto : ${exibirprojecaocomimposto}`);
 
-const alfabeto = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"];
 
 
-const retornoalfabeto = 33 ; //aq a qauntidade do input
 
-const estadentro = retornoalfabeto < 1 || retornoalfabeto > 26 ? "numero invalido, só entre 1 e 26" : alfabeto[retornoalfabeto - 1];;
 
- const contaralfabeto = alfabeto.filter( (letra, index) => { //aq defino o filtro
+///////////////////////////////====////////////////////////////
 
-    return letra < retornoalfabeto; // aq é para retornar tudo menor que o index(posição da array)
 
-});
 
-console.log(estadentro);
+
+
+
+
+
+// const alfabeto = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"];
+
+
+// const retornoalfabeto = 21 ; //aq a qauntidade do input
+
+// // if (retornoalfabeto < 1 || retornoalfabeto > 26) {
+// //     console.log("Número inválido!");
+// //     return; 
+// // }
+
+//  const  resultado = (retornoalfabeto < 1 ||  retornoalfabeto > 26) ?  //assim eu crio ums variavel só ternaria com filtro para suplir a necessidade
+//  "retorno invalido !" : alfabeto.filter( (letra, index) => { return index < retornoalfabeto;  // letra(conteudo) = conteudo da posição, index(endereço) = qual posição 
+
+// });
+
+// console.log(resultado);
 
 // const qualletra = alfabeto[retornoalfabeto];
 // const letra = qualletra + (retornoalfabeto + 1 );
@@ -2538,3 +2553,80 @@ console.log(estadentro);
 //});
 
 
+// Sempre que o código dentro deles for de apenas uma linha, você pode remover o return e as chaves {} para o código ficar bem "síntese", assim:
+
+// const dobro = nums.map(n => n * 2);
+
+// const maiores = nums.filter(n => n > 10);
+
+
+// Nível 1: O Map (Transformador)
+// Cenário: Você tem uma lista de preços em números inteiros, mas precisa exibir para o usuário com o símbolo de "R$".
+
+// Dado: const precos = [10, 25, 50, 100];
+
+// Tarefa: Crie um novo array onde cada número se transforme em uma string formatada (ex: "R$ 10").
+
+// Dica: O map sempre devolve um array do mesmo tamanho do original, mas com os valores transformados.
+
+// const precos = [10, 25, 50, 100];
+
+// const formatador = new Intl.NumberFormat('pt-BR', { //tranformar em BRL                     IMPORTANTE!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+//     style: 'currency',
+//     currency: 'BRL'
+// });
+
+// const novonumero = precos.map((item , index) => {
+//     return formatador.format(item); //usar "item" primeiro parametro vai pegar conteudo de cada objeto
+//                                     //usar o index vai pegar só o endereço, ah vai estar o 3 que é a quarta posição,
+//                                     //geralmente é raro usar o index num map, se quer algo especifico usa o filter
+//                                     // mas pode ser algo do tipo return index % 2 === 0 ? par : impar 
+
+    
+    
+// })
+// //const exibidor = formatador.format(novonumero); como o map vai indice por indice tem q usar no escopo dele
+
+
+// console.log(novonumero);
+
+
+// Filter + Map: Você joga gente fora e transforma o que sobrou. (O array diminui).
+
+// Map com Ternário: Você mantém todo mundo, mas "etiqueta" ou transforma de forma condicional. (O array mantém o tamanho).     !!!IMPORTANTE logica para usar o map 
+                                                                                                                         //      concatenado com o filter ou nao
+
+
+// Exercício 2: O Filter (O Segurança)
+// Cenário: Você tem uma lista de notas de alunos e quer criar um novo array apenas com quem foi aprovado (nota maior ou igual a 7).
+
+// Dado: const notas = [4.5, 8.0, 5.5, 10, 7.0, 6.5];
+
+// Tarefa: Crie o array aprovados.
+
+// O que observar: O filter não muda o valor (não usa o Intl aqui), ele só decide se o número entra ou não no novo array baseado em um teste de true ou false.
+
+
+// const notas = [4.5, 8.0, 5.5, 10, 7.0, 6.5]; 
+
+// const aprovados = notas.filter((item, index) => {
+//     return item >= 7; 
+// });
+// console.log(aprovados);
+//bem facil, um "if gourmet", se atentar a condição do return sempre ao lidar com filter!
+
+
+// Desafio 3: O Reduce (O Acumulador)
+// Agora o bicho pega um pouco mais, mas você já pegou a lógica de parâmetros, então vai ser tranquilo. O reduce não quer transformar, nem filtrar; ele quer condensar tudo em uma coisa só (tipo somar o total de uma nota fiscal).
+
+// Dado: const itensCarrinho = [15, 30, 45, 10];
+
+// Tarefa: Somar tudo para ter o valor total.
+
+const itensCarrinho = [15, 30, 45, 10];
+
+const total = itensCarrinho.reduce((acumulador , num) => { //reduce pode ter 3 parametros, primeiro sempre vai ser o acumulador acc
+    return acumulador + num;                               //segundo vai ser o conteudo do endereço, o que esta dentro da posição
+                                                           //terceiro o endereço.       >>é um map e filter com um parametro acumulador na frente 
+}, 0)
+console.log(total);

@@ -16,6 +16,14 @@ Ou seja: estou estudando só para ganhar dinheiro e ter carreira, ou porque eu r
 Olha, só quero ser um cara que entende muito bem de códigos e, a longo prazo, ter muitos projetos, entender partes físicas e afins. Porque achei algo que vai muito além de ser apenas a minha profissão...
 
 
+[Importante], entender a necessidade do cliente é tão importante quanto a parte tecnica, tem que enteder o problema, ter uma visão macro do negocio
+ter um planejamento eficiente, tanto de controle de prazos de entrega quanto financeiros, padronização de etapas e modelos, e papel ativo e reativo 
+a tudo, saber trabalhar em equipe e definir bem o escopo de cada um para o projeto, e ter muita comunicação para alinhar e não cometer erros que comprometam
+entragas, prazos, ou até mesmo a manutenibilidade do projeto.. NEM TODA EMPRESA VAI TER PADRÃO DE PROCEDIMENTOS OU DE "X ACONTECE, FAÇA Y", NA FACULDADE SEMPRE
+FALAM DA IMPORTANCIA DISSO, MAS NA PRATICA ISSO NEM SEMPRE VAI OCORRER, POR ISSO TER COMUNICAÇÃO, TANTO COM CLIENTE OU A PONTE COM O CLIENTE DENTRO DA ORG, OU SE 
+COMUNICAR COM OS COLEGAS SE TORNA VITAL, PARA DEIXAR TUDO ALINHADO PARA SEGUIR TODOS PARA UM OBEJTIVO EM COMUM
+>>>>REFINAR ESTUDOS DE UML 
+
 
 
 ARRAY É SEMPRE MAP(), FILTER() E REDUCE() !!
@@ -25,6 +33,30 @@ Entram 10 itens -> Saem 10 itens (mexidos): Use .map().
 Entram 10 itens -> Saem 5 itens (iguais): Use .filter().
 
 Entram 10 itens -> Sai 1 valor (total): Use .reduce().
+
+
+O if / else (O Arquiteto)
+Você usa quando a decisão gera uma ação ou bloqueio.
+
+Ação: Salvar no banco de dados, enviar um e-mail, parar a execução.
+
+Clareza: Se você tem 3 ou mais caminhos, o if/else if/else é obrigatório para o código não virar uma "sopa de letras".
+
+Dica de Ouro: Use o if para as "Cláusulas de Guarda" (os erros que matam o código no começo).
+
+
+
+ O Ternário (O Estilista) FUNCIONAL
+Você usa quando a decisão gera um valor.
+
+Atribuição: Dar nome a uma variável, definir uma cor de um botão, mudar um texto.
+
+Curto: Se a pergunta e as duas respostas cabem em uma linha, o ternário é o rei.
+
+Use a "trindade"(FUNCIONAL) por padrão para manter o código limpo e moderno. 
+
+Migre para o for apenas quando precisar de performance extrema, interrupção antecipada ou controle fino de índices. 
+
 
 
 
