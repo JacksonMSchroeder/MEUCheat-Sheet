@@ -15,18 +15,57 @@ Então, para esquecer toda a angústia de pensar que pode ser inútil estar estu
 Ou seja: estou estudando só para ganhar dinheiro e ter carreira, ou porque eu realmente é algo que quero entender? 
 Olha, só quero ser um cara que entende muito bem de códigos e, a longo prazo, ter muitos projetos, entender partes físicas e afins. Porque achei algo que vai muito além de ser apenas a minha profissão...
 
+[formatarParaReal] 
+>>>BR $$ 
+
+    const formatador = new Intl.NumberFormat('pt-BR', { //tranformar em BRL                  
+    style: 'currency',
+    currency: 'BRL'
+});             //gostei muito de usar isso em cima do cod e depois ir formatando os retorno 
+
+//
+
+
+
+[LEMBRETE] QUANDO NÃO ESTIVER ESTUDANDO LIGAR OS RECURSOS DE ASSISTENCIA DO VSCODE
 
 [Importante], entender a necessidade do cliente é tão importante quanto a parte tecnica, tem que enteder o problema, ter uma visão macro do negocio
 ter um planejamento eficiente, tanto de controle de prazos de entrega quanto financeiros, padronização de etapas e modelos, e papel ativo e reativo 
 a tudo, saber trabalhar em equipe e definir bem o escopo de cada um para o projeto, e ter muita comunicação para alinhar e não cometer erros que comprometam
 entragas, prazos, ou até mesmo a manutenibilidade do projeto.. NEM TODA EMPRESA VAI TER PADRÃO DE PROCEDIMENTOS OU DE "X ACONTECE, FAÇA Y", NA FACULDADE SEMPRE
 FALAM DA IMPORTANCIA DISSO, MAS NA PRATICA ISSO NEM SEMPRE VAI OCORRER, POR ISSO TER COMUNICAÇÃO, TANTO COM CLIENTE OU A PONTE COM O CLIENTE DENTRO DA ORG, OU SE 
-COMUNICAR COM OS COLEGAS SE TORNA VITAL, PARA DEIXAR TUDO ALINHADO PARA SEGUIR TODOS PARA UM OBEJTIVO EM COMUM
+COMUNICAR COM OS COLEGAS SE TORNA VITAL, PARA DEIXAR TUDO ALINHADO PARA SEGUIR TODOS PARA UM OBJTIVO EM COMUM
 >>>>REFINAR ESTUDOS DE UML 
+https://www.devmedia.com.br/orientacoes-basicas-na-elaboracao-de-um-diagrama-de-classes/37224
+
+
+[IMPORTANTE] CUIDAR COM O ERRO SILENCIOSO !! ESSE É O PIOR QUE TEM !! POIS O COD NÃO "APITA" O ERRO, É ERRO DE LOGICA
+Estava eu finalizando uma sessão de estudo ai descido dar um scroll para cima para comtemplar os cod realizados, no entanto,
+bati o olho num cod que eu fiz, numa funcional mais especificamente, que estava estranho, como ja tinha comentado, que está sendo minha
+metodologia, termina o cod e comentar e ir pilando os cod feito kk, eu o descomentei para realizar testes, rodou, mas a logica estava errada!!! 
+Basicamente eu tinha uma logica de negocio com condições especificas, ai criei um filtro para ela, ai na hora de fazer os acumuladores tanto de imposto
+quanto de valor normal, eu puxei array.reduce , e não variavelFILTRO.reduce , ai os numeros vieram, mas errados, porque eu estava ignorando o filtro
+teve outro caso que eu filtrei para tirar os valores 0 e depois ignorei o filtro,  >>
+>>const estoque = pecas 
+>>.filter((valor, index) => { return valor > 0 } )
+>>.reduce((acc, valor) => { return acc + valor * 1.10   },0);
+Na hora de fazer a somatotal do estoque, fazer ela na condição ou fora dela daria no mesmo, porque estou desprezando um valor 0 ou negativado..
+Mas, logicamente ta errado, vou tem que fazer um total considerando a condição seja de imposto ou de desconto, e o total, até mesmo as 3
+Sempre é bom separar e digitar o nome da variavel de maneira bem intuitiva para não ficar ruim de ler depois !!!
+
+
+[IMPORTANTE] meio confuso o esqueme de imposto, porque {* 1.10 tu da 10% de imposto}, e {* 0.90 tu da 10% de desconto} 
+PARA CALCULAR O QUANDO FOI DE IMPOSTO TU N PODE TIRAR 0.90 DO VALOR DO IMPOSTO, 
+>> 100 * 1.10 = 110, AGORA PARA CALCULAR A VOLTA N PODE SER [110 * 0.90 = 99] DA RESULTADO DIFERENTE E N DÁ PARA "VOLTAR" IMPOSTO OU CALCULA ASSIM
+>> VALORIMPOSTO = IMPOSTO - VALOR   TEM QUE PENSAR QUE TU VAI TER QUE PEGAR O VALOR FINAL DO IMPOSTO E TIRAR O VALOR NORMAL, SÓ ISSO !
+>>A porcentagem de "ida" não tem o mesmo peso que a porcentagem de "volta" sobre o valor novo
 
 
 
-ARRAY É SEMPRE MAP(), FILTER() E REDUCE() !!
+
+
+
+ARRAY É SEMPRE MAP(), FILTER() E REDUCE() !! quer dizer, para fazer algo que exija muita parada, um break no meio, o for ainda vai ser melhor!!!
 
 Entram 10 itens -> Saem 10 itens (mexidos): Use .map().
 

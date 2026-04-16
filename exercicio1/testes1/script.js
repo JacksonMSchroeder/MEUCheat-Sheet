@@ -2623,10 +2623,163 @@ Mostre na tela uma frase única que diga: "O atleta [nome] correu
 
 // Tarefa: Somar tudo para ter o valor total.
 
-const itensCarrinho = [15, 30, 45, 10];
+// const itensCarrinho = [15, 30, 45, 10];
 
-const total = itensCarrinho.reduce((acumulador , num) => { //reduce pode ter 3 parametros, primeiro sempre vai ser o acumulador acc
-    return acumulador + num;                               //segundo vai ser o conteudo do endereço, o que esta dentro da posição
-                                                           //terceiro o endereço.       >>é um map e filter com um parametro acumulador na frente 
+// const total = itensCarrinho.reduce((acumulador , num) => { //reduce pode ter 3 parametros, primeiro sempre vai ser o acumulador acc
+//     return acumulador + num;                               //segundo vai ser o conteudo do endereço, o que esta dentro da posição
+//                                                            //terceiro o endereço.       >>é um map e filter com um parametro acumulador na frente 
+// }, 0)
+// console.log(total);
+
+// Nível 4: A Esteira de Produção (Filter + Map)
+// Cenário: Você recebeu uma lista de peças do estoque. Algumas estão com o valor zerado (erro de sistema)
+//  e você precisa ignorar essas. Das que sobraram, você precisa aplicar um imposto de 10% e formatar como moeda.
+
+// Dado: const pecas = [0, 150, 300, 0, 500];
+
+// Sua Missão: 1. Filtre apenas as peças que têm valor maior que 0.
+// 2. Transforme as que sobraram somando 10% ao valor.
+// 3. Formate o resultado final usando o seu formatador.format.
+
+// const pecas = [0, 150, 300, 0, 500];
+
+// const formatador = new Intl.NumberFormat('pt-BR', { //tranformar em BRL                     IMPORTANTE!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+//     style: 'currency',
+//     currency: 'BRL'
+// });
+
+// const estoqueinteiro = pecas.reduce((acc, valor) => {return acc + valor  }, 0); //SEMPRE LEMBRA DO 0 NO REDUCE, TINHA ESQUECIDO
+
+// const estoquecomimposto = pecas.reduce((acc , valor) => {return acc + valor * 1.10}, 0);
+
+// //tive que fazer esse para ter um estoque inteiro já que eu estava tentando fazer o "estoque" com o filtro ali na conta final de impostos...
+// //nesse exercicio acabou funcionando ja q estava desprezando só o 0, mas se o filter fosse qualquer outro valor além de 0 os dados estariam comprometidos
+// //o que entra na conversa que tive com meu amigo, sobre se ater ao o que exercicio pede, porque você monta a estrutura pensando no requisito do exercicio
+// //se ficar pensando depois em adicionar coisas, extressando a logica, vai ter que mudar bastante o cod.. afinal sua logica era para condições x sem pensar na y
+// //  mas é uma excelente forma de treino, as empresas não mantém codigos estaticos, novos requisitos de clientes, de mercado e varios fatores torna o codigo muito dinamico
+// //colocar novas funcionalidades, e transformar o cod de uma coisa para outra é excessivamente o trabalho de um desenvolvedor,
+// //por isso vou fazer os exercicio e manter essa postura de extressar a logica com novos requisitos que eu mesmo me submeto... 
+
+// const exibirinteiro = formatador.format(estoqueinteiro);
+// const exibirimposto = formatador.format(estoquecomimposto);
+
+
+
+
+
+// const estoque = pecas
+// .filter((valor, index) => { return valor > 0 } )
+// .reduce((acc, valor) => { return acc + valor * 1.10   },0);
+
+// //  subtraiu 10% do valor (deixou ele com 90% do original).
+
+// // O que o desafio pediu: Somar 10% de imposto (ou seja, valor * 1.10).  ATENÇÃO, MAIS 10% EM CIMA DO VALOR TU USA O 100 + A QUANTIDADE, 10%? 1.10 
+
+// //SE POR ALGUM MOTIVO EU TER QUE DOBRAR O VALOR SERÁ * 2.0, OU SEI LA, DOBRAR + METADE 2.5, TRIPLICAR 3.0 ....
+
+// //enquanto pensar em desconto é o caminho oposto do 100, 0.90 é 10% desconto, 0.40 é 60, e assim vai indo..
+
+
+// const exibirestoquecomimposto = formatador.format(estoque);
+
+// //const imposto = pecas.reduce((acc , valor) => {    110 * 0.90 = 99  ou seja, 0.90 está errado para logica
+// //  return  acc + valor * 0.90;                 // o certo é criar reduce de deposito cheio + com imposto
+// //}, 0); 
+
+//     const valorimposto = estoquecomimposto - estoqueinteiro; // detalhe, colocar o estoque com imposto na frente já que ele é o maior valor, 
+//     //já que o imposto é uma "adição de valor" ele vai ser o numero a ser subtraido do estoque sem imposto..
+
+//    //antes eu tinha feito [[ > valorimposto = estoque - semimposto; < ]] o que veio a calhar já que eu estava retirando o 0
+//    //mas a logica estava comprometida já que puxei uma numero para calculo de acumulador com uma condição.. não posso fazer isso
+//    // ou seja, nesse exemplo eu poderia usar o "estoque" e o novo criado "estoquecomimposto", mas para a logica ficar certa é melhor criar um reduce para o imposto
+//    //eu tbm tentei dar o imposto subtraindo 0.90 dele, mas da erro, pq 0.90 de determinados valores vai dar diferença de 1.10, n estou "tirando 10" fazendo 0.90
+//    //o valor do imposto é sobre a base original dele, 0.90 to me baseando no resultado final q vai ser maior que o preço cheio.....
+   
+
+// //extra 
+// const exibirimpostototal = formatador.format(valorimposto);
+
+// console.log(exibirinteiro );
+// console.log(exibirestoquecomimposto);
+// console.log(exibirimposto);
+// console.log(exibirimpostototal);
+
+
+
+// Nível 5: O Relatório de Elite (Filter + Reduce + Média)
+// Cenário: No dashboard do CS2, precisamos analisar apenas os jogadores de alto desempenho.
+
+// Dados: const scores = [80, 120, 50, 200, 90, 150];
+
+// Seus Requisitos:
+
+// Filtrar: Apenas jogadores com score maior que 100.
+
+// Soma: Calcular o XP total apenas desse grupo de elite.
+
+// Média: Calcular a média de XP desse grupo (Total / Quantidade de jogadores elite).
+
+// Pit Stop: Você deve salvar o resultado do filtro em uma variável chamada jogadoresElite para não ter que filtrar a lista duas vezes.
+
+
+// const scores = [80, 120, 50, 200, 90, 150];
+
+// const elite = scores.filter((valor, index) => {return valor > 100 }); // primeiro criei a variavel elite, estipulando uma condição
+
+
+// const soma = elite.reduce((acc, valor) => {return acc + valor}, 0 ); //usei essa elite para acumulador
+// const media = soma / elite.length; // aqui uma coisa !!!!IMPORTANTE  PARA CALCULA A MEDIA BASTA PEGAR A LISTA /(DIVIDIR) POR ELA .LENGTH
+// const jogadoresElite = elite; // PARA DECLARAR A LISTA
+
+// console.log(jogadoresElite)
+// console.log(media.toFixed(0));
+// console.log(soma);
+
+//O critério para decidir se encadeia ou não se resume a uma pergunta simples:
+//"Eu vou precisar dos dados desse meio do caminho para outra coisa?"
+
+
+// const pecasLoja = [
+//   { nome: "Processador", preco: 1200, emEstoque: true },
+//   { nome: "Memória RAM", preco: 300, emEstoque: false },
+//   { nome: "Placa Mãe", preco: 800, emEstoque: true },
+//   { nome: "Fonte", preco: 0, emEstoque: true } // Erro de sistema
+// ];
+// Seus Requisitos:
+
+// Limpeza: Ignore peças que não estão em estoque (emEstoque: false) OU que o preço seja 0.
+
+// Imposto: Aplique os 10% de imposto em cada peça válida.
+
+// Total: Calcule o valor total de compra dessas peças com imposto.
+
+// Extra: O valor do imposto deve ser calculado comparando o Total com Imposto vs o Total sem Imposto (usando a base filtrada).
+
+
+const pecasLoja = [
+  { nome: "Processador", preco: 1200, emEstoque: true },
+  { nome: "Memória RAM", preco: 300, emEstoque: false },
+  { nome: "Placa Mãe", preco: 800, emEstoque: true },
+  { nome: "Fonte", preco: 0, emEstoque: true } // Erro de sistema
+];
+const impostoaplicado = 1.10
+
+
+
+const estoqueoff = pecasLoja.filter ( estoque => estoque.emEstoque === true && estoque.preco !== 0  );
+const valorsemimposto = estoqueoff.reduce((acc, valor) => { return acc + valor.preco  }, 0); //FIZ ESSE AQUI EM CIMA, MAS EM CIMA NÃO PEGARIA A CONDIÇÃO DO FILTER !!!
+//const imposto = pecasLoja.preco * impostoaplicado;
+const valorimposto = estoqueoff.reduce((acc, valor) => {
+    return acc + valor.preco * impostoaplicado;
 }, 0)
-console.log(total);
+
+//EU FIZ TBM O pecasLoja.reduce, ou seja, não usaria o filter que eu fiz, por isso arrumei para o cod funcionar conforme
+
+const totalcomimposto = valorimposto - valorsemimposto;
+
+//MANIPULANDO O OBJETO DA ARRAY DENTRO DA FUNCIONAL NÃO CHAMA A ARRAY, COLOCAR ELA NO PARAMETRO CRIADO, PARAMETROCRIADO.TIPO
+
+console.log(valorsemimposto);
+console.log(valorimposto);
+//console.log(imposto);
+console.log(totalcomimposto);
