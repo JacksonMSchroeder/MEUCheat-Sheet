@@ -60,8 +60,9 @@ PARA CALCULAR O QUANDO FOI DE IMPOSTO TU N PODE TIRAR 0.90 DO VALOR DO IMPOSTO,
 >> VALORIMPOSTO = IMPOSTO - VALOR   TEM QUE PENSAR QUE TU VAI TER QUE PEGAR O VALOR FINAL DO IMPOSTO E TIRAR O VALOR NORMAL, SÓ ISSO !
 >>A porcentagem de "ida" não tem o mesmo peso que a porcentagem de "volta" sobre o valor novo
 
-
-
+[IMPORTANTE] ENCADEIAR A FUNCIONAL ??
+>>ENCADEIAR QUANDO? QUANDO PRECISO RETORNAR SÓ UM VALOR ESPECIFICO DENTRO DAS CONDIÇÕES ESTABELECIDAS NO ENCADEAMENTO, 
+>>PRECISO RETORNAR MAIS COISAS OU LIDAR COM UMA TRATIVA DE DADO FILTRADO QUE ESTA NO MEIO DO ENCADEAMENTE?? AI ESQUECE, SEPARA 
 
 
 
@@ -99,6 +100,43 @@ Migre para o for apenas quando precisar de performance extrema, interrupção an
 
 
 
+const map = (arr, cb) => {
+    const newArr = [];
+    for(let i = 0; i < arr.lenght; i++) {
+        let e = arr[i];
+        newArr.push(
+            cb(e, i)
+        );
+    }
+}
+    return newArr;
+
+
+
+const filter = (arr, cb) => {
+    const newArr = [];
+    for(let i = 0; i < arr.lenght; i++) {
+         if(cb(arr[i], i, arr)) {
+             newArr.push(arr[i]);
+         }
+    }
+    return newArr;
+}
+
+const reduce = (arr, cb, initial) => {
+    let current = arr[0];   
+    let indexComeco = 1;   
+    const temInicial = initial !== undefined;
+    if (temInicial) {
+        indexComeco = 0;
+        current = initial;
+    }
+    for(let i = indexComeco; i < arr.lenght; i++) {
+        let e = arr[i];
+        current = cb(current, e, i);
+    }
+    return current;
+}
 
 
 

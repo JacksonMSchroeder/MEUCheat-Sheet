@@ -193,3 +193,12 @@ Onde ele fica: Na lista de destino: listaDestino.push(valor)./
  Escrever somatotalleve += pesos[i] é exatamente a mesma coisa que escrever:
 
 somatotalleve = somatotalleve + pesos[i]
+
+
+
+////////////////////
+
+
+
+typeof	Investiga o tipo do dado.
+

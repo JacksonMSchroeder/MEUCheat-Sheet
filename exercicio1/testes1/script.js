@@ -2762,16 +2762,33 @@ const pecasLoja = [
   { nome: "Placa Mãe", preco: 800, emEstoque: true },
   { nome: "Fonte", preco: 0, emEstoque: true } // Erro de sistema
 ];
-const impostoaplicado = 1.10
+const impostoAplicado = 1.10
 
 
 
-const estoqueoff = pecasLoja.filter ( estoque => estoque.emEstoque === true && estoque.preco !== 0  );
-const valorsemimposto = estoqueoff.reduce((acc, valor) => { return acc + valor.preco  }, 0); //FIZ ESSE AQUI EM CIMA, MAS EM CIMA NÃO PEGARIA A CONDIÇÃO DO FILTER !!!
+
+function calcularValores(acumulador, valorAtual) {
+    return ({
+        valorSemImposto: acumulador.valorSemImposto + valorAtual.preco,
+        valorComImposto: acumulador.valorComImposto + valorAtual.preco * impostoAplicado
+    });
+}
+
+(acc , valor) => ({
+valorsemimposto: acc.valorsemimposto + valor.preco,
+valorimposto: acc.valorimposto + valor.preco * impostoAplicado
+})
+if (true) console.log("lero")
+else console.log("aaaa");
+
+const add = (a, b) => 91283123 + 283423 + 23949234;
+
+ 
+const estoqueoff = pecasLoja
+    .filter(estoque => estoque.emEstoque === true && estoque.preco !== 0)
+const valorsemimposto = estoqueoff.reduce((acc, valor) => acc + valor.preco, 0); 
 //const imposto = pecasLoja.preco * impostoaplicado;
-const valorimposto = estoqueoff.reduce((acc, valor) => {
-    return acc + valor.preco * impostoaplicado;
-}, 0)
+const valorimposto = estoqueoff.reduce((acc, valor) => acc + valor.preco * impostoAplicado, 0)
 
 //EU FIZ TBM O pecasLoja.reduce, ou seja, não usaria o filter que eu fiz, por isso arrumei para o cod funcionar conforme
 
@@ -2783,3 +2800,28 @@ console.log(valorsemimposto);
 console.log(valorimposto);
 //console.log(imposto);
 console.log(totalcomimposto);
+
+
+//ENCADEIAR QUANDO? QUANDO PRECISO RETORNAR SÓ UM VALOR ESPECIFICO DENTRO DAS CONDIÇÕES ESTABELECIDAS NO ENCADEAMENTO, 
+//PRECISO RETORNAR MAIS COISAS OU LIDAR COM UMA TRATIVA DE DADO FILTRADO QUE ESTA NO MEIO DO ENCADEAMENTE?? AI ESQUECE, SEPARA 
+
+
+
+
+
+// COM OBJETO
+const pecasLoja = [
+  { nome: "Processador", preco: 1200, emEstoque: true },
+  { nome: "Memória RAM", preco: 300, emEstoque: false },
+  { nome: "Placa Mãe", preco: 800, emEstoque: true },
+  { nome: "Fonte", preco: 0, emEstoque: true } // Erro de sistema
+];
+const impostoaplicado = 1.10
+
+
+const estoqueoff = pecasLoja
+    .filter(estoque => estoque.emEstoque === true && estoque.preco !== 0)
+    .reduce((acc , valor) => ({valorsemimposto: acc.valorsemimposto + valor.preco , valorimposto: acc.valorimposto + valor.preco * impostoAplicado  }), {valorimposto: 0 , valorsemimposto: 0}  )
+
+
+console.log(estoqueoff);
