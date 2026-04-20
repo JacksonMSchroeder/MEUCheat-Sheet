@@ -43,16 +43,16 @@ else
 
 console.log(users) 
 
- }); */ 
+ }); */
 
- /*
- const tamanhocidade = 310.000
- if(tamanhocidade >= 300.000)
-    console.log("Cidade Grande")
+/*
+const tamanhocidade = 310.000
+if(tamanhocidade >= 300.000)
+   console.log("Cidade Grande")
 else if(tamomhocidade => 200.000)
-    console.log("cidade média")
+   console.log("cidade média")
 else
-    console.log("cidade pequena")
+   console.log("cidade pequena")
 */
 
 
@@ -122,7 +122,7 @@ const resultadoFinal = somar(10, 340, 23)
 console.log(resultadoFinal);
 */
 //////////////////
- 
+
 /*
 const nome = (nome1) => {
     const nome1 = "alberto"
@@ -183,17 +183,17 @@ Se as kills forem maiores que 50: Retorne: "Suspeito de Cheat! VSF."
 Para todos os outros casos: Calcule o saldo (kills - deaths) e retorne o dado bruto com a frase: "Seu saldo é: [resultado]". */
 
 
-  /*  const validadorP1 = (kill , death) => { 
+/*  const validadorP1 = (kill , death) => { 
 
-    if(death === 0){  
-             return "Imortal! Dados perfeitos."
-    }
-    if(kill > 50){  return "Ta xitado até o talo"
+  if(death === 0){  
+           return "Imortal! Dados perfeitos."
+  }
+  if(kill > 50){  return "Ta xitado até o talo"
 
-    }
-    else  { return `seu saldo é ${kill - death}`
+  }
+  else  { return `seu saldo é ${kill - death}`
 
-    }  
+  }  
 } 
 
 
@@ -203,15 +203,15 @@ console.log(validadorP1(13 , 22)) */
 
 //mostrando os 3 resultados simultaneo sem vericação (if/else) *diagnostico completo' 
 
-   /* const validadep1 = (kill, death) => {
+/* const validadep1 = (kill, death) => {
 
-        const imortal = `Imortal: ${death === 0}`;
-        const cheat =  `Suspeito ${kill > 50}`
-        const saldo = `seu saldo é: ${kill - death}`
-        return [imortal , cheat , saldo]
+     const imortal = `Imortal: ${death === 0}`;
+     const cheat =  `Suspeito ${kill > 50}`
+     const saldo = `seu saldo é: ${kill - death}`
+     return [imortal , cheat , saldo]
 
 
-    }
+ }
 console.log(validadep1(40 , 38) )
 */
 
@@ -219,7 +219,7 @@ console.log(validadep1(40 , 38) )
 
 
 
-    ////
+////
 /*
 while (true) {
     let ENTIDADE = pegar_tipo_entidade();
@@ -247,7 +247,7 @@ while (true) {
 } */
 
 
-    /* O Desafio: Sistema de Recompensa de Partida
+/* O Desafio: Sistema de Recompensa de Partida
 Crie uma função chamada calcularRecompensa que recebe o número de pontos de um jogador em uma partida.
 
 As Regras (Tratativas):
@@ -262,18 +262,18 @@ Se os pontos forem maiores que 50: Retorne "Recompensa: 1000 moedas + Bônus de 
 
 /* const calcularRecompensa = (pontos) => { */
 
- /*  if  (pontos === 0){ return `erro, pontos inválidos`;  melhor forma para SUPLIR O REQUISITO! SE O PROGRAMA N LIDAR COM NUMERO NEGATIVO */
+/*  if  (pontos === 0){ return `erro, pontos inválidos`;  melhor forma para SUPLIR O REQUISITO! SE O PROGRAMA N LIDAR COM NUMERO NEGATIVO */
 
-   /* (pontos <= 0){ return `erro, pontos inválidos`; */  /* supri  o negativo e o 0 */
+/* (pontos <= 0){ return `erro, pontos inválidos`; */  /* supri  o negativo e o 0 */
 
-   /* (pontos > -1 && pontos < 1){ return `erro, pontos inválidos`;  funciona */
+/* (pontos > -1 && pontos < 1){ return `erro, pontos inválidos`;  funciona */
 
-    /* (pontos === 0){ return `erro, pontos inválidos`; */ /* melhor forma para  */
+/* (pontos === 0){ return `erro, pontos inválidos`; */ /* melhor forma para  */
 
-  /* ( pontos <= 0 && pontos <= -1 ){ return `erro, pontos inválidos`; 
-    /* Não dá, assim ele pega todos os numeros entre -1 e 0 mas se coloca -2 em diante da undefined    (CORREÇÃO !, como estava lidando com numero negativo << muda o sinal !!)    
-    vou deixar esse && complexo ai mas pode ser (pontos <= 0)
-    
+/* ( pontos <= 0 && pontos <= -1 ){ return `erro, pontos inválidos`; 
+  /* Não dá, assim ele pega todos os numeros entre -1 e 0 mas se coloca -2 em diante da undefined    (CORREÇÃO !, como estava lidando com numero negativo << muda o sinal !!)    
+  vou deixar esse && complexo ai mas pode ser (pontos <= 0)
+  
 */
 /*
 }
@@ -375,7 +375,7 @@ Situação,Use...,Por quê?
 Busca Simples,return,É mais rápido e limpo.
 Processo em Etapas,break,"Você sai do loop, mas continua o ""trabalho de escritório"" da função."
 Menu de Opções (Switch),break,"Para não deixar o código ""escorrer"" para a próxima opção."
-*/ 
+*/
 
 /* Boa, Jackson! Vamos testar se a "febre" da lógica baixou ou se o termômetro de ADS está batendo no topo.
 
@@ -767,12 +767,12 @@ Se o dado for INVÁLIDO: Aumente 1 na contagemErros.
 //         contagemErros = contagemErros + 1;
 //         invalidos.push(scores[i]); /* para mostrar o valor do erro, ou seja o valor que não é valido, ou seja o valor que não é numero, ou seja o valor que é string ou numero negativo ou NaN */
 //         //console.log(`Score inválido: ${scores[i]}`)
-            
+
 //         //console.log(`Contagem de erros: ${contagemErros[i]}`)
 //     }
-    
-   
-   
+
+
+
 // }   
 // console.log(`soma valores total: ${somaValida}`)
 // console.log(`Valores válidos: ${validos}`)
@@ -836,7 +836,7 @@ O poder de fogo total do clan. */
 
 // for(let i = 0; i < arsenal.length; i++){
 
-    
+
 
 //     if(arsenal[i].estado === "novo"){
 //         //console.log(`Arma pronta para uso: ${arsenal[i].nome}`)
@@ -891,8 +891,8 @@ Relatório Final: Exiba o faturamento real, o total de descontos e quem são os 
 //         { id: 4, usuario: "Budié", valor: 80, tipo: "comum" },
 //         { id: 5, usuario: "Faith", valor: 150, tipo: "VIP" }
 // ];
-   
-   
+
+
 
 // let clientesVIP = [];
 // let clientescomuns = [];
@@ -906,7 +906,7 @@ Relatório Final: Exiba o faturamento real, o total de descontos e quem são os 
 
 //     if(compras[i].valor >= 100 ){
 //         clientesVIP.push(compras[i].usuario);
-        
+
 //          compras[i].desconto  = compras[i].valor * 0.2 ;
 //         totaldesconto = totaldesconto + compras[i].desconto;
 //         faturamento = faturamento + compras[i].valor - compras[i].desconto;
@@ -918,10 +918,10 @@ Relatório Final: Exiba o faturamento real, o total de descontos e quem são os 
 //         console.log(`O desconto para compra de ${compras[i].usuario} , nas compra de valor ${compras[i].valor} não foi possivel, só acima de 100! `);
 
 
-        
+
 //     }
- 
-   
+
+
 // }
 
 
@@ -1046,7 +1046,7 @@ Mostre na tela uma frase única que diga: "O atleta [nome] correu
 // Mostre no console: "Meu XP total é: [meuXP]".
 
 // const calcularXP = (missoesConcluidas, dificuldade)  => { //missoesConcluidas, dificuldade pode ser string, valor, true/false etc 
-   
+
 //     return  missoesConcluidas * dificuldade * 100;
 
 // };
@@ -1086,9 +1086,9 @@ Mostre na tela uma frase única que diga: "O atleta [nome] correu
 //     if(pontosPoder > 80){
 //         return ("Build OP")
 //     }
-  
+
 //         return ("Fraquin")
-    
+
 // }
 // console.log(analisarStatus(40));
 
@@ -1152,7 +1152,7 @@ Mostre na tela uma frase única que diga: "O atleta [nome] correu
 //             // para travar do usuario usar outro numero além do do estipulado.. 
 
 //                                 // ||     
-            
+
 //             // O valor nunca será menor que 1 nem maior que 100, 
 //     // o JS "força" ele a entrar no limite.
 //     //valorAtaque = Math.min(Math.max(valorAtaque, 1), 100);
@@ -1179,14 +1179,14 @@ Mostre na tela uma frase única que diga: "O atleta [nome] correu
 //     if(valorAtaque > defesaInimigo){
 //         return `Dano causado: ${valorAtaque}!`
 //     }
-     
-//         return;
-         
-// }
-         
-     
 
-    
+//         return;
+
+// }
+
+
+
+
 
 
 // calcularDano();
@@ -1274,7 +1274,7 @@ Mostre na tela uma frase única que diga: "O atleta [nome] correu
 //     for(let i = 0; i < valores.length; i++){   //percorrer a lista
 
 //         console.log(`O itens custam respectivamente : ${valores[i]}`);
-    
+
 //     }
 
 
@@ -1313,20 +1313,20 @@ Mostre na tela uma frase única que diga: "O atleta [nome] correu
 //     for(let i = 0; i < jogadores.length; i++){
 
 //         if(jogadores[i] === "Budié"){ 
-            
+
 //             //console.log(`Parceiro encontrado! ${i}`);
 //             return `Parceiro Budié encontrado!  `
 //         }
-       
+
 //             console.log( `Procurando... ${jogadores[i]} não é sua busca`); console.log //da eco no terminal se usado no loop, vai aparecer para 
 //                                         //   tudo por causa do [i]
 
 //              //return "Procurando..." 
 
 //             // return "Procurando..." usar assim ele vai parar o loop na primeira volta "Jackson"
-        
-           
-            
+
+
+
 //     }
 //       return "Procurando..." 
 // }
@@ -1384,31 +1384,31 @@ Mostre na tela uma frase única que diga: "O atleta [nome] correu
 
 //     for(let i = 0; i < vendas.length; i++){
 
-       
-    
+
+
 //         if(vendas[i] >= 0 && vendas[i] > vendas.length){ 
 //         //totalVendasGrandes += vendas[i]; //primeiro desafio
 //                         //+= acumulador 
 //         totalvendas += vendas[i];
-         
+
 
 //         }
-        
-        
+
+
 //         imposto = totalvendas  * 0.1;
 
-    
-        
+
+
 //     }
 //     //return `Suas vendas deram: ${totalvendas}, isso gerou um imposto de(10%): ${imposto} Seu faturamento foi: ${totalvendas - imposto}`;
 //     //return totalvendas - imposto; //retornar com imposto 
 //     //return totalvendas * 0.1; // retornar com imposto, sabendo a porcentagem do desconto n precisa colocar ele no cod
 
-    
-      
-    
 
-     
+
+
+
+
 
 // }
 // console.log(vendas());
@@ -1469,7 +1469,7 @@ Mostre na tela uma frase única que diga: "O atleta [nome] correu
 //             servico += movimentacoes[i].valor;
 //             quantidadeservico += 1;
 //         } 
-        
+
 //         //imposto = servico * 0.1; // precisa estar fora do loop se não ele roda junto ai vai somando conforme as vzs q roda o loop
 //         //return `seu total de ganho com os serviços foi de ${servico} e o imposto foi ${imposto} e o liquido foi ${servico - imposto}`  
 //     }
@@ -1479,7 +1479,7 @@ Mostre na tela uma frase única que diga: "O atleta [nome] correu
 //     }
 //     console.log("depois desconto", servico);
 //     imposto = servico * 0.1;
-   
+
 //     //return `seu total de ganho com os serviços foi de ${servico} e o imposto foi ${imposto} e o liquido foi ${servico - imposto}`
 //     return servico - quantidadeservico;
 // }   
@@ -1542,7 +1542,7 @@ Mostre na tela uma frase única que diga: "O atleta [nome] correu
 
 //     numerodecompra =  compra[i].compra;
 //     valornormal = compra[i].original;
-    
+
 
 //     if(numerodecompra === 1){
 //         primeiracompra = compra[0].original * 0.85  
@@ -1550,7 +1550,7 @@ Mostre na tela uma frase única que diga: "O atleta [nome] correu
 //     if(numerodecompra % 10 === 0 ){
 //         //desconto10 = compra[i].original * 0.70
 //         desconto10.push(compra[i].original * 0.70);
-        
+
 
 //     }
 
@@ -1583,7 +1583,7 @@ Mostre na tela uma frase única que diga: "O atleta [nome] correu
 //         { nome: "Esmerilhadeira", precoUnitario: 350, quantidade: 4 },
 //         { nome: "Parafusadeira", precoUnitario: 420, quantidade: 12 }
 //     ];
-    
+
 // Diferentes Tipos de Dados: Você está lidando com strings, números inteiros e decimais.
 
 // Múltiplas Condições: O sistema precisa checar se falta produto E se o preço muda pelo volume.
@@ -1622,17 +1622,17 @@ Mostre na tela uma frase única que diga: "O atleta [nome] correu
 //          //totalEmEstoque += precoUnitario * quantidade; para calcular sem os descontos, antes das regras do desconto
 //         if(estoque[i].quantidade >= 10){
 //             precoUnitario = estoque[i].precoUnitario * 0.8; //no geral para dar desconto eu sempre uso o valor que falta do 100%, se quer 60% de desconto eu coloco * 0.4
-            
+
 //             console.log(`Promoção ativa, comprou mais de 10 produtos.` );
 //         }
 
 //          totalEmEstoque += precoUnitario * quantidade; // para calcular com os descontos, depois da regra 
 //         //eu coloco acumuladores depois do for para n comprometer o loop, mas n tem problemas eu usar atribuição antes
 
-           
+
 //         //totalEmEstoque += estoque[i].precoUnitario * estoque[i].quantidade; n precisa dos [i] pq eu declarei lá em cima do que se trata 
 //         // tinha esqueci de fazer ele acumulador ja quer era uma logica de somar todas as quantidades +=
-        
+
 //             console.log(estoque[i].quantidade ,  "o tipo quantidade", typeof quantidade);
 //             console.log(estoque[i].precoUnitario ,  "o tipo precoUnitario", typeof precoUnitario);
 //             console.log(estoque[i].nome , "o tipo nomeproduto", typeof nomeproduto);
@@ -1645,63 +1645,63 @@ Mostre na tela uma frase única que diga: "O atleta [nome] correu
 //         console.log(`==============//===============`)
 //     return `produto ${nomeproduto , typeof nomeproduto} quantidade de preço do estoque ${totalEmEstoque, typeof totalEmEstoque}
 //      a quantidade comprada${quantidade }`
-    
+
 // }  
 // oficina(); 
 
 
 
-    // console.log(`Produto Atual: ${nomeproduto[i]}`);
-    // console.log(`Valor calculado nesta volta: R$ ${totalEmEstoque}`);
-    // console.log(`-----------------------------`);
+// console.log(`Produto Atual: ${nomeproduto[i]}`);
+// console.log(`Valor calculado nesta volta: R$ ${totalEmEstoque}`);
+// console.log(`-----------------------------`);
 
 
 
 
 
 
-    //desafio pessoal, criar um sistema que digito um numero de 1 a 26 e ele retorna a quantidade de letras correspondente do alfabeto
+//desafio pessoal, criar um sistema que digito um numero de 1 a 26 e ele retorna a quantidade de letras correspondente do alfabeto
 
-   // plus, só retornar 1 a que foi digitada 
+// plus, só retornar 1 a que foi digitada 
 
-    // const contagemalfabeto = (numerodigitado) => { //preciso estudar quando coloco no parametro ou declaro depois... 
-    //     const alfabeto = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"];
-    //      let listaalfabeto = [];
-    //     //let numerodigitado = 0; aq ou no parametro? entender as diferenças !!!!!!!!!!!!!IMPORTANTE
+// const contagemalfabeto = (numerodigitado) => { //preciso estudar quando coloco no parametro ou declaro depois... 
+//     const alfabeto = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"];
+//      let listaalfabeto = [];
+//     //let numerodigitado = 0; aq ou no parametro? entender as diferenças !!!!!!!!!!!!!IMPORTANTE
 
-    //     //Para um sistema de input (onde o usuário escolhe), use sempre o Parâmetro. usar let numerodigitado = 0; é usar valor fixo num harcoding
-    //     //imaginar o hardcoding nesse sentido como um numeru estacionario no cod, n faz sentido pq preciso do input para devolver algo ! 
-    //     // ou seja, um valor estacionario(let numerodigitado = 0;) ele n vai ditar o retorno do input, o input n vai manipular ele dentro do cod assim !! 
+//     //Para um sistema de input (onde o usuário escolhe), use sempre o Parâmetro. usar let numerodigitado = 0; é usar valor fixo num harcoding
+//     //imaginar o hardcoding nesse sentido como um numeru estacionario no cod, n faz sentido pq preciso do input para devolver algo ! 
+//     // ou seja, um valor estacionario(let numerodigitado = 0;) ele n vai ditar o retorno do input, o input n vai manipular ele dentro do cod assim !! 
 
-    //      if(numerodigitado < 1 || numerodigitado > 26){
-    //         //regra para delimitar as "regras do jogo", por isso vou usar o numerodigitado no let do for...
-    //             return "Ops, só pode digitar numeros entre 1 a 26!"
-    //         }
-    //         //listaalfabeto += alfabeto; viajei, vou conconcatenar o texto fazendo isso, vai um loop de a, ab, abc, abcd, ou seja, não!!
-    //       for(let i = 0; i < numerodigitado; i++){ //no começo usei .length, isso só vale quando quero puxar toda a lista da array !!!!! 
-    //        //tbm usei o alfabeto invez do numerodigitado no let =, isso foi ruim uma vez q vou manipular o numero entre 1 a 26 digito.. 
+//      if(numerodigitado < 1 || numerodigitado > 26){
+//         //regra para delimitar as "regras do jogo", por isso vou usar o numerodigitado no let do for...
+//             return "Ops, só pode digitar numeros entre 1 a 26!"
+//         }
+//         //listaalfabeto += alfabeto; viajei, vou conconcatenar o texto fazendo isso, vai um loop de a, ab, abc, abcd, ou seja, não!!
+//       for(let i = 0; i < numerodigitado; i++){ //no começo usei .length, isso só vale quando quero puxar toda a lista da array !!!!! 
+//        //tbm usei o alfabeto invez do numerodigitado no let =, isso foi ruim uma vez q vou manipular o numero entre 1 a 26 digito.. 
 
-    //         //i < alfabeto.length: O loop percorreria as 26 letras sempre, ignorando o que o usuário pediu.
-    //         //i < numerodigitado: O loop para exatamente onde o usuário mandou. Se ele digitou 3, o i vai ser 0, 1, 2 e para.
+//         //i < alfabeto.length: O loop percorreria as 26 letras sempre, ignorando o que o usuário pediu.
+//         //i < numerodigitado: O loop para exatamente onde o usuário mandou. Se ele digitou 3, o i vai ser 0, 1, 2 e para.
 
 
-    //         listaalfabeto.push(alfabeto[i]); //retorna a lista de todas as letras correspondentes ao numero 
-    //         //listaalfabeto = alfabeto[i]; // para retornar só 1 valor !!!! 
-           
+//         listaalfabeto.push(alfabeto[i]); //retorna a lista de todas as letras correspondentes ao numero 
+//         //listaalfabeto = alfabeto[i]; // para retornar só 1 valor !!!! 
 
-    //          //const listaalfabeto = alfabeto [numerodigitado - 1]; //para fazer sem o for direto, mas sem lista tbm
-    //          //return listaalfabeto ; 
-    //     }
-    //      return listaalfabeto ;
-    // }
-        
-        
-    
-    // contagemalfabeto();
-    // console.log(contagemalfabeto(21));
-    
 
-    //FAZER A LOGICA DO ALFABETO MAS INVERSO, DOS NUMEROS PUXAR A LETRA
+//          //const listaalfabeto = alfabeto [numerodigitado - 1]; //para fazer sem o for direto, mas sem lista tbm
+//          //return listaalfabeto ; 
+//     }
+//      return listaalfabeto ;
+// }
+
+
+
+// contagemalfabeto();
+// console.log(contagemalfabeto(21));
+
+
+//FAZER A LOGICA DO ALFABETO MAS INVERSO, DOS NUMEROS PUXAR A LETRA
 
 //     const alfabetoinverso = (letradigitada) => {
 //         const numeros = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26];
@@ -1741,13 +1741,13 @@ Mostre na tela uma frase única que diga: "O atleta [nome] correu
 //                 default: letraencontrada = "Inexistente"; break;
 //         }
 //         return letraencontrada;
-        
+
 //         }
 
-                    
+
 //                 }
 //                  return "not found";
-       
+
 //             }
 //             console.log((alfabetoinverso(C)));
 // alfabetoinverso();
@@ -1755,7 +1755,7 @@ Mostre na tela uma frase única que diga: "O atleta [nome] correu
 //vi um exemplo com switch e decidi usar para ver, mas é pessimo, foge muito do KISS, tive dificuldade tbm, escreve tudo na mão para descobrir q coloquei "" onde n devia e tive q reescrever
 //era para ser um estudo de usar o switch, mas na real q foi uma pessima solução para um problema mais simples.... vou refazer a logica, e depois estudar sobre onde e como usar o switch de forma correta....
 
-    
+
 //O switch é usado quando você tem uma única variável que pode assumir vários valores constantes diferentes e você quer executar um bloco de código específico para cada um deles.
 //Em ADS, a gente diz que o switch é uma alternativa mais limpa e organizada ao "ninho" de if...else if...else quando a comparação é sempre de igualdade.
 // ou seja para um cod que por exeplo vai fazer promoções diferentes nos produtos acaba se usando o switch para o cod ficar sem mt if, mas tem q ser usado em casos especificos.. 
@@ -1781,7 +1781,7 @@ Mostre na tela uma frase única que diga: "O atleta [nome] correu
 //         }
 
 //         return indice + 1  // retorna o indice +1 pq array começa do 0 então vai ficar sempre 1 atrás se eu n colocar..
-    
+
 // }
 // console.log(alfabetoinverso("a"));
 
@@ -1848,8 +1848,8 @@ Mostre na tela uma frase única que diga: "O atleta [nome] correu
 // //             return busca
 
 // //         }
-        
-        
+
+
 
 // // }
 // //     return "Produto não encontrado"
@@ -1887,20 +1887,20 @@ Mostre na tela uma frase única que diga: "O atleta [nome] correu
 
 // // const verificarJogador = (ban) => {
 // //     const banidos = ["steam_123", "steam_456", "steam_789"];
-   
+
 // //     const banidosinput = banidos.map(b => b.toUpperCase());
 // //     const baninput = ban.trim().toUpperCase();
 
 
 // //     return  banidosinput.indexOf(baninput) !== -1;
-   
+
 // // // -1 é sempre para indexof
 
 // // // === -1 é pq ta fora da array
 
 // // // !== -1 está dentro da array
 
-    
+
 // // }
 // // console.log(verificarJogador("   sTeaM_123 "));
 // // console.log(verificarJogador("steam_832"));
@@ -1926,7 +1926,7 @@ Mostre na tela uma frase única que diga: "O atleta [nome] correu
 // //     }
 // //     return "user limpo"
 
-    
+
 
 
 // // }
@@ -1963,7 +1963,7 @@ Mostre na tela uma frase única que diga: "O atleta [nome] correu
 //     }
 //     //total++ === total = total + 1
 //     // poderia ser em outros casos total +=, ai seria total = total +
-      
+
 
 
 //    }
@@ -2031,7 +2031,7 @@ Mostre na tela uma frase única que diga: "O atleta [nome] correu
 
 
 
-    
+
 
 // const buscarcliente = (nomeDoCliente) => {
 //         const clientes = [
@@ -2063,7 +2063,7 @@ Mostre na tela uma frase única que diga: "O atleta [nome] correu
 //             let valor = clientes[i].valorUltimaCompra;
 //             let clientestatus = clientes[i].tipo;
 //             let primeiraCompra = clientes[i].primeiraCompra;
-            
+
 //             if(clientes[i].primeiraCompra === true){
 //                 valor = valor * 0.85;
 //             }
@@ -2108,7 +2108,7 @@ Mostre na tela uma frase única que diga: "O atleta [nome] correu
 
 //     let totalCaixaBruto = 0;       
 //     let totalCaixaComDesconto = 0; 
-   
+
 
 // const valorestotais = () => {
 //     const clientes = [
@@ -2133,7 +2133,7 @@ Mostre na tela uma frase única que diga: "O atleta [nome] correu
 //     { nome: "Felipe", tipo: "Standard", historicoCompras: 100, valorUltimaCompra: 600.00, primeiraCompra: false },
 //     { nome: "Glória", tipo: "Premium", historicoCompras: 1, valorUltimaCompra: 150.00, primeiraCompra: true }
 // ];
-      
+
 
 //     for(let i = 0; i < clientes.length; i++){
 
@@ -2250,12 +2250,12 @@ Mostre na tela uma frase única que diga: "O atleta [nome] correu
 //         }
 //         if((produtos[i].preco * produtos[i].qtd) < 500){ 
 //          frete += 20 * produtos[i].qtd;
-        
+
 //         }
-        
+
 //         //totalImpostos += imposto;
 //         totalDescontos += descontocliente;
-        
+
 //     }
 
 //     valorFinal = (totalBruto + imposto + frete)  - totalDescontos;
@@ -2280,7 +2280,7 @@ Mostre na tela uma frase única que diga: "O atleta [nome] correu
 // const contador = () => {
 //     const numeros = [10, 15, 8, 20, 30];
 
-     
+
 //     for(let i = 0; i < numeros.length; i++){
 //         total += numeros[i];
 //         //somatotal += total;
@@ -2290,9 +2290,9 @@ Mostre na tela uma frase única que diga: "O atleta [nome] correu
 // }
 // console.log(contador(total));
 
- 
+
 // //
- 
+
 
 // const numeros = [10, 15, 8, 20, 30];
 
@@ -2434,13 +2434,13 @@ Mostre na tela uma frase única que diga: "O atleta [nome] correu
 // const totalbrutoperiferico = filtroperiferico.reduce((acumulador, produtos)=>  {  //reduce
 //        return acumulador + (produtos.preco * produtos.qtd * 1.10);
 
-     
+
 // }, 0);
 
 // const totalbrutohardware = filtrohardware.reduce((acumulador, produtos)=>  {  //reduce
 //        return acumulador + (produtos.preco * produtos.qtd * 1.10);
 
-     
+
 // }, 0);
 
 // const totalgeral = produtos.reduce((acumulador, produtos) => {          //reduce
@@ -2505,7 +2505,7 @@ Mostre na tela uma frase única que diga: "O atleta [nome] correu
 //ai depois lança o filtro, ai se consegue adequar o passa ou não por ele, por caracteristicas, ou preço, só manipular
 //ai depois o reduce, que vai somar tudo considerando as regras ou não do filtro, ai vc vai fazer ele como acumulador.. 
 
-            // o filtro pode vir antes ou depois do map, depende do objetivo, se for muito grande o site, ou se quero manipular só uma parte dos dados..
+// o filtro pode vir antes ou depois do map, depende do objetivo, se for muito grande o site, ou se quero manipular só uma parte dos dados..
 
 // console.log(checkout);
 // console.log(`total periferico:  ${totalExibicaoper}`);
@@ -2582,8 +2582,8 @@ Mostre na tela uma frase única que diga: "O atleta [nome] correu
 //                                     //geralmente é raro usar o index num map, se quer algo especifico usa o filter
 //                                     // mas pode ser algo do tipo return index % 2 === 0 ? par : impar 
 
-    
-    
+
+
 // })
 // //const exibidor = formatador.format(novonumero); como o map vai indice por indice tem q usar no escopo dele
 
@@ -2594,7 +2594,7 @@ Mostre na tela uma frase única que diga: "O atleta [nome] correu
 // Filter + Map: Você joga gente fora e transforma o que sobrou. (O array diminui).
 
 // Map com Ternário: Você mantém todo mundo, mas "etiqueta" ou transforma de forma condicional. (O array mantém o tamanho).     !!!IMPORTANTE logica para usar o map 
-                                                                                                                         //      concatenado com o filter ou nao
+//      concatenado com o filter ou nao
 
 
 // Exercício 2: O Filter (O Segurança)
@@ -2694,7 +2694,7 @@ Mostre na tela uma frase única que diga: "O atleta [nome] correu
 //    // ou seja, nesse exemplo eu poderia usar o "estoque" e o novo criado "estoquecomimposto", mas para a logica ficar certa é melhor criar um reduce para o imposto
 //    //eu tbm tentei dar o imposto subtraindo 0.90 dele, mas da erro, pq 0.90 de determinados valores vai dar diferença de 1.10, n estou "tirando 10" fazendo 0.90
 //    //o valor do imposto é sobre a base original dele, 0.90 to me baseando no resultado final q vai ser maior que o preço cheio.....
-   
+
 
 // //extra 
 // const exibirimpostototal = formatador.format(valorimposto);
@@ -2756,72 +2756,699 @@ Mostre na tela uma frase única que diga: "O atleta [nome] correu
 // Extra: O valor do imposto deve ser calculado comparando o Total com Imposto vs o Total sem Imposto (usando a base filtrada).
 
 
-const pecasLoja = [
-  { nome: "Processador", preco: 1200, emEstoque: true },
-  { nome: "Memória RAM", preco: 300, emEstoque: false },
-  { nome: "Placa Mãe", preco: 800, emEstoque: true },
-  { nome: "Fonte", preco: 0, emEstoque: true } // Erro de sistema
+// const pecasLoja = [
+//   { nome: "Processador", preco: 1200, emEstoque: true },
+//   { nome: "Memória RAM", preco: 300, emEstoque: false },
+//   { nome: "Placa Mãe", preco: 800, emEstoque: true },
+//   { nome: "Fonte", preco: 0, emEstoque: true } // Erro de sistema
+// ];
+// const impostoAplicado = 1.10
+
+
+// const arr = [1,2,3];
+// arr.map(e => e * 2)
+//             arr   (e => e * 2)
+
+// //CONST XD = ARRAY.MAP (
+// //    (VALORENDERECO , ENDERECO) => {} 
+// //)
+// const map = (arr, cb) => {
+//     const newArr = [];
+//     for(let i = 0; i < arr.lenght; i++) {
+//         let e = arr[i];
+//         newArr.push(
+//             cb(e, i)
+//         );
+//     }
+//     return newArr;
+// }
+// //estoqueoff.reduce((acc, valor) => acc + valor.preco * impostoAplicado, 0)
+// // estoqueoff -> arr
+// // (acc, valor) => acc + valor.preco * impostoAplicado -> cb
+// // initial -> 0
+
+// inicial
+// [1,((((2)),3]
+// current = 1
+// 2
+// (anterior, agora) => 
+// const reduce = (arr, cb, initial) => {
+//     let current = arr[0];   
+//     let indexComeco = 1;   
+//     const temInicial = initial !== undefined;
+//     if (temInicial) {
+//         indexComeco = 0;
+//         current = initial;
+//     }
+//     for(let i = indexComeco; i < arr.lenght; i++) {
+//         let e = arr[i];
+//         current = cb(current, e, i);
+//     }
+//     return current;
+// }
+// reduce([1,2,3], (a, b) => a + b, 0);
+
+// fn(arr, e => e * 2);
+
+
+
+
+// arr.reduce(e => e * 2);
+
+
+
+//             valor     posição
+// const filter = (arr, cb) => {
+//     const newArr = [];
+//     for(let i = 0; i < arr.lenght; i++) {
+//          if(cb(arr[i], i, arr)) {
+//              newArr.push(arr[i]);
+//          }
+//     }
+//     return newArr;
+// }
+
+
+// const calc = (acc , valor) => {
+//     console.log("weereqwe")
+//     return ({
+//         valorsemimposto: acc.valorsemimposto + valor.preco,
+//         valorimposto: acc.valorimposto + valor.preco * impostoAplicado,
+//         imposto: valor.preco * (impostoAplicado - 1)
+//     })
+// }
+
+// function calcularValores(acumulador, valorAtual) {
+//     return ({
+//         valorSemImposto: acumulador.valorSemImposto + valorAtual.preco,
+//         valorComImposto: acumulador.valorComImposto + valorAtual.preco * impostoAplicado
+//     });
+// }
+
+// if (true) console.log("lero")
+// else console.log("aaaa");
+
+// const add = (a, b) => 91283123 + 283423 + 23949234;
+
+
+// const estoqueoff = pecasLoja
+//     .filter(estoque => estoque.emEstoque === true && estoque.preco !== 0)
+// const valorsemimposto = estoqueoff.reduce((acc, valor) => acc + valor.preco, 0); 
+// //const imposto = pecasLoja.preco * impostoaplicado;
+// const valorimposto = estoqueoff.reduce((acc, valor) => acc + valor.preco * impostoAplicado, 0)
+
+// //EU FIZ TBM O pecasLoja.reduce, ou seja, não usaria o filter que eu fiz, por isso arrumei para o cod funcionar conforme
+
+// const totalcomimposto = valorimposto - valorsemimposto;
+
+// //MANIPULANDO O OBJETO DA ARRAY DENTRO DA FUNCIONAL NÃO CHAMA A ARRAY, COLOCAR ELA NO PARAMETRO CRIADO, PARAMETROCRIADO.TIPO
+
+// console.log(valorsemimposto);
+// console.log(valorimposto);
+// //console.log(imposto);
+// console.log(totalcomimposto);
+
+
+// //ENCADEIAR QUANDO? QUANDO PRECISO RETORNAR SÓ UM VALOR ESPECIFICO DENTRO DAS CONDIÇÕES ESTABELECIDAS NO ENCADEAMENTO, 
+// //PRECISO RETORNAR MAIS COISAS OU LIDAR COM UMA TRATIVA DE DADO FILTRADO QUE ESTA NO MEIO DO ENCADEAMENTE?? AI ESQUECE, SEPARA 
+
+
+
+
+
+// // // COM OBJETO
+// // const pecasLoja = [
+// //   { nome: "Processador", preco: 1200, emEstoque: true },
+// //   { nome: "Memória RAM", preco: 300, emEstoque: false },
+// //   { nome: "Placa Mãe", preco: 800, emEstoque: true },
+// //   { nome: "Fonte", preco: 0, emEstoque: true } // Erro de sistema
+// // ];
+// // const impostoaplicado = 1.10
+
+
+// const estoqueoff = pecasLoja
+//     .filter(estoque => estoque.emEstoque === true && estoque.preco !== 0)
+//     .reduce((acc , valor) => ({
+//         valorsemimposto: acc.valorsemimposto + valor.preco,
+//         valorimposto: acc.valorimposto + valor.preco * impostoAplicado
+//     }), {
+//         valorimposto: 0,
+//         valorsemimposto: 0
+//     }
+// )
+
+
+// console.log(estoqueoff);
+
+
+// // Filtrar: Selecione apenas os produtos da categoria "Eletrônicos".
+// // Mapear: Converta os itens filtrados para o valor total de cada linha (Preço $\times$ Quantidade).
+// // Reduzir: Some todos esses valores para obter o faturamento final dessa categoria.
+
+// const vendas = [
+//   { produto: "Teclado Mecânico", categoria: "Eletrônicos", preco: 250, qtd: 2 },
+//   { produto: "Monitor 24'", categoria: "Eletrônicos", preco: 900, qtd: 1 },
+//   { produto: "Cadeira Gamer", categoria: "Móveis", preco: 1200, qtd: 1 },
+//   { produto: "Mouse Pad XL", categoria: "Acessórios", preco: 80, qtd: 3 },
+//   { produto: "Headset USB", categoria: "Eletrônicos", preco: 350, qtd: 2 },
+//   { produto: "Mesa de Escritório", categoria: "Móveis", preco: 500, qtd: 1 }
+// ];
+
+// const eletronico = vendas
+// .filter((valor,index) =>  valor.categoria === "Eletrônicos" )
+// .map((valor,index) =>  valor.preco * valor.qtd )
+// .reduce((acc,valor) =>  acc + valor  , 0);
+
+// console.log(eletronico);
+
+
+// O Desafio: Gestão de Clube de Assinatura
+// Imagine que você está processando uma lista de usuários de um serviço de streaming. 
+// Você precisa calcular o faturamento líquido (o que sobra para a empresa) após aplicar descontos e taxas.
+
+// Filtrar: Pegue apenas as contas ativas.
+
+// Mapear: Transforme cada usuário no valor da sua mensalidade, mas com as seguintes regras (aqui entra a complexidade):
+
+// Plano Premium: Valor base de R$ 50. Se o usuário tiver mais de 10 meses de casa, ele tem um desconto de fidelidade de 10% no valor.
+
+// Plano Standard: Valor base de R$ 30.
+
+// Plano Básico: Valor base de R$ 20.
+
+// Reduzir: Some todos os valores, mas ao final, subtraia uma taxa de manutenção fixa de R$ 5 por cada conta ativa que entrou na soma.
+
+// const usuarios = [
+//   { nome: "Ana", plano: "Premium", ativa: true, meses: 12 },
+//   { nome: "Bruno", plano: "Básico", ativa: false, meses: 2 },
+//   { nome: "Carla", plano: "Premium", ativa: true, meses: 5 },
+//   { nome: "Diego", plano: "Standard", ativa: true, meses: 8 },
+//   { nome: "Elena", plano: "Premium", ativa: true, meses: 24 },
+//   { nome: "Fabio", plano: "Standard", ativa: false, meses: 1 }
+// ];
+
+// const premium = usuarios
+// .filter((valor,index) => valor.plano === "Premium" && valor.ativa )
+// .map((valor,index) => {
+
+//     if(valor.meses >= 10) {
+//        return 50 * 0.90
+//     }
+//     else{
+//         return 50
+//     }
+// })
+// .reduce((acc,valor) => acc + valor -5, 0);
+
+// const standard = usuarios
+// .filter((valor,index) => valor.plano === "Standard" && valor.ativa )
+// .map(valor => 30)
+// .reduce ((acc, valor) => acc + valor -5, 0);
+
+// const basico = usuarios
+// .filter((valor,index) => valor.plano === "Básico" && valor.ativa )
+// .map(valor => 20)
+// .reduce ((acc, valor) => acc + valor -5, 0);
+
+// console.log(premium);
+// console.log(standard);
+// console.log(basico);
+
+
+// const faturamentoLiquido = usuarios
+//   .filter(u => u.ativa) 
+//   .map(u => {           
+//     if (u.plano === "Premium") {
+//       return u.meses > 10 ? 50 * 0.9 : 50;
+//     }
+//     if (u.plano === "Standard") return 30;
+//     if (u.plano === "Básico") return 20;
+//     return 0;
+//   })
+//   .reduce((acc, valor) => { 
+//     // 3. Soma o valor e já desconta a taxa de R$ 5 por conta
+//     return acc + (valor - 5);
+//   }, 0);
+
+// console.log(`Faturamento Líquido Total: R$ ${faturamentoLiquido}`);
+
+// Você tem um carrinho de compras com vários itens. Alguns são peças pesadas (que têm frete extra), outros são acessórios leves. Você precisa calcular o valor final do carrinho.
+
+// As Regras:
+
+// Filtrar: Remova qualquer item que esteja com estoque zerado (qtdEstoque: 0).
+
+// Mapear (O Zeus da Lógica): Transforme cada item no seu valor final considerando:
+
+// Desconto: Se o item for da categoria "Eletrônico", ele tem 15% de desconto.
+
+// Frete: Se o peso for maior que 5kg, adiciona uma taxa de R$ 40,00 de frete. Se for menor ou igual, o frete é R$ 10,00.
+
+// Dica: O valor final de cada item deve ser (precoComDesconto + frete).
+
+// Reduzir: Some tudo para obter o valor total que o cliente vai pagar.
+
+// const carrinho = [
+//     { nome: "Bateria 60Ah", categoria: "Eletrônico", preco: 450, peso: 17.5, qtdEstoque: 5 },
+//     { nome: "Lâmpada Farol H4", categoria: "Eletrônico", preco: 30, peso: 0.2, qtdEstoque: 0 }, // Sem estoque!
+//     { nome: "Kit Amortecedor", categoria: "Mecânico", preco: 800, peso: 12.0, qtdEstoque: 2 },
+//     { nome: "Filtro de Óleo", categoria: "Mecânico", preco: 40, peso: 0.5, qtdEstoque: 10 },
+//     { nome: "Central Multimídia", categoria: "Eletrônico", preco: 1200, peso: 1.2, qtdEstoque: 3 }
+// ];
+
+
+// const total = carrinho
+//     .filter((valor, index) => valor.qtdEstoque !== 0)
+//     .map((valor, index) => {
+        
+//         const frete = valor.peso > 5 ?  40 : 10
+//         let desconto = 1
+
+
+//         if (valor.categoria === "Eletrônico") {
+//             desconto = desconto * 0.85 
+//         }
+//         return (valor.preco * desconto) + frete  ;
+
+//         // if (valor.peso > 5) {
+//         //     valorfinal = valorfinal + 40
+//         // }
+//         // if (valor.peso <= 5) {
+//         //     valorfinal =  valorfinal + 10
+//         // }
+//         // return valorfinal;
+
+
+         
+       
+         
+        
+//     })
+//     .reduce((acc, valor) => acc + valor, 0)
+
+
+// console.log(total);
+
+
+// Filtrar: Remova quem não entregou o projeto (entregue: false).
+
+// Mapear (O Zeus): Calcule o valor final de cada um:
+
+// Preço Base: É o valorHora multiplicado pelas horasTrabalhadas.
+
+// Bônus Sênior: Se o nivel for "Senior", ele ganha um bônus fixo de R$ 500,00.
+
+// Imposto: Se o valor base (antes do bônus) for maior que R$ 2.000,00, ele tem um desconto de 10% (multiplicar por 0.90). Se for menor ou igual, não desconta nada.
+
+// Taxa de urgência (Ternário): Se urgente for true, soma R$ 100,00, se não, soma R$ 0.
+
+// Reduzir: Some o valor líquido de todos os que sobraram.
+
+// const freelas = [
+//   { nome: "Jackson", nivel: "Junior", valorHora: 50, horasTrabalhadas: 40, entregue: true, urgente: false },
+//   { nome: "Luis", nivel: "Senior", valorHora: 100, horasTrabalhadas: 25, entregue: true, urgente: true },
+//   { nome: "Ana", nivel: "Pleno", valorHora: 80, horasTrabalhadas: 30, entregue: false, urgente: false }, // Não entregou!
+//   { nome: "Maria", nivel: "Senior", valorHora: 100, horasTrabalhadas: 15, entregue: true, urgente: false }
+// ];
+
+// const entregas = freelas 
+// .filter((valor, index) => valor.entregue === true )
+// .map((valor,index) => {
+//     const valorbase = valor.valorHora * valor.horasTrabalhadas 
+//     const imposto = valorbase > 2000 ? valorbase * 0.9 : valorbase
+//     const valorsenior = valor.nivel === "Senior" ? 500 : 0
+    
+//     const urgente = valor.urgente === true ? 100 : 0 
+
+//     return imposto + valorsenior + urgente ;
+// })
+// .reduce((acc,valor) => acc + valor , 0); 
+
+// console.log(entregas);
+
+
+
+
+    // Filtrar: Remova pedidos que foram cancelados (status: "cancelado").
+
+    // Mapear (Transformação):
+
+    // Preço Inicial: É o precoUnitario * quantidade.
+
+    // Desconto Cliente: Se o tipoCliente for "VIP", ele ganha 20% de desconto (* 0.8). Se for "Comum", não ganha nada.
+
+    // Frete por Peso: Se o pesoTotal for maior que 20kg, o frete é R$ 80,00. Se for menor ou igual, o frete é R$ 20,00.
+
+    // Regra Extra (O Pulo do Gato): Se o valor do produto já com o desconto do cliente for maior que R$ 1.000,00, o frete fica de graça (R$ 0), independente do peso.
+
+    // const pedidos = [
+    // { produto: "Furadeira", precoUnitario: 500, quantidade: 3, pesoTotal: 15, tipoCliente: "VIP", status: "pago" },
+    // { produto: "Parafusos", precoUnitario: 2, quantidade: 1000, pesoTotal: 25, tipoCliente: "Comum", status: "pago" },
+    // { produto: "Cimento", precoUnitario: 40, quantidade: 50, pesoTotal: 1000, tipoCliente: "Comum", status: "cancelado" },
+    // { produto: "Serra Circular", precoUnitario: 800, quantidade: 1, pesoTotal: 8, tipoCliente: "Comum", status: "pago" }
+    // ];
+
+    // const valorfinal = pedidos
+    // .filter((valor,index) => valor.status === "pago")
+    // .map((valor,index)=>{
+    //     const precoinicial = valor.precoUnitario * valor.quantidade
+    //     const clientvip = valor.tipoCliente === "VIP" ? precoinicial * 0.8 : precoinicial
+    //     const frete = valor.pesoTotal > 20 ? 80 : 20
+    //     const totalfinal = clientvip > 1000  ?  clientvip : clientvip + frete //tinha usado fretetotal, isso pode e vai ficar confuso para quem lê
+    //     return totalfinal;                                              //sempre colocar o nome da variavel seguindo a logica da tratativa do dado ! 
+    // })
+    // .reduce((acc,valor) => acc + valor, 0 )
+
+
+    // console.log(valorfinal);
+
+
+
+
+//     Filtrar: Remova alunos com status: "trancado".
+
+// Mapear (A cascata de lógica):
+
+// Média Base: (n1 + n2) / 2.
+
+// Bônus de Presença: Se a presenca for maior que 90, adicione 0.5 na média base. Senão, mantém a média base. (Crie uma constante mediaFinal para isso).
+
+// Veredito: Se a mediaFinal for maior ou igual a 7, o resultado é 1 (Aprovado). Senão, é 0 (Reprovado).
+
+// const alunos = [
+//   { nome: "Jackson", n1: 8, n2: 9, presenca: 95, status: "ativo" },   // Passa (Média 8.5 + 0.5 = 9) -> 1
+//   { nome: "Luis", n1: 5, n2: 6, presenca: 80, status: "ativo" },      // Reprova (Média 5.5) -> 0
+//   { nome: "Leonardo", n1: 10, n2: 10, presenca: 100, status: "trancado" }, // Fora (Trancado)
+//   { nome: "Maria", n1: 6, n2: 6.5, presenca: 92, status: "ativo" },   // Reprova (Média 6.25 + 0.5 = 6.75) -> 0
+//   { nome: "Beatriz", n1: 7.5, n2: 8, presenca: 85, status: "ativo" }, // Passa (Média 7.75) -> 1
+//   { nome: "André", n1: 6.5, n2: 7, presenca: 98, status: "ativo" },   // Passa no limite (Média 6.75 + 0.5 = 7.25) -> 1
+//   { nome: "Carla", n1: 9, n2: 9, presenca: 100, status: "trancado" }, // Fora (Trancado)
+//   { nome: "Tiago", n1: 4, n2: 5, presenca: 95, status: "ativo" },     // Reprova (Média 4.5 + 0.5 = 5.0) -> 0
+//   { nome: "Renata", n1: 8, n2: 7, presenca: 88, status: "ativo" },    // Passa (Média 7.5) -> 1
+//   { nome: "Felipe", n1: 10, n2: 9.5, presenca: 99, status: "ativo" }  // Passa (Média 9.75 + 0.5 = 10.25) -> 1
+// ];
+
+// const notas = alunos
+// .filter((valor,index) => valor.status !== "trancado")
+// .map((valor,index) => {
+//     const media = (valor.n1 + valor.n2) / 2
+//     const bonus = valor.presenca > 90 ?  media + 0.5 : media
+//     const mediafinal = bonus >= 7 ? 1 : 0
+//     return mediafinal
+// })
+// .reduce((acc, valor) => acc + valor , 0);
+// console.log(notas);
+
+
+
+
+// Filtro: O cliente desistiu dos produtos que estão com status: "cancelado".
+
+// Mapa (Regra de Negócio): * Se o produto for da categoria "eletrônico", ele tem 10% de desconto.
+
+// Se não for, o preço continua o mesmo.
+
+// Reduce (Resultado Final): Somar o preço final de todos os produtos que sobraram.
+
+// const carrinho = [
+//   { nome: "Mouse Gamer", preco: 200, categoria: "eletrônico", status: "comprado" },
+//   { nome: "Teclado Mecânico", preco: 500, categoria: "eletrônico", status: "comprado" },
+//   { nome: "Monitor 144hz", preco: 1200, categoria: "eletrônico", status: "cancelado" },
+//   { nome: "Livro de Clean Code", preco: 100, categoria: "livro", status: "comprado" },
+//   { nome: "Fone Bluetooth", preco: 300, categoria: "eletrônico", status: "comprado" }
+// ];
+
+// const formatador = new Intl.NumberFormat('pt-BR', {
+//   style: 'currency',
+//   currency: 'BRL'
+// });
+
+// const compras = carrinho
+// .filter((valor) => valor.status !== "cancelado")
+// .map((valor)=> {
+//     const preco = valor.preco
+//     const desconto = valor.categoria === "eletrônico" ? preco * 0.90 : preco
+    
+    
+//     return {
+//         preço: formatador.format(preco),
+//         precocomdesconto: formatador.format(desconto),
+//         valordesconto: formatador.format(preco) - formatador.format(desconto)
+        
+
+//         }
+// })
+// //.reduce((acc,valor) => acc + valor.precocomdesconto, 0);
+
+
+//     console.log(compras);
+//    // console.log(formatador.format(compras)); com o reduce atiVO ! o format só aceita numero ! 
+
+
+// Regra de Letalidade: Se o nível for acima de 7 E o estado for "gasoso", a letalidade é Crítica.
+
+// Regra de Descarte: Substâncias com nível abaixo de 3 são consideradas "Descarte Comum".
+
+// Regra de Alerta: Se o nível estiver entre 4 e 7, é "Monitoramento".
+
+// O Desafio
+// Queremos um relatório final que nos dê:
+
+// O volume total de substâncias Críticas.
+
+// A contagem de quantas substâncias são de cada categoria.
+
+// Uma lista com os nomes das substâncias perigosas formatadas.
+
+
+// const substancias = [
+//   { nome: "Sarin", nivel: 10, estado: "gasoso", qtd: 50 },
+//   { nome: "Cloro", nivel: 8, estado: "gasoso", qtd: 100 },
+//   { nome: "Etanol", nivel: 2, estado: "líquido", qtd: 500 },
+//   { nome: "VX Nerve Agent", nivel: 9, estado: "líquido", qtd: 30 },
+//   { nome: "Mercúrio", nivel: 6, estado: "líquido", qtd: 200 },
+//   { nome: "Sódio Puro", nivel: 5, estado: "sólido", qtd: 80 }
+// ];
+
+// const perigo = substancias
+// .map((valor,index) => {
+// const pericusidade = valor.nivel
+// const substanciabaixonivel = pericusidade < 3 ? 1 : 0
+// const monitoramento = pericusidade > 3 && pericusidade < 7 ? 1 : 0
+// const critica = pericusidade > 7 && valor.estado === "gasoso" ? 1 : 0
+// const nomenclatura = valor.nome
+// const quantidade = valor.qtd
+// return {
+
+//     Nome: nomenclatura, quantidade: quantidade,   QuantasCriticas: critica,
+//     quantasmonitoramento: monitoramento,
+//     quantasbaixonivel: substanciabaixonivel 
+// }
+
+// })
+// .reduce((acc,valor) => {
+//     acc.QuantasCriticas += valor.QuantasCriticas
+//     acc.quantasmonitoramento += valor.quantasmonitoramento
+//     acc.quantasbaixonivel += valor.quantasbaixonivel
+//     //acc.nomenclatura.push(valor.Nome)
+    
+
+//     let mensagem = "";
+
+//     if (valor.QuantasCriticas === 1) {
+//         mensagem = `💀 CRÍTICO: Isolar ${valor.Nome} imediatamente!`;
+//     } else if (valor.quantasmonitoramento === 1) {
+//         mensagem = `⚠️ MONITORAR: ${valor.Nome} requer atenção.`;
+//     } else {
+//         mensagem = `✅ SEGURO: ${valor.Nome} sob controle.`;
+//     }
+
+//     acc.nomenclatura.push(mensagem);
+//     return acc;
+// },  
+//  {QuantasCriticas: 0 , 
+//     quantasmonitoramento: 0, 
+//     quantasbaixonivel: 0, 
+//     nomenclatura: [] 
+// });
+
+
+
+// // const relatorioTexto = `
+// // === RELATÓRIO DE SEGURANÇA ===
+// // Críticas: ${perigo.QuantasCriticas} unidades
+// // Monitoramento: ${perigo.quantasmonitoramento} unidades
+// // Baixo Nível: ${perigo.quantasbaixonivel} unidades
+// // ------------------------------
+// // Substâncias Identificadas: ${perigo.nomenclatura.join(", ")}
+// // ==============================  
+// // `;
+
+
+// // console.log("=== STATUS DAS SUBSTÂNCIAS ===");
+// // perigo.nomenclatura.forEach(item => console.log(item));
+// // console.log("------------------------------");
+// // console.log(`Total de Críticas: ${perigo.QuantasCriticas}`);
+
+// // console.log(relatorioTexto);
+
+
+// console.log(perigo);
+
+
+
+
+
+
+
+
+
+
+// Você tem um array de pedidos. Cada pedido tem: id, cliente, itens (array), valorTotal e status.
+
+// As Regras de Negócio (O Motor):
+
+// Filtro de Pendência: Só processamos pedidos com status "pago". O resto a gente ignora.
+
+// Regra de Frete (Letalidade do Bolso): * Se o valorTotal for acima de 500, o frete é Gratuito.
+
+// Se for abaixo, o frete é R$ 50,00.
+
+// Categoria de Volume:
+
+// Pedidos com mais de 3 itens são "Volume Alto".
+
+// 3 itens ou menos são "Volume Padrão".
+
+
+// const pedidos = [
+//   { id: 1, cliente: "Jackson", itens: ["Bateria Moura", "Cabo de Vela"], valorTotal: 450, status: "pago" },
+//   { id: 2, cliente: "Luis", itens: ["Óleo Selenia", "Filtro", "Palheta", "Lâmpada"], valorTotal: 120, status: "pago" },
+//   { id: 3, cliente: "Leonardo", itens: ["Pneu Pirelli"], valorTotal: 600, status: "pago" },
+//   { id: 4, cliente: "Oficina Joinville", itens: ["Pastilha", "Disco", "Fluido", "Cilindro"], valorTotal: 800, status: "pendente" },
+//   { id: 5, cliente: "Auto Peças Saguaçu", itens: ["Amortecedor", "Mola"], valorTotal: 1100, status: "pago" }
+// ];
+
+// const pagos = pedidos
+// .filter(valor => valor.status !== "pendente")
+// .map(valor => {
+//      const TotalItens = valor.itens.length  //length para percorrer a lista de valor.itens e saber a quantidade [x,y,z](3)
+//     const valoritem = valor.valorTotal
+//     const frete = valoritem < 500 ? 50 : 0
+//     const cliente = valor.cliente
+   
+//     const quantidade = TotalItens > 3 ?  valoritem : valoritem + frete //aqui para puxar o total de otens no objeto e calcula o frete se for +3
+//    return {
+//     TotalItens: TotalItens,
+//     valoritem: valoritem,
+//     frete: frete,
+//     quantidade: quantidade,
+//     cliente: cliente
+//    };
+// })
+
+// .reduce((acc,valor) =>{
+// acc.TotalItens += valor.TotalItens;
+// acc.valoritemtotal += valor.valoritem;
+// acc.quantidadetotal += valor.quantidade;
+
+//     let mensagem = "";
+
+//     if(valor.TotalItens > 3){
+//         mensagem =  `${valor.cliente} Volume Alto, sem Frete, e vai custar ${valor.valoritem}`
+//     }
+//     else if( valor.TotalItens <= 3){
+//        mensagem = `${valor.cliente} Volume Padrão, paga frete, e vai custar ${valor.valoritem}`
+//     }
+//     acc.relatorioenvio.push(mensagem);
+    
+// return acc;}, { 
+    
+//     TotalItens: 0, 
+//     valoritemtotal: 0, 
+//     quantidadetotal: 0,
+//     relatorioenvio: [] 
+//   });
+// console.log(pagos);
+
+
+
+
+
+
+
+
+// Filtro: Só processar viagens "concluida".
+
+// Consumo (Km/L): Você precisa calcular quantos km o caminhão fez por litro.
+
+// Custo da Viagem: combustivelConsumido * valorDiesel.
+
+// Alerta de Manutenção: Se o consumo for menor que 3 km/L, o caminhão está gastando demais (Precisa de Manutenção).
+
+const viagens = [
+  { caminhao: "Volvo FH", kmRodado: 450, combustivelConsumido: 150, valorDiesel: 5.80, status: "concluida" },
+  { caminhao: "Scania R500", kmRodado: 600, combustivelConsumido: 120, valorDiesel: 5.90, status: "concluida" },
+  { caminhao: "Mercedes Axor", kmRodado: 300, combustivelConsumido: 110, valorDiesel: 5.85, status: "concluida" },
+  { caminhao: "Cargo 2428", kmRodado: 150, combustivelConsumido: 40, valorDiesel: 5.75, status: "cancelada" },
+  { caminhao: "Iveco Stralis", kmRodado: 800, combustivelConsumido: 320, valorDiesel: 6.00, status: "concluida" }
 ];
-const impostoAplicado = 1.10
 
+const formatador = new Intl.NumberFormat('pt-BR', { //tranformar em BRL                  
+    style: 'currency',
+    currency: 'BRL'
+});    
 
+const relatorioFrota = viagens
+  .filter(v => v.status === "concluida")
+  .map(v => {
+    const consumoKmL = v.kmRodado / v.combustivelConsumido;
+    const marca = v.caminhao
+    const distancia = v.kmRodado
+    const GasosaGasta = v.combustivelConsumido
+    const GasosaCusto = v.valorDiesel
+    const custoTotal = GasosaGasta * GasosaCusto;
+    
+    // --- COMPLETE O RETURN DO MAP ---
+    return {
+      consumoKmL: consumoKmL,
+      marca: marca,
+      distancia: distancia,
+      GasosaGasta: GasosaGasta,
+      GasosaCusto: GasosaCusto,
+      custoTotal: GasosaGasta * GasosaCusto
 
+    };
+  })
+  .reduce((acc, v) => {
+    acc.gasolinagasta += v.GasosaGasta
+    acc.custoGeral += v.custoTotal
+    acc.kmTotal += v.distancia
 
-function calcularValores(acumulador, valorAtual) {
-    return ({
-        valorSemImposto: acumulador.valorSemImposto + valorAtual.preco,
-        valorComImposto: acumulador.valorComImposto + valorAtual.preco * impostoAplicado
-    });
-}
+    let mensagem = "";
+    if((v.distancia / v.GasosaGasta ) <3 ){
+        mensagem = `o caminhão ${v.marca} está gastando demais (Precisa de Manutenção).`
+    }
+    else {  mensagem = `Caminhão ${v.marca} está em boas condições`
+    }
+    acc.statusManutencao.push(mensagem);
+   
+    //acc.listaCaminhoes.push(v.marca); aq era para puxar os caminhões em array, mas, coloquei direto na msg para ficar melhor
 
-(acc , valor) => ({
-valorsemimposto: acc.valorsemimposto + valor.preco,
-valorimposto: acc.valorimposto + valor.preco * impostoAplicado
-})
-if (true) console.log("lero")
-else console.log("aaaa");
+    return acc;
+  }, { 
+    // --- COMPLETE O OBJETO INICIAL (AS GAVETAS) ---
+    gasolinagasta: 0,
+    custoGeral: 0,
+     kmTotal: 0,
+    //listaCaminhoes: [],
+    statusManutencao: []
+    
+  });
 
-const add = (a, b) => 91283123 + 283423 + 23949234;
-
- 
-const estoqueoff = pecasLoja
-    .filter(estoque => estoque.emEstoque === true && estoque.preco !== 0)
-const valorsemimposto = estoqueoff.reduce((acc, valor) => acc + valor.preco, 0); 
-//const imposto = pecasLoja.preco * impostoaplicado;
-const valorimposto = estoqueoff.reduce((acc, valor) => acc + valor.preco * impostoAplicado, 0)
-
-//EU FIZ TBM O pecasLoja.reduce, ou seja, não usaria o filter que eu fiz, por isso arrumei para o cod funcionar conforme
-
-const totalcomimposto = valorimposto - valorsemimposto;
-
-//MANIPULANDO O OBJETO DA ARRAY DENTRO DA FUNCIONAL NÃO CHAMA A ARRAY, COLOCAR ELA NO PARAMETRO CRIADO, PARAMETROCRIADO.TIPO
-
-console.log(valorsemimposto);
-console.log(valorimposto);
-//console.log(imposto);
-console.log(totalcomimposto);
-
-
-//ENCADEIAR QUANDO? QUANDO PRECISO RETORNAR SÓ UM VALOR ESPECIFICO DENTRO DAS CONDIÇÕES ESTABELECIDAS NO ENCADEAMENTO, 
-//PRECISO RETORNAR MAIS COISAS OU LIDAR COM UMA TRATIVA DE DADO FILTRADO QUE ESTA NO MEIO DO ENCADEAMENTE?? AI ESQUECE, SEPARA 
-
-
-
-
-
-// COM OBJETO
-const pecasLoja = [
-  { nome: "Processador", preco: 1200, emEstoque: true },
-  { nome: "Memória RAM", preco: 300, emEstoque: false },
-  { nome: "Placa Mãe", preco: 800, emEstoque: true },
-  { nome: "Fonte", preco: 0, emEstoque: true } // Erro de sistema
-];
-const impostoaplicado = 1.10
-
-
-const estoqueoff = pecasLoja
-    .filter(estoque => estoque.emEstoque === true && estoque.preco !== 0)
-    .reduce((acc , valor) => ({valorsemimposto: acc.valorsemimposto + valor.preco , valorimposto: acc.valorimposto + valor.preco * impostoAplicado  }), {valorimposto: 0 , valorsemimposto: 0}  )
-
-
-console.log(estoqueoff);
+console.log("=== RELATÓRIO FINAL DA FROTA ===");
+console.log("Gasolina gasta de todos os caminhão:", relatorioFrota.gasolinagasta + "Ltrs");
+console.log("Custo Total Diesel:", formatador.format(relatorioFrota.custoGeral)); // Formata aqui!
+console.log("KM Total Rodado:", relatorioFrota.kmTotal + " km");
+console.log("Mensagens de Manutenção:", relatorioFrota.statusManutencao);
+//console.log("Caminhões Disponiveis:", relatorioFrota.listaCaminhoes);
