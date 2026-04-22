@@ -3372,83 +3372,213 @@ Mostre na tela uma frase única que diga: "O atleta [nome] correu
 // console.log(pagos);
 
 
+ 
 
 
 
 
 
 
-// Filtro: Só processar viagens "concluida".
 
-// Consumo (Km/L): Você precisa calcular quantos km o caminhão fez por litro.
+// // Filtro: Só processar viagens "concluida".
 
-// Custo da Viagem: combustivelConsumido * valorDiesel.
+// // Consumo (Km/L): Você precisa calcular quantos km o caminhão fez por litro.
 
-// Alerta de Manutenção: Se o consumo for menor que 3 km/L, o caminhão está gastando demais (Precisa de Manutenção).
+// // Custo da Viagem: combustivelConsumido * valorDiesel.
 
-const viagens = [
-  { caminhao: "Volvo FH", kmRodado: 450, combustivelConsumido: 150, valorDiesel: 5.80, status: "concluida" },
-  { caminhao: "Scania R500", kmRodado: 600, combustivelConsumido: 120, valorDiesel: 5.90, status: "concluida" },
-  { caminhao: "Mercedes Axor", kmRodado: 300, combustivelConsumido: 110, valorDiesel: 5.85, status: "concluida" },
-  { caminhao: "Cargo 2428", kmRodado: 150, combustivelConsumido: 40, valorDiesel: 5.75, status: "cancelada" },
-  { caminhao: "Iveco Stralis", kmRodado: 800, combustivelConsumido: 320, valorDiesel: 6.00, status: "concluida" }
+// // Alerta de Manutenção: Se o consumo for menor que 3 km/L, o caminhão está gastando demais (Precisa de Manutenção).
+
+// const viagens = [
+//   { caminhao: "Volvo FH", kmRodado: 450, combustivelConsumido: 150, valorDiesel: 5.80, status: "concluida" },
+//   { caminhao: "Scania R500", kmRodado: 600, combustivelConsumido: 120, valorDiesel: 5.90, status: "concluida" },
+//   { caminhao: "Mercedes Axor", kmRodado: 300, combustivelConsumido: 110, valorDiesel: 5.85, status: "concluida" },
+//   { caminhao: "Cargo 2428", kmRodado: 150, combustivelConsumido: 40, valorDiesel: 5.75, status: "cancelada" },
+//   { caminhao: "Iveco Stralis", kmRodado: 800, combustivelConsumido: 320, valorDiesel: 6.00, status: "concluida" }
+// ];
+
+// const formatador = new Intl.NumberFormat('pt-BR', { //tranformar em BRL                  
+//     style: 'currency',
+//     currency: 'BRL'
+// });    
+
+// const relatorioFrota = viagens
+//   .filter(v => v.status === "concluida")
+//   .map(v => {
+//     const consumoKmL = v.kmRodado / v.combustivelConsumido;
+//     const marca = v.caminhao
+//     const distancia = v.kmRodado
+//     const GasosaGasta = v.combustivelConsumido
+//     const GasosaCusto = v.valorDiesel
+//     const custoTotal = GasosaGasta * GasosaCusto;
+
+
+//     let mensagem = "";
+//     if((distancia / GasosaGasta ) <3 ){
+//         mensagem = `o caminhão ${marca} está gastando demais (Precisa de Manutenção).`
+//     }
+//     else { 
+//          mensagem = `Caminhão ${marca} está em boas condições`
+//     }
+    
+    
+//     // --- COMPLETE O RETURN DO MAP ---
+//     return {
+//       consumoKmL: consumoKmL,
+//       marca: marca,
+//       distancia: distancia,
+//       GasosaGasta: GasosaGasta,
+//       GasosaCusto: GasosaCusto,
+//       custoTotal: GasosaGasta * GasosaCusto,
+//       mensagem: mensagem
+
+//     };
+//   });
+//  console.log(relatorioFrota);
+  
+//   const acumuladores = viagens.reduce((acc, v) => {
+//     acc.gasolinagasta += v.combustivelConsumido
+//     acc.custoGeral += (v.valorDiesel * v.combustivelConsumido)
+//     acc.kmTotal += v.kmRodado
+//     //acc.statusManutencao.push(v.mensagem)
+    
+   
+//     //acc.listaCaminhoes.push(v.marca); aq era para puxar os caminhões em array, mas, coloquei direto na msg para ficar melhor
+
+//     return acc;
+//   }, { 
+//     // --- COMPLETE O OBJETO INICIAL (AS GAVETAS) ---
+//     gasolinagasta: 0,
+//     custoGeral: 0,
+//      kmTotal: 0,
+//     //listaCaminhoes: [],
+//     //statusManutencao: []
+    
+//   });
+// console.log(acumuladores);
+  
+
+// console.log("=== RELATÓRIO FINAL DA FROTA ===");
+// console.log("Gasolina gasta de todos os caminhão:", relatorioFrota.gasolinagasta + "Ltrs");
+// console.log("Custo Total Diesel:", formatador.format(relatorioFrota.custoGeral)); // Formata aqui!
+// console.log("KM Total Rodado:", relatorioFrota.kmTotal + " km");
+// console.log("Mensagens de Manutenção:", relatorioFrota.statusManutencao);
+//console.log("Caminhões Disponiveis:", relatorioFrota.listaCaminhoes);
+
+
+
+
+
+
+
+
+
+//////////////////////////=======///////////////////
+
+
+// 📋 O Cenário: Sistema "Express Log"
+// Você recebeu uma lista de objetos contendo: o valor da entrega, a distância, o combustível gasto, a data e o status.
+
+// Sua missão:
+
+// Filtrar: Apenas entregas com status "finalizada".
+
+// Mapear (O Relatório Individual):
+
+// Calcular o lucro líquido de cada entrega (Valor da Entrega - Custo do Combustível).
+
+// Identificar o tipo de veículo: se a distância for < 5km é "Utilitário", se for >= 5km é "Caminhão Leve".
+
+// Formatar a data para exibir apenas o nome do mês (ex: "Abril").
+
+// Reduzir (O Pacote Completo):
+
+// Acumular o lucro total.
+
+// Contar quantas entregas foram feitas por "Utilitário" e quantas por "Caminhão Leve".
+
+// O Desafio: Calcular a Média de Lucro por Mês. (Dica: no seu acumulador do reduce, você vai precisar de um objeto para contar os meses).
+
+
+const entregas = [
+  { id: 1, valor: 150, km: 3, litros: 2, data: "2026-04-10", status: "finalizada" },
+  { id: 2, valor: 450, km: 12, litros: 8, data: "2026-04-12", status: "finalizada" },
+  { id: 3, valor: 200, km: 4, litros: 3, data: "2026-05-05", status: "finalizada" },
+  { id: 4, valor: 600, km: 20, litros: 12, data: "2026-05-15", status: "finalizada" },
+  { id: 5, valor: 100, km: 2, litros: 1, data: "2026-04-20", status: "cancelada" }, // Não entra!
+  { id: 6, valor: 350, km: 8, litros: 5, data: "2026-06-02", status: "finalizada" }
 ];
 
-const formatador = new Intl.NumberFormat('pt-BR', { //tranformar em BRL                  
+const PRECOCOMBUSTIVEL = 5.85; //valor em litro
+
+const formatadorUTC = new Intl.DateTimeFormat('pt-BR', {
+    month: 'long'
+    });
+
+    const formatadorCash = new Intl.NumberFormat('pt-BR', { //tranformar em BRL                  
     style: 'currency',
     currency: 'BRL'
-});    
+});            
 
-const relatorioFrota = viagens
-  .filter(v => v.status === "concluida")
-  .map(v => {
-    const consumoKmL = v.kmRodado / v.combustivelConsumido;
-    const marca = v.caminhao
-    const distancia = v.kmRodado
-    const GasosaGasta = v.combustivelConsumido
-    const GasosaCusto = v.valorDiesel
-    const custoTotal = GasosaGasta * GasosaCusto;
+const arraymap = entregas
+.filter((valor) => valor.status !== "cancelada")
+.map((valor) => {
+    const custogasolina = valor.litros * PRECOCOMBUSTIVEL  //de novo usei o entregas.litros, tipo ele n vai olhar para o valor assim, ja q a array n devolve valor...
+    const custo = valor.valor - custogasolina               //o certo é usar v.tipo, que dai eu pego 
+    const tipoveiculo = valor.km >= 5 ? "Caminhão Leve" : "Utilitario"
+    // const utilitario = valor.km < 5 ? 1 : 0   //resolver no reduce
+    // const leve = valor.km >= 5 ? 1 : 0
+    const datames = formatadorUTC.format(new Date(valor.data))
     
-    // --- COMPLETE O RETURN DO MAP ---
-    return {
-      consumoKmL: consumoKmL,
-      marca: marca,
-      distancia: distancia,
-      GasosaGasta: GasosaGasta,
-      GasosaCusto: GasosaCusto,
-      custoTotal: GasosaGasta * GasosaCusto
+return {
+    custogasreduce: custogasolina, //para usar, e ao mesmo tempo ter o resultado formatado(N da pra usar o formatado no reduce)
+    lucrototalreduce: custo,
 
-    };
-  })
-  .reduce((acc, v) => {
-    acc.gasolinagasta += v.GasosaGasta
-    acc.custoGeral += v.custoTotal
-    acc.kmTotal += v.distancia
+   // QuantosUtilitarios: utilitario, resolver no reduce
+    //QuantosCaminhõesLeves: leve, 
+    custoGAS: formatadorCash.format(custogasolina),
+    lucrototal: formatadorCash.format(custo),
+    veiculo: tipoveiculo,
+    mesDATA: datames
+    }
+    
 
-    let mensagem = "";
-    if((v.distancia / v.GasosaGasta ) <3 ){
-        mensagem = `o caminhão ${v.marca} está gastando demais (Precisa de Manutenção).`
+
+});
+console.log(arraymap);
+
+const totais = arraymap
+.reduce((acc, valor) => {
+    acc.custogasolina += valor.custogasreduce
+    acc.lucrototal += valor.lucrototalreduce
+    //acc.leve += valor.QuantosCaminhõesLeves
+    //acc.utilitario += valor.QuantosUtilitarios
+
+    if(valor.veiculo === "Utilitario"){
+        acc.utilitario++
+    } 
+    else{
+        acc.leve++
     }
-    else {  mensagem = `Caminhão ${v.marca} está em boas condições`
-    }
-    acc.statusManutencao.push(mensagem);
-   
-    //acc.listaCaminhoes.push(v.marca); aq era para puxar os caminhões em array, mas, coloquei direto na msg para ficar melhor
+
+    const mes = valor.mesDATA
+
+
+
+
+        if(!acc.mes[mes]){
+            acc.mes[mes] = 0;  //para o mês, torna inteligente sem precisar declarar mes por mes...
+        }
+
+        acc.mes[mes] += valor.lucrototalreduce
 
     return acc;
-  }, { 
-    // --- COMPLETE O OBJETO INICIAL (AS GAVETAS) ---
-    gasolinagasta: 0,
-    custoGeral: 0,
-     kmTotal: 0,
-    //listaCaminhoes: [],
-    statusManutencao: []
-    
-  });
+}, {custogasolina: 0, lucrototal: 0, leve:0, utilitario: 0, mes: {} } );
+console.log(totais);
 
-console.log("=== RELATÓRIO FINAL DA FROTA ===");
-console.log("Gasolina gasta de todos os caminhão:", relatorioFrota.gasolinagasta + "Ltrs");
-console.log("Custo Total Diesel:", formatador.format(relatorioFrota.custoGeral)); // Formata aqui!
-console.log("KM Total Rodado:", relatorioFrota.kmTotal + " km");
-console.log("Mensagens de Manutenção:", relatorioFrota.statusManutencao);
-//console.log("Caminhões Disponiveis:", relatorioFrota.listaCaminhoes);
+Object.entries(totais.mes).forEach(([mes, valor]) => {
+    console.log(`${mes}: ${formatadorCash.format(valor)}`);
+}); 
+console.log(`Total de caminhões leves: ${totais.leve}`)
+console.log(`Total de utilitarios: ${totais.utilitario}`)
+console.log(`Total Gasolina: ${formatadorCash.format(totais.custogasolina)}`);
+console.log(`Total Lucro: ${formatadorCash.format(totais.lucrototal)}`);
