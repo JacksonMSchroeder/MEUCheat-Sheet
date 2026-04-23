@@ -23,6 +23,19 @@ Olha, só quero ser um cara que entende muito bem de códigos e, a longo prazo, 
     currency: 'BRL'
 });             //gostei muito de usar isso em cima do cod e depois ir formatando os retorno 
 
+
+
+[formataroDIA/HORA/ETC]
+
+const formatadorUTC = new Intl.DateTimeFormat('pt-BR', {
+    day: '2-digit',
+    month: 'long',
+    year: 'numeric',
+    hour: '2-digit',
+    minute: '2-digit',
+    hour12: false // Formato 24h
+});
+
 //
 
 

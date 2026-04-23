@@ -3020,7 +3020,7 @@ Mostre na tela uma frase única que diga: "O atleta [nome] correu
 // const total = carrinho
 //     .filter((valor, index) => valor.qtdEstoque !== 0)
 //     .map((valor, index) => {
-        
+
 //         const frete = valor.peso > 5 ?  40 : 10
 //         let desconto = 1
 
@@ -3039,10 +3039,10 @@ Mostre na tela uma frase única que diga: "O atleta [nome] correu
 //         // return valorfinal;
 
 
-         
-       
-         
-        
+
+
+
+
 //     })
 //     .reduce((acc, valor) => acc + valor, 0)
 
@@ -3077,7 +3077,7 @@ Mostre na tela uma frase única que diga: "O atleta [nome] correu
 //     const valorbase = valor.valorHora * valor.horasTrabalhadas 
 //     const imposto = valorbase > 2000 ? valorbase * 0.9 : valorbase
 //     const valorsenior = valor.nivel === "Senior" ? 500 : 0
-    
+
 //     const urgente = valor.urgente === true ? 100 : 0 
 
 //     return imposto + valorsenior + urgente ;
@@ -3089,38 +3089,38 @@ Mostre na tela uma frase única que diga: "O atleta [nome] correu
 
 
 
-    // Filtrar: Remova pedidos que foram cancelados (status: "cancelado").
+// Filtrar: Remova pedidos que foram cancelados (status: "cancelado").
 
-    // Mapear (Transformação):
+// Mapear (Transformação):
 
-    // Preço Inicial: É o precoUnitario * quantidade.
+// Preço Inicial: É o precoUnitario * quantidade.
 
-    // Desconto Cliente: Se o tipoCliente for "VIP", ele ganha 20% de desconto (* 0.8). Se for "Comum", não ganha nada.
+// Desconto Cliente: Se o tipoCliente for "VIP", ele ganha 20% de desconto (* 0.8). Se for "Comum", não ganha nada.
 
-    // Frete por Peso: Se o pesoTotal for maior que 20kg, o frete é R$ 80,00. Se for menor ou igual, o frete é R$ 20,00.
+// Frete por Peso: Se o pesoTotal for maior que 20kg, o frete é R$ 80,00. Se for menor ou igual, o frete é R$ 20,00.
 
-    // Regra Extra (O Pulo do Gato): Se o valor do produto já com o desconto do cliente for maior que R$ 1.000,00, o frete fica de graça (R$ 0), independente do peso.
+// Regra Extra (O Pulo do Gato): Se o valor do produto já com o desconto do cliente for maior que R$ 1.000,00, o frete fica de graça (R$ 0), independente do peso.
 
-    // const pedidos = [
-    // { produto: "Furadeira", precoUnitario: 500, quantidade: 3, pesoTotal: 15, tipoCliente: "VIP", status: "pago" },
-    // { produto: "Parafusos", precoUnitario: 2, quantidade: 1000, pesoTotal: 25, tipoCliente: "Comum", status: "pago" },
-    // { produto: "Cimento", precoUnitario: 40, quantidade: 50, pesoTotal: 1000, tipoCliente: "Comum", status: "cancelado" },
-    // { produto: "Serra Circular", precoUnitario: 800, quantidade: 1, pesoTotal: 8, tipoCliente: "Comum", status: "pago" }
-    // ];
+// const pedidos = [
+// { produto: "Furadeira", precoUnitario: 500, quantidade: 3, pesoTotal: 15, tipoCliente: "VIP", status: "pago" },
+// { produto: "Parafusos", precoUnitario: 2, quantidade: 1000, pesoTotal: 25, tipoCliente: "Comum", status: "pago" },
+// { produto: "Cimento", precoUnitario: 40, quantidade: 50, pesoTotal: 1000, tipoCliente: "Comum", status: "cancelado" },
+// { produto: "Serra Circular", precoUnitario: 800, quantidade: 1, pesoTotal: 8, tipoCliente: "Comum", status: "pago" }
+// ];
 
-    // const valorfinal = pedidos
-    // .filter((valor,index) => valor.status === "pago")
-    // .map((valor,index)=>{
-    //     const precoinicial = valor.precoUnitario * valor.quantidade
-    //     const clientvip = valor.tipoCliente === "VIP" ? precoinicial * 0.8 : precoinicial
-    //     const frete = valor.pesoTotal > 20 ? 80 : 20
-    //     const totalfinal = clientvip > 1000  ?  clientvip : clientvip + frete //tinha usado fretetotal, isso pode e vai ficar confuso para quem lê
-    //     return totalfinal;                                              //sempre colocar o nome da variavel seguindo a logica da tratativa do dado ! 
-    // })
-    // .reduce((acc,valor) => acc + valor, 0 )
+// const valorfinal = pedidos
+// .filter((valor,index) => valor.status === "pago")
+// .map((valor,index)=>{
+//     const precoinicial = valor.precoUnitario * valor.quantidade
+//     const clientvip = valor.tipoCliente === "VIP" ? precoinicial * 0.8 : precoinicial
+//     const frete = valor.pesoTotal > 20 ? 80 : 20
+//     const totalfinal = clientvip > 1000  ?  clientvip : clientvip + frete //tinha usado fretetotal, isso pode e vai ficar confuso para quem lê
+//     return totalfinal;                                              //sempre colocar o nome da variavel seguindo a logica da tratativa do dado ! 
+// })
+// .reduce((acc,valor) => acc + valor, 0 )
 
 
-    // console.log(valorfinal);
+// console.log(valorfinal);
 
 
 
@@ -3188,13 +3188,13 @@ Mostre na tela uma frase única que diga: "O atleta [nome] correu
 // .map((valor)=> {
 //     const preco = valor.preco
 //     const desconto = valor.categoria === "eletrônico" ? preco * 0.90 : preco
-    
-    
+
+
 //     return {
 //         preço: formatador.format(preco),
 //         precocomdesconto: formatador.format(desconto),
 //         valordesconto: formatador.format(preco) - formatador.format(desconto)
-        
+
 
 //         }
 // })
@@ -3251,7 +3251,7 @@ Mostre na tela uma frase única que diga: "O atleta [nome] correu
 //     acc.quantasmonitoramento += valor.quantasmonitoramento
 //     acc.quantasbaixonivel += valor.quantasbaixonivel
 //     //acc.nomenclatura.push(valor.Nome)
-    
+
 
 //     let mensagem = "";
 
@@ -3336,7 +3336,7 @@ Mostre na tela uma frase única que diga: "O atleta [nome] correu
 //     const valoritem = valor.valorTotal
 //     const frete = valoritem < 500 ? 50 : 0
 //     const cliente = valor.cliente
-   
+
 //     const quantidade = TotalItens > 3 ?  valoritem : valoritem + frete //aqui para puxar o total de otens no objeto e calcula o frete se for +3
 //    return {
 //     TotalItens: TotalItens,
@@ -3361,9 +3361,9 @@ Mostre na tela uma frase única que diga: "O atleta [nome] correu
 //        mensagem = `${valor.cliente} Volume Padrão, paga frete, e vai custar ${valor.valoritem}`
 //     }
 //     acc.relatorioenvio.push(mensagem);
-    
+
 // return acc;}, { 
-    
+
 //     TotalItens: 0, 
 //     valoritemtotal: 0, 
 //     quantidadetotal: 0,
@@ -3372,7 +3372,7 @@ Mostre na tela uma frase única que diga: "O atleta [nome] correu
 // console.log(pagos);
 
 
- 
+
 
 
 
@@ -3419,8 +3419,8 @@ Mostre na tela uma frase única que diga: "O atleta [nome] correu
 //     else { 
 //          mensagem = `Caminhão ${marca} está em boas condições`
 //     }
-    
-    
+
+
 //     // --- COMPLETE O RETURN DO MAP ---
 //     return {
 //       consumoKmL: consumoKmL,
@@ -3434,14 +3434,14 @@ Mostre na tela uma frase única que diga: "O atleta [nome] correu
 //     };
 //   });
 //  console.log(relatorioFrota);
-  
+
 //   const acumuladores = viagens.reduce((acc, v) => {
 //     acc.gasolinagasta += v.combustivelConsumido
 //     acc.custoGeral += (v.valorDiesel * v.combustivelConsumido)
 //     acc.kmTotal += v.kmRodado
 //     //acc.statusManutencao.push(v.mensagem)
-    
-   
+
+
 //     //acc.listaCaminhoes.push(v.marca); aq era para puxar os caminhões em array, mas, coloquei direto na msg para ficar melhor
 
 //     return acc;
@@ -3452,10 +3452,10 @@ Mostre na tela uma frase única que diga: "O atleta [nome] correu
 //      kmTotal: 0,
 //     //listaCaminhoes: [],
 //     //statusManutencao: []
-    
+
 //   });
 // console.log(acumuladores);
-  
+
 
 // console.log("=== RELATÓRIO FINAL DA FROTA ===");
 // console.log("Gasolina gasta de todos os caminhão:", relatorioFrota.gasolinagasta + "Ltrs");
@@ -3499,86 +3499,438 @@ Mostre na tela uma frase única que diga: "O atleta [nome] correu
 // O Desafio: Calcular a Média de Lucro por Mês. (Dica: no seu acumulador do reduce, você vai precisar de um objeto para contar os meses).
 
 
-const entregas = [
-  { id: 1, valor: 150, km: 3, litros: 2, data: "2026-04-10", status: "finalizada" },
-  { id: 2, valor: 450, km: 12, litros: 8, data: "2026-04-12", status: "finalizada" },
-  { id: 3, valor: 200, km: 4, litros: 3, data: "2026-05-05", status: "finalizada" },
-  { id: 4, valor: 600, km: 20, litros: 12, data: "2026-05-15", status: "finalizada" },
-  { id: 5, valor: 100, km: 2, litros: 1, data: "2026-04-20", status: "cancelada" }, // Não entra!
-  { id: 6, valor: 350, km: 8, litros: 5, data: "2026-06-02", status: "finalizada" }
+// const entregas = [
+//     { id: 1, valor: 150, km: 3, litros: 2, data: "2026-04-10", status: "finalizada" },
+//     { id: 2, valor: 450, km: 12, litros: 8, data: "2026-04-12", status: "finalizada" },
+//     { id: 3, valor: 200, km: 4, litros: 3, data: "2026-05-05", status: "finalizada" },
+//     { id: 4, valor: 600, km: 20, litros: 12, data: "2026-05-15", status: "finalizada" },
+//     { id: 5, valor: 100, km: 2, litros: 1, data: "2026-04-20", status: "cancelada" }, // Não entra!
+//     { id: 6, valor: 350, km: 8, litros: 5, data: "2026-06-02", status: "finalizada" }
+// ];
+
+// const PRECOCOMBUSTIVEL = 5.85; //valor em litro
+
+// const formatadorUTC = new Intl.DateTimeFormat('pt-BR', {
+//     month: 'long'
+// });
+
+// const formatadorG = new Intl.DateTimeFormat(undefined, {
+//     month: 'long',
+//     day: '2-digit',
+//     year: 'numeric',
+//     hour: '2-digit',
+//     minute: '2-digit',
+//     hour12: false // Formato 24h
+// });
+
+// const formatadorhora = new Intl.DateTimeFormat(undefined, {
+//     hour: '2-digit',
+//     minute: '2-digit'
+// });
+
+// const formatadorCash = new Intl.NumberFormat('pt-BR', { //tranformar em BRL                  
+//     style: 'currency',
+//     currency: 'BRL'
+// });
+
+// const arraymap = entregas
+//     .filter((valor) => valor.status !== "cancelada")
+//     .map((valor) => {
+//         const custogasolina = valor.litros * PRECOCOMBUSTIVEL  //de novo usei o entregas.litros, tipo ele n vai olhar para o valor assim, ja q a array n devolve valor...
+//         const custo = valor.valor - custogasolina               //o certo é usar v.tipo, que dai eu pego 
+//         const utilitario = valor.km < 5 ? 1 : 0;
+//         const datames = new Date(valor.data).getMonth();
+
+//         return {
+//             custogasreduce: custogasolina, //para usar, e ao mesmo tempo ter o resultado formatado(N da pra usar o formatado no reduce)
+//             lucrototalreduce: custo,
+
+//             // QuantosUtilitarios: utilitario, resolver no reduce
+//             //QuantosCaminhõesLeves: leve, 
+//             custoGAS: formatadorCash.format(custogasolina),
+//             lucrototal: formatadorCash.format(custo),
+//             utilitario: utilitario,
+//             mesDATA: datames
+//         }
+
+//     });
+// console.log(arraymap);
+
+// const totais = arraymap
+//     .reduce((acc, valor) => {
+//         acc.custogasolina += valor.custogasreduce
+//         acc.lucrototal += valor.lucrototalreduce
+//         // acc.leve += valor.QuantosCaminhõesLeves
+//         // acc.utilitario += valor.QuantosUtilitarios
+
+//         if (valor.utilitario) {
+//             acc.utilitario++
+//         }
+//         else {
+//             acc.leve++
+//         }
+
+//         const mes = valor.mesDATA
+
+
+//         if (!acc.mes[mes]) {
+//             acc.mes[mes] = 0;  //para o mês, torna inteligente sem precisar declarar mes por mes...
+//         }
+
+//         acc.mes[mes] += valor.lucrototalreduce
+
+//         return acc;
+//     }, { custogasolina: 0, lucrototal: 0, leve: 0, utilitario: 0, mes: {} });
+// console.log(totais);
+
+// Object.entries(totais.mes).forEach(([mes, valor]) => {
+    
+//     console.log(`${formatadorUTC.format(new Date(0, mes))}: ${formatadorCash.format(valor)}`);  //jeito eleganta de formatar o retorno do objecto do Mês
+// });
+// console.log(`Total de caminhões leves: ${totais.leve}`)
+// console.log(`Total de utilitarios: ${totais.utilitario}`)
+// console.log(`Total Gasolina: ${formatadorCash.format(totais.custogasolina)}`);
+// console.log(`Total Lucro: ${formatadorCash.format(totais.lucrototal)}`);
+
+
+// index.html
+
+
+// i18/en/strings.json
+//     {
+//         "title": "Jacason site",
+//         "body-text": "body text lerolero"
+//     }
+// i18/pt/strings.json
+//     {
+//         "title": "Sitezinho do jacason",
+//         "body-text": "texto corpo do site lerolero"
+//     }
+
+// const i18nObj = {
+//     "en-US": {
+//         "title": "Jackcon site",
+//         "body-text": "body text lerolero"
+//     },
+//     "pt-BR": {
+//         "title": "Sitezinho do Jackson",
+//         "body-text": "texto corpo do site lerolero"
+//     }
+// }
+
+// function i18n(key) {
+//     const lang = navigator.language;
+//     const keyLang = i18nObj[lang][key];
+//     return keyLang;
+// }
+
+// console.log(i18n("title"));
+
+// function comp() {
+//     return `<h1>${i18n("body-text")}</h1>`;
+// }
+
+// console.log(comp());
+
+
+
+/*
+> console.log(comp());
+<h1>body text lerolero</h1>
+undefined
+
+❯ node
+Welcome to Node.js v25.9.0.
+Type ".help" for more information.
+> navigator
+Navigator {}
+> navigator.language
+'en-US'
+> const i18nObj = {
+|     "en-US":{
+|         "title": "Jacason site",
+|         "body-text": "body text lerolero"
+|     },
+|     "pt-BR": {
+|         "title": "Sitezinho do Jackson",
+|         "body-text": "texto corpo do site lerolero"
+|     }
+| }
+undefined
+>
+> function i18n(key) {
+|     const lang = navigator.language;
+|     const keyLang = i18nObj[lang][key];
+|     return keyLang;
+| }
+undefined
+>
+> console.log(i18n("title"));
+Jacason site
+undefined
+>
+*/
+// <h1>{i18n("title")}</h1>
+// <p>{i18n("body-text")}</p>
+
+// function montarComponente(hora) {
+//     const formatador = Intl.DateTimeFormat();
+//     const horaFormatada = formatador.format(hora);
+
+//     return `<p>Hora: ${horaFormatada}</p>`;
+// }
+
+
+
+// function montarComponente(hora) {
+//     const formatador = Intl.DateTimeFormat();
+//     const horaFormatada = formatador.format(hora);
+
+//     return `<p>Hora: ${horaFormatada}</p>`;
+// }
+
+// function montarComponente(hora) {
+//     const formatador = Intl.DateTimeFormat();
+//     const horaFormatada = formatador.format(hora);
+//     return `<p>${horaFormatada} horas restantes.</p>`;
+// }
+
+// function montarComponente(hora) {
+//     const formatador = Intl.DateTimeFormat();
+//     const horainicial = formatador.format(hora);
+//     const horalimite = formatador.format(hora);
+//     return `<p>Faltam ${horainicial} para dar ${horalimite}</p>`;
+// }
+
+
+// h3> *Manifesto*  h3
+
+// <div> pt-br 
+//     Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque possimus consequatur optio, dolorum explicabo ex sapiente repudiandae aliquam accusantium esse odio quas error aspernatur ratione id nisi iusto deserunt dolorem.
+//     Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque possimus consequatur optio, dolorum explicabo ex sapiente repudiandae aliquam accusantium esse odio quas error aspernatur ratione id nisi iusto deserunt dolorem.
+//     Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque possimus consequatur optio, dolorum explicabo ex sapiente repudiandae aliquam accusantium esse odio quas error aspernatur ratione id nisi iusto deserunt dolorem.
+//     Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque possimus consequatur optio, dolorum explicabo ex sapiente repudiandae aliquam accusantium esse odio quas error aspernatur ratione id nisi iusto deserunt dolorem.
+//     Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque possimus consequatur optio, dolorum explicabo ex sapiente repudiandae aliquam accusantium esse odio quas error aspernatur ratione id nisi iusto deserunt dolorem.
+// </div>
+
+
+// <div> eng
+//     Lore ipsum dolor sit amet consectetur adipisicing elit. Doloremque possimus consequatur optio, dolorum explicabo ex sapiente repudiandae aliquam accusantium esse odio quas error aspernatur ratione id nisi iusto deserunt dolorem.
+//     Lore ipsum dolor sit amet consectetur adipisicing elit. Doloremque possimus consequatur optio, dolorum explicabo ex sapiente repudiandae aliquam accusantium esse odio quas error aspernatur ratione id nisi iusto deserunt dolorem.
+//     Lore ipsum dolor sit amet consectetur adipisicing elit. Doloremque possimus consequatur optio, dolorum explicabo ex sapiente repudiandae aliquam accusantium esse odio quas error aspernatur ratione id nisi iusto deserunt dolorem.
+//     Lore ipsum dolor sit amet consectetur adipisicing elit. Doloremque possimus consequatur optio, dolorum explicabo ex sapiente repudiandae aliquam accusantium esse odio quas error aspernatur ratione id nisi iusto deserunt dolorem.
+//     Lore ipsum dolor sit amet consectetur adipisicing elit. Doloremque possimus consequatur optio, dolorum explicabo ex sapiente repudiandae aliquam accusantium esse odio quas error aspernatur ratione id nisi iusto deserunt dolorem.
+// </div>
+
+
+
+
+
+// Você recebeu um array de viagens. Seu objetivo é gerar um resumo que nos diga:
+
+// Quanto cada motorista gerou de Lucro Líquido.
+
+// Qual a Média de Consumo (KM/L) de cada um.
+
+// Um Ranking (quem é "Top" e quem é "Alerta").
+
+// const viagens = [
+//   { motorista: "Jackson", km: 500, litros: 50, valorFrete: 2500 },
+//   { motorista: "Geremias", km: 800, litros: 120, valorFrete: 3800 },
+//   { motorista: "Leon", km: 300, litros: 35, valorFrete: 1500 },
+//   { motorista: "Leonardo", km: 1000, litros: 180, valorFrete: 5000 },
+//   { motorista: "Luis", km: 200, litros: 25, valorFrete: 1100 }
+// ];
+
+// const PRECO_DIESEL = 5.85;
+
+// const mapArray = viagens
+// .map((v) => {
+//     const motorista = v.motorista
+//     const distancia = v.km
+//     const custogasosa = v.litros * PRECO_DIESEL
+//     const lucro = v.valorFrete - custogasosa
+//     const eficiencia = v.km / v.litros
+
+//     return {
+//         motorista: motorista,
+//         custogasosa: custogasosa,
+//         lucro: lucro,
+//         eficiencia: eficiencia,
+//         distancia: distancia
+//     }
+// });
+// //console.log(mapArray);
+
+// const rankinglucro = [...mapArray].sort((a,b) =>  b.lucro - a.lucro);
+// //console.log(rankinglucro)
+
+
+// const rankingEficiencia = [...mapArray].sort((a, b) => b.eficiencia - a.eficiencia);
+// //console.log(rankingEficiencia);
+
+// //[...maparray] percorrer o array da função criada inteira
+
+
+// //.sort organizador de elementos do array, O segredo é que o .sort() não é apenas um loop simples como o .forEach().
+// //  Ele usa um algoritmo chamado Timsort (ou Merge Sort em alguns navegadores).
+// // a - b = Crescente (Do menor para o maior: 1, 2, 3...)
+
+// // b - a = Decrescente (Do maior para o menor: 10, 9, 8...)
+
+
+
+// const acumulador = mapArray
+// .reduce((acc,v) =>{
+//     acc.gasosa += v.custogasosa
+//     acc.lucro += v.lucro
+//     acc.distancia += v.distancia
+
+//     if (!acc[v.motorista]) {
+//         acc[v.motorista] = { lucro: 0, distancia: 0 }; //ver individualmente
+//     }
+//     acc[v.motorista].lucro += v.lucro;
+//     acc[v.motorista].distancia += v.distancia;
+    
+    
+
+//     return acc;
+//   }, { gasosa: 0, lucro: 0, distancia: 0 });
+
+// console.log(acumulador);
+
+// const formatador = new Intl.NumberFormat('pt-BR', { //tranformar em BRL                  
+//     style: 'currency',
+//     currency: 'BRL'
+// });         
+
+
+// const relatorioFinal = {         //invez de voltar no console.log faz uma função de retornos
+//                                 // claro que se quiser que volte indece por indece o map ainda é uma bela ferramenta 
+// frota: "lero lero transporte",
+//  dataRelatorio: new Date().toLocaleDateString('pt-BR'),
+    
+    
+// financeiro: {
+//     custoDieselTotal: formatador.format(acumulador.gasosa),
+//     lucroTotal: formatador.format(acumulador.lucro),
+//     distanciatotal: `${acumulador.distancia} Km`,  
+//     mediaConsumoFrota: (acumulador.distancia / acumulador.gasosa).toFixed(2) + " Km/L"
+
+// },
+
+    
+// rankingEconomiaGasosa: rankingEficiencia.map((v, index) => ({
+//         posicao: `${index + 1}º`,
+//         nome: v.motorista,
+//         kmL: v.eficiencia.toFixed(2)
+//     })),
+
+//     rankingLucro: rankinglucro.map((v, index) => ({
+//         posicao: `${index + 1}º`,
+//         nome: v.motorista,
+//         lucro: formatador.format(v.lucro)
+//     })),
+
+    
+//     maioreconomia: rankingEficiencia[0].motorista,
+//     pioresconomia: rankingEficiencia[rankingEficiencia.length -1].motorista,  //length -1 para pegar o ultimo sempre 
+
+//     maiorlucro: rankinglucro[0].motorista,
+//     menorlucro: rankinglucro[rankinglucro.length - 1].motorista
+// };
+
+// console.log(relatorioFinal);
+
+
+
+
+
+// A transportadora decidiu dar um bônus para os motoristas, mas a regra não é simples.
+//  Você precisa processar os dados e gerar um ranking final.
+
+// Imposto: Toda viagem tem 10% de imposto retido na fonte.
+
+// Bônus por Distância:
+
+// Viagens acima de 600km ganham bônus de R$ 200,00.
+
+// Viagens abaixo disso não ganham nada.
+
+// Filtro de Segurança: Motoristas da Categoria C estão com a licença vencida. Eles não podem aparecer no relatório final (devem ser filtrados).
+
+// Ranking: O relatório deve ser ordenado pelo Lucro Líquido (Valor - Imposto + Bônus) do maior para o menor.
+
+
+const viagens = [
+  { motorista: "Jackson", km: 500, valorFrete: 2500, categoria: "A" },
+  { motorista: "Geremias", km: 800, valorFrete: 3800, categoria: "B" },
+  { motorista: "Leon", km: 300, valorFrete: 1500, categoria: "A" },
+  { motorista: "Leonardo", km: 1000, valorFrete: 5000, categoria: "C" },
+  { motorista: "Luis", km: 200, valorFrete: 1100, categoria: "B" }
 ];
 
-const PRECOCOMBUSTIVEL = 5.85; //valor em litro
+const impostoReTIDO = 0.90 //na fonte
 
-const formatadorUTC = new Intl.DateTimeFormat('pt-BR', {
-    month: 'long'
-    });
-
-    const formatadorCash = new Intl.NumberFormat('pt-BR', { //tranformar em BRL                  
-    style: 'currency',
-    currency: 'BRL'
-});            
-
-const arraymap = entregas
-.filter((valor) => valor.status !== "cancelada")
-.map((valor) => {
-    const custogasolina = valor.litros * PRECOCOMBUSTIVEL  //de novo usei o entregas.litros, tipo ele n vai olhar para o valor assim, ja q a array n devolve valor...
-    const custo = valor.valor - custogasolina               //o certo é usar v.tipo, que dai eu pego 
-    const tipoveiculo = valor.km >= 5 ? "Caminhão Leve" : "Utilitario"
-    // const utilitario = valor.km < 5 ? 1 : 0   //resolver no reduce
-    // const leve = valor.km >= 5 ? 1 : 0
-    const datames = formatadorUTC.format(new Date(valor.data))
+const maparray = viagens
+.filter((v) => v.categoria !== "C" )
+.map((v) => {
+    const motorista = v.motorista
+    const valorfrete = v.valorFrete
+    const KmRodado = v.km
+    const bonus = KmRodado > 600 ? 200 : 0
+    const LucroEmpresa = (valorfrete * impostoReTIDO) - bonus
+    //const LucroMotorista = (valorfrete * impostoReTIDO) + bonus
     
-return {
-    custogasreduce: custogasolina, //para usar, e ao mesmo tempo ter o resultado formatado(N da pra usar o formatado no reduce)
-    lucrototalreduce: custo,
-
-   // QuantosUtilitarios: utilitario, resolver no reduce
-    //QuantosCaminhõesLeves: leve, 
-    custoGAS: formatadorCash.format(custogasolina),
-    lucrototal: formatadorCash.format(custo),
-    veiculo: tipoveiculo,
-    mesDATA: datames
+    return  {
+        motorista: motorista,
+        valorfrete: valorfrete,
+        KmRodado: KmRodado,
+        bonus: bonus,
+        LucroEmpresa: LucroEmpresa,
+        //LucroMotorista: LucroMotorista
     }
-    
-
-
 });
-console.log(arraymap);
+//console.log(maparray);
 
-const totais = arraymap
-.reduce((acc, valor) => {
-    acc.custogasolina += valor.custogasreduce
-    acc.lucrototal += valor.lucrototalreduce
-    //acc.leve += valor.QuantosCaminhõesLeves
-    //acc.utilitario += valor.QuantosUtilitarios
-
-    if(valor.veiculo === "Utilitario"){
-        acc.utilitario++
-    } 
-    else{
-        acc.leve++
-    }
-
-    const mes = valor.mesDATA
+const rakinglucro = [...maparray].sort((a,b) => b.LucroEmpresa - a.LucroEmpresa )  //quero descrecente o B na frente
+//console.log(rakinglucro);
 
 
 
-
-        if(!acc.mes[mes]){
-            acc.mes[mes] = 0;  //para o mês, torna inteligente sem precisar declarar mes por mes...
-        }
-
-        acc.mes[mes] += valor.lucrototalreduce
+const reducetravel = maparray
+.reduce((acc,v)=>{
+    acc.valorfrete += v.valorfrete
+    acc.lucro += v.LucroEmpresa
 
     return acc;
-}, {custogasolina: 0, lucrototal: 0, leve:0, utilitario: 0, mes: {} } );
-console.log(totais);
+  },  {valorfrete: 0, lucro: 0 });
+  //console.log(reducetravel);
 
-Object.entries(totais.mes).forEach(([mes, valor]) => {
-    console.log(`${mes}: ${formatadorCash.format(valor)}`);
-}); 
-console.log(`Total de caminhões leves: ${totais.leve}`)
-console.log(`Total de utilitarios: ${totais.utilitario}`)
-console.log(`Total Gasolina: ${formatadorCash.format(totais.custogasolina)}`);
-console.log(`Total Lucro: ${formatadorCash.format(totais.lucrototal)}`);
+
+  const gerarTemplateRelatorio = (ranking, totais) => {
+    const formatador = new Intl.NumberFormat('pt-BR', { style: 'currency', currency: 'BRL' });
+    
+
+    let output = `\n=== RELATÓRIO LOGÍSTICO - LERO LERO ===\n`;
+    output += `Data: ${new Intl.DateTimeFormat('pt-BR').format(new Date())}\n`;
+    
+
+    
+    ranking.forEach((v, i) => {
+        output += `${i + 1}º ${v.motorista.padEnd(10)} | Lucro: ${formatador.format(v.LucroEmpresa)}\n`;
+    });
+
+    
+    output += `FATURAMENTO BRUTO: ${formatador.format(totais.valorfrete)}\n`;
+    output += `LUCRO REAL CAIXA : ${formatador.format(totais.lucro)}\n`;
+   
+
+    return output;
+};
+
+
+const impressao = gerarTemplateRelatorio(rakinglucro, reducetravel);
+
+
+console.log(impressao);
