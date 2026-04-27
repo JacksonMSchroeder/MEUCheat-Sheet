@@ -3908,29 +3908,46 @@ const reducetravel = maparray
   //console.log(reducetravel);
 
 
-  const gerarTemplateRelatorio = (ranking, totais) => {
-    const formatador = new Intl.NumberFormat('pt-BR', { style: 'currency', currency: 'BRL' });
-    
+const campoData = document.querySelector("#data-relatorio");
+const listaRanking = document.querySelector("#lista-ranking");
+const campoFaturamento = document.querySelector("#faturamento");
+const campoLucroTotal = document.querySelector("#lucro-total");
 
-    let output = `\n=== RELATÓRIO LOGÍSTICO - LERO LERO ===\n`;
-    output += `Data: ${new Intl.DateTimeFormat('pt-BR').format(new Date())}\n`;
-    
+const formatador = new Intl.NumberFormat('pt-BR', { style: 'currency', currency: 'BRL' });
 
-    
-    ranking.forEach((v, i) => {
-        output += `${i + 1}º ${v.motorista.padEnd(10)} | Lucro: ${formatador.format(v.LucroEmpresa)}\n`;
-    });
+campoData.textContent = new Intl.DateTimeFormat('pt-BR').format(new Date());
 
-    
-    output += `FATURAMENTO BRUTO: ${formatador.format(totais.valorfrete)}\n`;
-    output += `LUCRO REAL CAIXA : ${formatador.format(totais.lucro)}\n`;
-   
+listaRanking.innerHTML = ""; 
+rakinglucro.forEach((v, i) => {
+    listaRanking.innerHTML += `<li>${i + 1}º ${v.motorista} | Lucro: ${formatador.format(v.LucroEmpresa)}</li>`;
+});
 
-    return output;
-};
+campoFaturamento.textContent = formatador.format(reducetravel.valorfrete);
+campoLucroTotal.textContent = formatador.format(reducetravel.lucro);
 
-
-const impressao = gerarTemplateRelatorio(rakinglucro, reducetravel);
+campoLucroTotal.style.color = reducetravel.lucro >= 8000 ? "green" : "red";
+//campoLucroTotal.style.color = reducetravel.lucro >= 7000 ? "green" : "red";
 
 
-console.log(impressao);
+
+///NUM SISTEMA REAL EU TERIA QUE CRIAR UMA PASTA COM A LOGICA DO PAGAMENTO DE SALARIOS, DE DIVISÃO PARA MANUTENÇÃO, E DIVISÃO PARA MARKETING,
+//ISSO INCLUE INCLUSIVE DESCISÃO DE SALARIOS, CLARO QUE TBM EXISTE UMA PRESSÃO DE FORA, UM PISO DE CATEGORIA QUE GANHAM MAIS OU MENOS, COMO CAMINHONEIROS 
+//TUDO ISSO VAI ENTRANDO NO COD, AI SABER CODAR É SÓ 50% DO PROBLEMA 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//=================================================================================//=============================================================================
+
+                                                                    //DOM
+

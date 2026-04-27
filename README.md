@@ -1,12 +1,12 @@
 Bom, vou lançar um README despretensioso aqui... e algumas notas que julgo muito importantes sobre meus estudos.
 
-Primeiro, quero desabafar sobre incertezas e medos. Sabe, a realidade atual do mercado me assusta. Estou me formando talvez na pior época para ser um desenvolvedor!? A galera do "vibecoding" vem forte, e empresas acredito que não ligam tanto sobre conhecimento, tendo um site funcional; não importa se a pessoa fez num copy-paste de IA ou se fez entendendo pelo menos essa copy-paste kk
+Primeiro, quero desabafar sobre incertezas e medos. Sabe, a realidade atual do mercado me assusta. Estou me formando talvez na pior época para ser um desenvolvedor!? A galera do "vibecoding" vem forte, e empresas, acredito eu, que não ligam tanto sobre conhecimento, tendo um site funcional; não importa se a pessoa fez num copy-paste de IA ou se fez entendendo pelo menos essa copy-paste kk
 
 Apesar de que, quanto mais estudo, mais percebo que a IA é uma ótima operária, mas uma péssima arquiteta. Ela é extremamente ruim em SRP (Single Responsibility Principle). A IA olha para a função, não para o sistema... faz muito espaguete.. 
 
 Mas enfim, tenho dois amigos me ajudando nos estudos, que entendem extremamente bem por serem sêniores há anos. Um deles não arruma emprego há cerca de um ano, mesmo entendendo bastante, o que me coloca em conflito ao pensar: "imagina eu...".
 
-Bom, minha área atual(profissão) é Logística, e talvez eu continue nela, mas fui estudar sobre desenvolvimento e acabei realmente curtindo muito. Estudei até um pouco de circuitos eletrônicos para entender o funcionamento físico, kk.
+Bom, minha área atual(profissão) é Logística, e talvez eu continue nela, mas fui estudar sobre desenvolvimento e acabei realmente curtindo muito. Estudei até um pouco de circuitos eletrônicos para entender o funcionamento físico, kk
 
 Mas esses pensamentos de estar me esforçando para aprender no pior momento possível não me abandonavam. Até que esses pensamentos surgiram enquanto eu escutava música, e a música específica era Sultans of Swing...
 
@@ -25,7 +25,8 @@ Olha, só quero ser um cara que entende muito bem de códigos e, a longo prazo, 
 
 
 
-[formataroDIA/HORA/ETC]
+[formataroDIA/HORA/ETC] 
+>>> mas nem sempre vai ser global, tem vezes que vou ter que usar em blocos de escopos dependendo o que eu preciso !!
 
 const formatadorUTC = new Intl.DateTimeFormat('pt-BR', {
     day: '2-digit',
@@ -37,6 +38,43 @@ const formatadorUTC = new Intl.DateTimeFormat('pt-BR', {
 });
 
 //
+
+https://notes.brooklynzelenka.com/Notes/CRDT
+
+[ManipularHTML] 
+>>>FAZER O SITE FICAR EM INGLES E PTBR 
+const i18nObj = {
+    "en-US": {
+        "title": "Jackcon site",
+        "body-text": "body text lerolero"
+    },
+    "pt-BR": {
+        "title": "Sitezinho do Jackson",
+        "body-text": "texto corpo do site lerolero"
+    }
+}
+
+function i18n(key) {
+    const lang = navigator.language;
+    const keyLang = i18nObj[lang][key];
+    return keyLang;
+}
+
+console.log(i18n("title"));
+
+function comp() {
+    return `<h1>${i18n("body-text")}</h1>`;
+}
+
+console.log(comp());
+
+
+[ORDENAÇÃODEARRAY]  .sort 
+>>> TEM O .SORT que é um foreach só que com o poder de organizar dados !!  E CONSIDERANDO BOAS PRATICAS MELHOR ISOLAR A FUNÇÃO DO SORT FORA DOS ESCOPOS 
+>>> o sort vai ALTERAR O ARRAY ORIGINAL, e como o paradigma funcional preza por imutabilidade, o bom vai ser isolar ela para n alterar e depois acabar 
+>>> adulterando o dado original ao longo do processo 
+b - a ➔ Decrescente (Do maior para o menor / Ranking).
+a - b ➔ Crescente (Do menor para o maior).
 
 
 
